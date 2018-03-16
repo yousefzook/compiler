@@ -22,3 +22,6 @@ public:
 };
 
 #endif /* AUTOMATAOPERATOR_H_ */
+
+//comment
+//hhghghghhghghg
