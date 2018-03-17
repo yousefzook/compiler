@@ -11,8 +11,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 #include <vector>
-
 using namespace std;
 
 /*
@@ -31,32 +31,69 @@ RuleParser::~RuleParser()
 }
 
 
-void split(const std::string &txt, std::vector<std::string> &strs2, char ch)
+void split (string &txt, vector<string> &strs1, char ch)
 {
-    size_t pos = txt.find( ch );
-    size_t initialPos = 0;
-    vector<string> strs;
-    strs.clear();
-
-    // Decompose statement
-    while( pos != std::string::npos )
+    string token;
+    stringstream ss(txt);
+    while (getline(ss,token,ch))
     {
-        strs.push_back( txt.substr( initialPos, pos - initialPos ) );
-        initialPos = pos + 1;
-        pos = txt.find( ch, initialPos );
+        strs1.push_back(token);
     }
-    // Add the last one
-    strs.push_back( txt.substr( initialPos, std::min( pos, txt.size() ) - initialPos + 1 ) );
-    for(int i=0; i<strs.size(); i++)
-    {
-        if(strs[i].find(" ")==string::npos&&strs[i].find_first_not_of("\t\n ")!=string::npos)
-        {
-            strs2.push_back(strs[i]);
-        }
-    }
-    //return strs.size();
 }
 
+
+
+void definitionRange(string &str, string &result)
+{
+
+    vector <string> vector1;
+    split(str,vector1,'-');
+    vector <string> vector2;
+    if(vector1.size()==1)
+    {
+        cout<<"not match"<<endl;
+        for (int i=0; i<vector1.size(); i++)
+        {
+            split(vector1[i],vector2,' ');
+            for(int j=0; j<vector2.size(); j++)
+            {
+                char t=vector2[j][0];
+                if((t>=48&&t<=57)||(t>=65&&t<=90)||(t>=97&&t<=128))
+                {
+                    result=vector2[j];
+                    return;
+                }
+            }
+        }
+    }
+    string part1_str,part2_str;
+    bool check_first_part=true;
+    for (int i=0; i<vector1.size(); i++)
+    {
+        split(vector1[i],vector2,' ');
+        for(int j=0; j<vector2.size(); j++)
+        {
+            char t=vector2[j][0];
+            if((t>=48&&t<=57)||(t>=65&&t<=90)||(t>=97&&t<=128))
+            {
+                if(check_first_part)
+                {
+                    part1_str=vector2[j];
+                    check_first_part=false;
+                }
+                else
+                    part2_str=vector2[j];
+
+            }
+        }
+        vector2.clear();
+    }
+    for(int k=part1_str[0]; k<=part2_str[0]; k++)
+    {
+        char element=k;
+        result.push_back(element);
+    }
+}
 
 void keyWordParse(string line)
 {
@@ -66,7 +103,7 @@ void keyWordParse(string line)
     split(line,newKeyword,' ');
     for (int i=0; i<newKeyword.size(); i++)
     {
-        cout<<newKeyword[i]<<endl;
+        //  cout<<newKeyword[i]<<endl;
     }
     //sent vector
 
@@ -75,7 +112,6 @@ void keyWordParse(string line)
 
 void operatorsParse(string line)
 {
-
     string key ;
     string value;
     vector<string> values;
@@ -111,26 +147,45 @@ void operatorsParse(string line)
         values.push_back(value);
         value.clear();
     }
-    cout <<key <<endl;
+    //cout <<key <<endl;
     for(int i=0; i<values.size(); i++)
     {
-        cout <<values[i]<<endl;
+        //cout <<values[i]<<endl;
     }
     //send values and key
 }
-void definitionsParse(string line) {}
+void definitionsParse(string line)
+{
+    vector <string> define;
+    string result;
+    split(line,define,'=');
+    string key=define[0];
+    string vv=define[1];
+    define.clear();
+    if(key.find(" ")!=string::npos)
+    {
+        split( key, define, ' ' );
+    }
+    define.clear();
+    split(vv,define,'|');
+    for (int i=0; i<define.size(); i++)
+    {
+        definitionRange(define[i],result);
+    }
+    cout<<result<<endl;
+}
 
 void punctuationParse(string line)
 {
     line.erase(0, 1);
     line.erase(line.size() - 1);
-    string punc;
-    for (int i=0; i<line.size(); i++)
+    vector<string> punc;
+    split(line,punc,' ');
+    for (int i=0; i<punc.size(); i++)
     {
-        if(line[i]!=' ')
-            punc.push_back(line[i]);
+//        if(punc[i]!=' ')
+        //cout<<punc[i]<<endl;
     }
-    cout <<punc<<endl;
 
     // send punc
 }
@@ -163,8 +218,6 @@ bool checkOperators(string line)
 }
 bool checkExpression(string line)
 {
-
-
     if(line.find(":")!=string::npos)
     {
         bool dots_detect=false;
@@ -193,9 +246,6 @@ bool checkExpression(string line)
 
 void parseLine(string line)
 {
-
-
-
     if (line[0] == '{')
     {
         keyWordParse(line);
@@ -210,7 +260,7 @@ void parseLine(string line)
     }
     else if(checkExpression(line))
     {
-       cout<<"match expression"<<endl;
+        cout<<"match expression"<<endl;
         // expression work
     }
     else
