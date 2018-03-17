@@ -12,7 +12,11 @@ class LexecialGenerator {
 public:
 	LexecialGenerator();
 	virtual ~LexecialGenerator();
+
 };
+	void startLexical();
+	void readRuleFile();
+	void readProgramFile();
 
 /*
  * [TODO] to be implemented ...........
