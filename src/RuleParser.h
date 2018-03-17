@@ -8,6 +8,7 @@
 #ifndef RULEPARSER_H_
 #define RULEPARSER_H_
 
+#include "RegularDefinition.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -15,23 +16,25 @@
 
 using namespace std;
 
-class RuleParser {
+class RuleParser: public RegularDefinition
+{
 public:
-	RuleParser();
-	virtual ~RuleParser();
+    RuleParser();
+    virtual ~RuleParser();
+    void parseLine(string line);
+
+private:
+    void keyWordParse(string line);
+    void split (string &txt, vector<string> &strs1, char ch);
+    string removeWhiteSpaces(string str);
+    bool checkOperators(string line);
+    void operatorsParse(string line);
+    bool checkExpression(string line);
+    void definitionsParse(string line);
+    void definitionRange(string &str, string &result);
+    void punctuationParse(string line);
 
 };
-	void split(const std::string &txt, std::vector<std::string> &strs2, char ch);
-	void definitionRange(string &str, string &result);
-	void keyWordParse(string line);
-	void operatorsParse(string line);
-	void definitionsParse(string line);
-	void punctuationParse(string line);
-	bool checkOperators(string line);
-	bool checkDefinitions(string line);
-
-
-void parseLine(string line);
 
 /*
  * [TODO] to be implemented ...........

@@ -31,7 +31,7 @@ RuleParser::~RuleParser()
 }
 
 
-void split (string &txt, vector<string> &strs1, char ch)
+void RuleParser::split (string &txt, vector<string> &strs1, char ch)
 {
     string token;
     stringstream ss(txt);
@@ -41,76 +41,74 @@ void split (string &txt, vector<string> &strs1, char ch)
     }
 }
 
-
-
-void definitionRange(string &str, string &result)
+string RuleParser::removeWhiteSpaces(string str)
 {
+    vector <string> vector2;
+    RuleParser::split(str,vector2,' ');
+    for(int j=0; j<vector2.size(); j++)
+    {
+        char t=vector2[j][0];
+        if((t>=48&&t<=57)||(t>=65&&t<=90)||(t>=97&&t<=128))
+        {
+            return vector2[j];
+        }
+    }
+    return "";
+}
 
+
+void RuleParser::definitionRange(string &str, string &result)
+{
     vector <string> vector1;
-    split(str,vector1,'-');
+    RuleParser::split(str,vector1,'-');
     vector <string> vector2;
     if(vector1.size()==1)
     {
         cout<<"not match"<<endl;
-        for (int i=0; i<vector1.size(); i++)
-        {
-            split(vector1[i],vector2,' ');
-            for(int j=0; j<vector2.size(); j++)
-            {
-                char t=vector2[j][0];
-                if((t>=48&&t<=57)||(t>=65&&t<=90)||(t>=97&&t<=128))
-                {
-                    result=vector2[j];
-                    return;
-                }
-            }
-        }
+        result=RuleParser::removeWhiteSpaces(vector1[0]);
+        return;
     }
-    string part1_str,part2_str;
+    string startRange,endRange,temp;
     bool check_first_part=true;
     for (int i=0; i<vector1.size(); i++)
     {
-        split(vector1[i],vector2,' ');
-        for(int j=0; j<vector2.size(); j++)
+        temp=RuleParser::removeWhiteSpaces(vector1[i]);
+        if(temp=="")
         {
-            char t=vector2[j][0];
-            if((t>=48&&t<=57)||(t>=65&&t<=90)||(t>=97&&t<=128))
-            {
-                if(check_first_part)
-                {
-                    part1_str=vector2[j];
-                    check_first_part=false;
-                }
-                else
-                    part2_str=vector2[j];
-
-            }
+            continue;
         }
-        vector2.clear();
+        else if(check_first_part)
+        {
+            check_first_part=false;
+            startRange=temp;
+        }
+        else
+            endRange=temp;
     }
-    for(int k=part1_str[0]; k<=part2_str[0]; k++)
+    for(int k=startRange[0]; k<=endRange[0]; k++)
     {
         char element=k;
         result.push_back(element);
     }
+    //cout<<result<<endl;
 }
 
-void keyWordParse(string line)
+void RuleParser::keyWordParse(string line)
 {
     line.erase(0, 1);
     line.erase(line.size() - 1);
     vector <string> newKeyword;
-    split(line,newKeyword,' ');
-    for (int i=0; i<newKeyword.size(); i++)
-    {
-        //  cout<<newKeyword[i]<<endl;
-    }
+    RuleParser::split(line,newKeyword,' ');
     //sent vector
-
-
+    for(int i=0; i<newKeyword.size(); i++)
+    {
+        string temp=RuleParser::removeWhiteSpaces(newKeyword[i]);
+        if(temp!="")
+            RegularDefinition::setKeywords(temp);
+    }
 }
 
-void operatorsParse(string line)
+void RuleParser::operatorsParse(string line)
 {
     string key ;
     string value;
@@ -147,40 +145,41 @@ void operatorsParse(string line)
         values.push_back(value);
         value.clear();
     }
-    //cout <<key <<endl;
     for(int i=0; i<values.size(); i++)
     {
         //cout <<values[i]<<endl;
     }
     //send values and key
 }
-void definitionsParse(string line)
+
+void RuleParser::definitionsParse(string line)
 {
     vector <string> define;
     string result;
-    split(line,define,'=');
+    RuleParser::split(line,define,'=');
     string key=define[0];
     string vv=define[1];
     define.clear();
     if(key.find(" ")!=string::npos)
     {
-        split( key, define, ' ' );
+        RuleParser::split( key, define, ' ' );
     }
     define.clear();
-    split(vv,define,'|');
+    RuleParser::split(vv,define,'|');
     for (int i=0; i<define.size(); i++)
     {
         definitionRange(define[i],result);
     }
-    cout<<result<<endl;
+    RegularDefinition::setDefinitions(key,result);
+    // cout<<result<<endl;
 }
 
-void punctuationParse(string line)
+void RuleParser::punctuationParse(string line)
 {
     line.erase(0, 1);
     line.erase(line.size() - 1);
     vector<string> punc;
-    split(line,punc,' ');
+    RuleParser::split(line,punc,' ');
     for (int i=0; i<punc.size(); i++)
     {
 //        if(punc[i]!=' ')
@@ -189,7 +188,8 @@ void punctuationParse(string line)
 
     // send punc
 }
-bool checkOperators(string line)
+
+bool RuleParser::checkOperators(string line)
 {
     if(line.find(":")!=string::npos)
     {
@@ -216,7 +216,8 @@ bool checkOperators(string line)
         }
     }
 }
-bool checkExpression(string line)
+
+bool RuleParser::checkExpression(string line)
 {
     if(line.find(":")!=string::npos)
     {
@@ -244,32 +245,29 @@ bool checkExpression(string line)
     }
 }
 
-void parseLine(string line)
+void RuleParser::parseLine(string line)
 {
     if (line[0] == '{')
     {
-        keyWordParse(line);
+        RuleParser::keyWordParse(line);
     }
     else if (line[0] == '[')
     {
-        punctuationParse(line);
+        RuleParser::punctuationParse(line);
     }
-    else if(checkOperators(line))
+    else if(RuleParser::checkOperators(line))
     {
-        operatorsParse(line);
+        RuleParser::operatorsParse(line);
     }
-    else if(checkExpression(line))
+    else if(RuleParser::checkExpression(line))
     {
         cout<<"match expression"<<endl;
         // expression work
     }
     else
     {
-        definitionsParse(line);
+        RuleParser::definitionsParse(line);
     }
 
 }
-
-
-
 

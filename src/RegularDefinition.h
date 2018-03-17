@@ -6,28 +6,33 @@
  */
 
 #include "RuleParser.h"
-
+#include <iostream>
 #include <string>
 #include <map>
 #include <vector>
+
 using namespace std;
 
 #ifndef REGULARDEFINITION_H_
 #define REGULARDEFINITION_H_
 
-class RegularDefinition {
+class RegularDefinition
+{
 public:
-	RegularDefinition();
-	virtual ~RegularDefinition();
+    RegularDefinition();
+    virtual ~RegularDefinition();
 
-	bool compare(string type, char c);
+    bool compare(string type, char c);
+    void setKeywords(string keyword);
+    void setOperators(string key,vector<string>values);
+    void setDefinitions(string key,string value);
+    void setPunctuation(vector<string>punc);
 
 private:
-	std::map<string, string > definitions;
-	std::vector<string> keyword;
-	//std::map<string, vector<string>> operators;
-	std::vector<string> punctuation;
-
+    map<string, string > definition;
+    vector<string> keywords;
+    map <string, vector<string> > operators;
+    vector<string> punctuation;
 };
 
 

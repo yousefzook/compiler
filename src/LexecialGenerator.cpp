@@ -14,38 +14,41 @@
 using namespace std;
 
 
-LexecialGenerator::LexecialGenerator() {
-	// TODO Auto-generated constructor stub
+LexecialGenerator::LexecialGenerator()
+{
+    // TODO Auto-generated constructor stub
 
 }
 
-LexecialGenerator::~LexecialGenerator() {
-	// TODO Auto-generated destructor stub
+LexecialGenerator::~LexecialGenerator()
+{
+    // TODO Auto-generated destructor stub
 }
 
-void readRuleFile() {
-	ifstream myReadFile("/home/rizk/Desktop/rules.txt");
-		string output;
+void LexecialGenerator::readRuleFile()
+{
+    ifstream myReadFile("/home/rizk/Desktop/rules.txt");
+    string output;
 
-		for( string line; getline( myReadFile, line ); )
-		{
-			cout << line<<endl;
-			parseLine(line);
-		}
-		myReadFile.close();
+    for( string line; getline( myReadFile, line ); )
+    {
+        //cout << line<<endl;
+        RuleParser::parseLine(line);
+    }
+    myReadFile.close();
 }
-;
 
-void readProgramFile() {
-}
-;
+void LexecialGenerator::readProgramFile()
+{
 
-void startLexical() {
-	readRuleFile();
-	readProgramFile();
 
 }
-;
+
+void LexecialGenerator::startLexical()
+{
+    readRuleFile();
+    readProgramFile();
+}
 
 /*
  * [TODO] to be implemented ...........

@@ -8,16 +8,21 @@
 #ifndef LEXECIALGENERATOR_H_
 #define LEXECIALGENERATOR_H_
 
-class LexecialGenerator {
+#include "RuleParser.h"
+
+class LexecialGenerator: public RuleParser
+{
 public:
-	LexecialGenerator();
-	virtual ~LexecialGenerator();
+    LexecialGenerator();
+    virtual ~LexecialGenerator();
+
+    void startLexical();
+
+private:
+    void readRuleFile();
+    void readProgramFile();
 
 };
-	void startLexical();
-	void readRuleFile();
-	void readProgramFile();
-
 /*
  * [TODO] to be implemented ...........
 */
