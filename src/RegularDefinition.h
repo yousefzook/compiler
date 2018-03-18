@@ -5,7 +5,7 @@
  *      Author: Rizk
  */
 
-#include "RuleParser.h"
+#include "graph.h"
 #include <iostream>
 #include <string>
 #include <map>
@@ -16,7 +16,7 @@ using namespace std;
 #ifndef REGULARDEFINITION_H_
 #define REGULARDEFINITION_H_
 
-class RegularDefinition
+class RegularDefinition: public graph
 {
 public:
     RegularDefinition();

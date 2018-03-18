@@ -150,6 +150,7 @@ void RuleParser::operatorsParse(string line)
         //cout <<values[i]<<endl;
     }
     //send values and key
+    RegularDefinition::setOperators(key,values);
 }
 
 void RuleParser::definitionsParse(string line)
@@ -180,12 +181,7 @@ void RuleParser::punctuationParse(string line)
     line.erase(line.size() - 1);
     vector<string> punc;
     RuleParser::split(line,punc,' ');
-    for (int i=0; i<punc.size(); i++)
-    {
-//        if(punc[i]!=' ')
-        //cout<<punc[i]<<endl;
-    }
-
+    RegularDefinition::setPunctuation(punc);
     // send punc
 }
 
@@ -262,7 +258,12 @@ void RuleParser::parseLine(string line)
     else if(RuleParser::checkExpression(line))
     {
         cout<<"match expression"<<endl;
+
         // expression work
+    }
+    else if(line=="\L")
+    {
+    //lamda symbol
     }
     else
     {

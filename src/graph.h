@@ -4,8 +4,11 @@
  *  Created on: Mar 16, 2018
  *      Author: Yousef Zook
  */
-#include <vector>
+#include <iostream>
+#include <fstream>
 #include <string>
+#include <sstream>
+#include <vector>
 using namespace std;
 
 #ifndef GRAPH_H_

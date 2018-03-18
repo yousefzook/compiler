@@ -32,7 +32,6 @@ bool compare(string type, char c)
 
 void RegularDefinition::setKeywords(string keyword)
 {
-    // RegularDefinition::keyword.insert(RegularDefinition::keyword.end(), keywords.begin(), keywords.end());
     RegularDefinition::keywords.push_back(keyword);
 }
 

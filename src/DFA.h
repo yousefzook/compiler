@@ -5,9 +5,9 @@
  *      Author: yousef
  */
 
+ #include "graph.h"
 #ifndef DFA_H_
 #define DFA_H_
-#include "graph.h"
 
 class DFA: public graph{
 public:

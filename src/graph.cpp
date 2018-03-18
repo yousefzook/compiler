@@ -7,11 +7,17 @@
 
 #include "graph.h"
 
+
+#include <iostream>
+#include <fstream>
 #include <string>
+#include <sstream>
+#include <vector>
+using namespace std;
 
 graph::graph() {
 	// TODO Auto-generated constructor stub
-	start_state = nullptr;
+	//start_state = nullptr;
 }
 
 graph::~graph() {
@@ -24,6 +30,6 @@ void graph::addEdge(State *src,State *dest, string value){
 	value_v.push_back(value);
 }
 void graph::createState(bool acceptance){
-	State state = new State();
+	State state;
 	state.acceptance = acceptance;
 }
