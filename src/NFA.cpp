@@ -17,9 +17,10 @@ NFA::~NFA() {
 	// TODO Auto-generated destructor stub
 }
 
-vector<graph::State *> NFA::getClosures(graph::State * state){
+vector<Graph::State *> NFA::getClosures(Graph::State * state){
 
 	// [TODO] --- to be implemented .....
 
-	return 0;
+	vector<Graph::State *> foo;
+	return foo;
 }

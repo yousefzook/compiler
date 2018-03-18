@@ -5,6 +5,9 @@
  *      Author: yousef
  */
 
+#include "NFA.h"
+#include "DFA.h"
+
 #ifndef AUTOMATAOPERATOR_H_
 #define AUTOMATAOPERATOR_H_
 

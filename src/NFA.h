@@ -5,13 +5,14 @@
  *      Author: yousef
  */
 #include <vector>
+#include "Graph.h"
+
 using namespace std;
 
 #ifndef NFA_H_
 #define NFA_H_
 
-
-class NFA: public graph{
+class NFA: public Graph{
 public:
 	NFA();
 	virtual ~NFA();

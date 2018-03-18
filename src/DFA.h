@@ -5,10 +5,12 @@
  *      Author: yousef
  */
 
+#include "Graph.h"
+
 #ifndef DFA_H_
 #define DFA_H_
 
-class DFA: public graph{
+class DFA: public Graph{
 public:
 	DFA();
 	virtual ~DFA();

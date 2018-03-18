@@ -6,6 +6,8 @@
  */
 
 #include "AutomataOperator.h"
+#include "NFA.h"
+#include "DFA.h"
 
 AutomataOperator::AutomataOperator() {
 	// TODO Auto-generated constructor stub
