@@ -54,8 +54,9 @@ void LexecialGenerator::createMainGraph()
 {
     NFA mainGraph;
     NFA* mainGraphPointer;
-    for(int i=0;i<RegularDefinition::mainGraphV.size();i++){
-        mainGraphPointer=AutomataOperator::orOperation(mainGraphPointer,mainGraphV[i]);
+    for(int i=0; i<RegularDefinition::mainGraphV.size(); i++)
+    {
+        mainGraphPointer=AutomataOperator::orOperation(mainGraphPointer,& mainGraphV[i]);
     }
 
 }

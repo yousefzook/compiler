@@ -39,7 +39,7 @@ public:
     NFA* handlePositiveClosure(NFA* closureGraph);
     NFA* handleOr(vector<string>conditions);
     NFA* handleBrackets(vector<string> conditions);
-    vector<NFA*> mainGraphV;
+    vector<NFA> mainGraphV;
 private:
     vector< pair<string, string> > definition;
     vector<string> keywords;

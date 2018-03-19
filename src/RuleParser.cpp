@@ -252,7 +252,7 @@ string RuleParser::addSpace(string exp)
     string output;
     for(int i=0; i<exp.size(); i++)
     {
-        if(exp[i]=='('||exp[i]==')'||exp[i]=='.')
+        if(exp[i]=='('||exp[i]==')'||exp[i]=='.'||exp[i]=='|'||exp[i]==':')
         {
             output.push_back(' ');
             output.push_back(exp[i]);
@@ -306,6 +306,7 @@ void RuleParser::regularExpressionParse(string line)
     {
         cout<<conditions[i]<<endl;
     }
+    RegularDefinition::createSubGraph(name,conditions);
 }
 
 
