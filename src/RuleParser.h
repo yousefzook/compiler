@@ -27,12 +27,14 @@ private:
     void keyWordParse(string line);
     void split (string &txt, vector<string> &strs1, char ch);
     string removeWhiteSpaces(string str);
+    string addSpace(string exp);
     bool checkOperators(string line);
     void operatorsParse(string line);
     bool checkExpression(string line);
     void definitionsParse(string line);
-    void definitionRange(string &str, string &result);
+    int definitionRange(string &str, string &result);
     void punctuationParse(string line);
+    void regularExpressionParse(string line);
 
 };
 

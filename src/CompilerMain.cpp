@@ -16,6 +16,7 @@ using namespace std;
 int main()
 {
     LexecialGenerator lexecialGenerator;
-    lexecialGenerator.startLexical();
+//    lexecialGenerator.startLexical();
+    cout<<"sssss";
     return 0;
 }

@@ -20,6 +20,6 @@ NFA::~NFA() {
 vector<graph::State *> NFA::getClosures(graph::State * state){
 
 	// [TODO] --- to be implemented .....
-
-	return 0;
+    vector<graph::State*> s;
+	return s;
 }

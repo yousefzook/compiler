@@ -15,21 +15,42 @@
 #include <vector>
 using namespace std;
 
-graph::graph() {
-	// TODO Auto-generated constructor stub
-	//start_state = nullptr;
+
+graph::graph()
+{
+    // initialize start state
+    vector<pair<State*, string> > nextStates;
+    vector<pair<State*, string> > prevStates;
+    startState = createState(prevStates, nextStates, false);
 }
 
-graph::~graph() {
-	// TODO Auto-generated destructor stub
+graph::~graph()
+{
+    // TODO Auto-generated destructor stub
 }
 
-void graph::addEdge(State *src,State *dest, string value){
-	src_v.push_back(src);
-	dest_v.push_back(dest);
-	value_v.push_back(value);
+//void Graph::addEdge(State *src,State *dest, string value){
+//	src_v.push_back(src);
+//	dest_v.push_back(dest);
+//	value_v.push_back(value);
+//}
+graph::State* graph::createState(vector<pair<State*, string> > prevStates,
+                                 vector<pair<State*, string> > nextStates, bool accepted)
+{
+    State* state = new State();
+    state->accepted = accepted;
+    state->nextStates = nextStates;
+
+    for (vector<pair<State*, string> >::iterator i = prevStates.begin();
+            i < prevStates.end(); i++)
+    {
+
+    }
+    return state;
 }
-void graph::createState(bool acceptance){
-	State state;
-	state.acceptance = acceptance;
-}
+
+//int main(int argc, char **argv) {
+////	Graph* g = new Graph();
+////	g->
+//}
+

@@ -13,6 +13,8 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <map>
+#include <bits/stdc++.h>
 using namespace std;
 
 /*
@@ -48,7 +50,7 @@ string RuleParser::removeWhiteSpaces(string str)
     for(int j=0; j<vector2.size(); j++)
     {
         char t=vector2[j][0];
-        if((t>=48&&t<=57)||(t>=65&&t<=90)||(t>=97&&t<=128))
+        if(!(t<=32))
         {
             return vector2[j];
         }
@@ -57,7 +59,7 @@ string RuleParser::removeWhiteSpaces(string str)
 }
 
 
-void RuleParser::definitionRange(string &str, string &result)
+int RuleParser::definitionRange(string &str, string &result)
 {
     vector <string> vector1;
     RuleParser::split(str,vector1,'-');
@@ -66,7 +68,7 @@ void RuleParser::definitionRange(string &str, string &result)
     {
         cout<<"not match"<<endl;
         result=RuleParser::removeWhiteSpaces(vector1[0]);
-        return;
+        return 2;
     }
     string startRange,endRange,temp;
     bool check_first_part=true;
@@ -90,6 +92,7 @@ void RuleParser::definitionRange(string &str, string &result)
         char element=k;
         result.push_back(element);
     }
+    return 1;
     //cout<<result<<endl;
 }
 
@@ -159,6 +162,7 @@ void RuleParser::definitionsParse(string line)
     string result;
     RuleParser::split(line,define,'=');
     string key=define[0];
+    key=RuleParser::removeWhiteSpaces(key);
     string vv=define[1];
     define.clear();
     if(key.find(" ")!=string::npos)
@@ -169,7 +173,9 @@ void RuleParser::definitionsParse(string line)
     RuleParser::split(vv,define,'|');
     for (int i=0; i<define.size(); i++)
     {
-        definitionRange(define[i],result);
+        int check=definitionRange(define[i],result);
+        if(check==2)
+            RegularDefinition::setUnMatchedDefinitions(key,result);
     }
     RegularDefinition::setDefinitions(key,result);
     // cout<<result<<endl;
@@ -241,6 +247,68 @@ bool RuleParser::checkExpression(string line)
     }
 }
 
+string RuleParser::addSpace(string exp)
+{
+    string output;
+    for(int i=0; i<exp.size(); i++)
+    {
+        if(exp[i]=='('||exp[i]==')'||exp[i]=='.')
+        {
+            output.push_back(' ');
+            output.push_back(exp[i]);
+            output.push_back(' ');
+        }
+        else
+            output.push_back(exp[i]);
+    }
+    return output;
+}
+
+void RuleParser::regularExpressionParse(string line)
+{
+    vector<string> v1;
+    split(line,v1,':');
+    string name=v1[0];
+    name = removeWhiteSpaces(name);
+    cout<<name<<endl;
+    string exp=v1[1];
+    exp=RuleParser::addSpace(exp);
+    v1.clear();
+    split(exp,v1,' ');
+    vector<string> conditions;
+    for (int i=0; i<v1.size(); i++)
+    {
+        v1[i]=removeWhiteSpaces(v1[i]);
+        if(v1[i]!="")
+            conditions.push_back(v1[i]);
+    }
+    for(int i=0; i<conditions.size(); i++)
+    {
+        if(conditions[i]=="("||conditions[i]=="."||conditions[i]==")"
+                ||conditions[i]=="*"||conditions[i]=="+"||conditions[i]=="|")
+            continue;
+        else
+        {
+            typedef std::vector<std::pair<string, string> > MyClassPairs;
+
+            for( MyClassPairs::iterator it = RegularDefinition::unMatchedDefinition.begin();
+                    it != RegularDefinition::unMatchedDefinition.end(); ++it )
+            {
+                string p_a = it->first;
+                string p_b = it->second;
+                cout<<conditions[i]<<"--------"<<p_a<<"-----"<<p_b<<endl;
+                if(conditions[i]==p_a)
+                    conditions[i]=p_b;
+            }
+        }
+    }
+    for(int i=0; i<conditions.size(); i++)
+    {
+        cout<<conditions[i]<<endl;
+    }
+}
+
+
 void RuleParser::parseLine(string line)
 {
     if (line[0] == '{')
@@ -258,12 +326,12 @@ void RuleParser::parseLine(string line)
     else if(RuleParser::checkExpression(line))
     {
         cout<<"match expression"<<endl;
-
+        RuleParser::regularExpressionParse(line);
         // expression work
     }
     else if(line=="\L")
     {
-    //lamda symbol
+        //lamda symbol
     }
     else
     {
@@ -271,4 +339,3 @@ void RuleParser::parseLine(string line)
     }
 
 }
-

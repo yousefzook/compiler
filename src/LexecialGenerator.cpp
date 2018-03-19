@@ -32,7 +32,7 @@ void LexecialGenerator::readRuleFile()
 
     for( string line; getline( myReadFile, line ); )
     {
-        //cout << line<<endl;
+        cout << line<<endl;
         RuleParser::parseLine(line);
     }
     myReadFile.close();
@@ -48,6 +48,16 @@ void LexecialGenerator::startLexical()
 {
     readRuleFile();
     readProgramFile();
+}
+
+void LexecialGenerator::createMainGraph()
+{
+    NFA mainGraph;
+    NFA* mainGraphPointer;
+    for(int i=0;i<RegularDefinition::mainGraphV.size();i++){
+        mainGraphPointer=AutomataOperator::orOperation(mainGraphPointer,mainGraphV[i]);
+    }
+
 }
 
 /*

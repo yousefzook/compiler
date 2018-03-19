@@ -6,54 +6,81 @@
  */
 
 #include "AutomataOperator.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <vector>
+using namespace std;
 
-AutomataOperator::AutomataOperator() {
-	// TODO Auto-generated constructor stub
+AutomataOperator::AutomataOperator()
+{
+    // TODO Auto-generated constructor stub
 
 }
 
-AutomataOperator::~AutomataOperator() {
-	// TODO Auto-generated destructor stub
+AutomataOperator::~AutomataOperator()
+{
+    // TODO Auto-generated destructor stub
 }
 
-NFA* orOperation(NFA* nfa1, NFA* nfa2){
-
-	// [TODO] --- to be implemented .....
-
-	return 0;
+NFA* AutomataOperator::createBasicGraph(string value)
+{
+    NFA newGraph;
+    vector<pair<graph::State*,string> >prev;
+    prev.push_back(std::make_pair(newGraph.startState,value));
+    vector<pair<graph::State*,string> >next;
+    newGraph.createState(prev,next,true);
+    NFA *largeGraphPointer=&newGraph;
+    return largeGraphPointer;
 }
 
-NFA* andOperation(NFA* nfa1, NFA* nfa2){
+NFA* AutomataOperator::orOperation(NFA* nfa1, NFA* nfa2)
+{
 
-	// [TODO] --- to be implemented .....
+    // [TODO] --- to be implemented .....
 
-	return 0;
+    return nfa1;
 }
 
-NFA* closureOperation(NFA* nfa1, NFA* nfa2){
+NFA* AutomataOperator::andOperation(NFA* nfa1, NFA* nfa2)
+{
 
-	// [TODO] --- to be implemented .....
+    // [TODO] --- to be implemented .....
 
-	return 0;
+    return 0;
 }
 
-NFA* positiveClosureOperation(NFA* nfa1, NFA* nfa2){
+NFA* AutomataOperator::closureOperation(NFA* nfa1)
+{
 
-	// [TODO] --- to be implemented .....
-
-	return 0;
+    // [TODO] --- to be implemented .....
+NFA *R;
+    return R;
 }
 
-NFA* optionalOperation(NFA* nfa1, NFA* nfa2){
 
-	// [TODO] --- to be implemented .....
+NFA* AutomataOperator::positiveClosureOperation(NFA* nfa1)
+{
 
-	return 0;
+    // [TODO] --- to be implemented .....
+
+
+    return 0;
 }
 
-DFA* NFAToDFA(NFA* nfa){
+NFA* AutomataOperator::optionalOperation(NFA* nfa1, NFA* nfa2)
+{
 
-	// [TODO] --- to be implemented .....
+    // [TODO] --- to be implemented .....
 
-	return 0;
+    return 0;
 }
+/*
+DFA* NFAToDFA(NFA* nfa)
+{
+
+    // [TODO] --- to be implemented .....
+
+    return 0;
+}*/

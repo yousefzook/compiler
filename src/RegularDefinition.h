@@ -6,6 +6,8 @@
  */
 
 #include "graph.h"
+#include "AutomataOperator.h"
+
 #include <iostream>
 #include <string>
 #include <map>
@@ -16,7 +18,7 @@ using namespace std;
 #ifndef REGULARDEFINITION_H_
 #define REGULARDEFINITION_H_
 
-class RegularDefinition: public graph
+class RegularDefinition: public AutomataOperator
 {
 public:
     RegularDefinition();
@@ -26,13 +28,24 @@ public:
     void setKeywords(string keyword);
     void setOperators(string key,vector<string>values);
     void setDefinitions(string key,string value);
+    void setUnMatchedDefinitions(string key,string value);
     void setPunctuation(vector<string>punc);
+    void createSubGraph(string name,vector<string> conditions);
+    string L="";
+    vector< pair<string, string> > unMatchedDefinition;
 
+
+    NFA* handleClosure(NFA* closureGraph);
+    NFA* handlePositiveClosure(NFA* closureGraph);
+    NFA* handleOr(vector<string>conditions);
+    NFA* handleBrackets(vector<string> conditions);
+    vector<NFA*> mainGraphV;
 private:
-    map<string, string > definition;
+    vector< pair<string, string> > definition;
     vector<string> keywords;
     map <string, vector<string> > operators;
     vector<string> punctuation;
+    int indexExp;
 };
 
 

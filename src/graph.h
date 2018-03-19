@@ -4,6 +4,10 @@
  *  Created on: Mar 16, 2018
  *      Author: Yousef Zook
  */
+
+#ifndef GRAPH_H_
+#define GRAPH_H_
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -11,27 +15,27 @@
 #include <vector>
 using namespace std;
 
-#ifndef GRAPH_H_
-#define GRAPH_H_
-
-
-class graph {
+class graph
+{
 public:
-	graph();
-	virtual ~graph();
+    graph();
+    virtual ~graph();
 
-	struct State {
-		bool acceptance;
-	};
+    struct State
+    {
+        vector<pair<State*, string> > nextStates;
+        bool accepted;
+    };
 
-	void addEdge(State *s1, State *s2, string value);
-	void createState(bool acceptance);
+    /*
+     * Create a state , given its previous and next states
+     * and if it's accepted or not
+     * */
+    State* createState(vector<pair<State*, string> > prevStates,
+                       vector<pair<State*, string> > nextStates, bool accepted);
 
+    State * startState;
+    string grapgName;
 private:
-	vector<State *> src_v;
-	vector<State *> dest_v;
-	vector<string> value_v;
-	State * start_state;
 };
-
-#endif /* GRAPH_H_ */
+#endif
