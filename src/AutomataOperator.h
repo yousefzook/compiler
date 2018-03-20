@@ -18,9 +18,9 @@ public:
 
 	NFA* orOperation(NFA* nfa1, NFA* nfa2);
 	NFA* andOperation(NFA* nfa1, NFA* nfa2);
-	NFA* closureOperation(NFA* nfa1, NFA* nfa2);
-	NFA* positiveClosureOperation(NFA* nfa1, NFA* nfa2);
-	NFA* optionalOperation(NFA* nfa1, NFA* nfa2);
+	NFA* closureOperation(NFA* nfa1);
+	NFA* positiveClosureOperation(NFA* nfa1);
+	NFA* optionalOperation(NFA* nfa1);
 	DFA* NFAToDFA(NFA* nfa);
 };
 
