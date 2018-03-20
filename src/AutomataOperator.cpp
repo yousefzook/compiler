@@ -40,7 +40,7 @@ NFA* orOperation(NFA* nfa1, NFA* nfa2) {
 		NFA::State* state = (*i);
 
 		state->accepted = false;
-		nfa1->addEdge(state, newFinalState, RegularDefinition::L);
+		nfa1->addEdge(state, newFinalState, "");
 	}
 
 	// The old start states will not be start
@@ -49,8 +49,8 @@ NFA* orOperation(NFA* nfa1, NFA* nfa2) {
 	NFA::State* oldStartState = nfa1->startState;
 	nfa1->startState = nfa1->createState(false);
 
-	nfa1->addEdge(nfa1->startState, oldStartState, RegularDefinition::L);
-	nfa1->addEdge(nfa1->startState, nfa2->startState, RegularDefinition::L);
+	nfa1->addEdge(nfa1->startState, oldStartState, "");
+	nfa1->addEdge(nfa1->startState, nfa2->startState, "");
 
 	return nfa1;
 }
@@ -73,7 +73,7 @@ NFA* andOperation(NFA* nfa1, NFA* nfa2) {
 		NFA::State* state = (*i);
 
 		state->accepted = false;
-		nfa1->addEdge(state, nfa2->startState, RegularDefinition::L);
+		nfa1->addEdge(state, nfa2->startState, "");
 	}
 
 	return nfa1;
@@ -94,13 +94,13 @@ NFA* closureOperation(NFA* nfa) {
 		NFA::State* state = (*i);
 
 		state->accepted = false;
-		nfa->addEdge(state, newFinalState, RegularDefinition::L);
+		nfa->addEdge(state, newFinalState, "");
 	}
 
 	// We create two edges in two directions
 	// between start and new final states.
-	nfa->addEdge(nfa->startState, newFinalState, RegularDefinition::L);
-	nfa->addEdge(newFinalState, nfa->startState, RegularDefinition::L);
+	nfa->addEdge(nfa->startState, newFinalState, "");
+	nfa->addEdge(newFinalState, nfa->startState, "");
 
 	return nfa;
 }
@@ -115,7 +115,7 @@ NFA* positiveClosureOperation(NFA* nfa) {
 			i < finalStates.end(); i++) {
 		NFA::State* state = (*i);
 
-		nfa->addEdge(state, nfa->startState, RegularDefinition::L);
+		nfa->addEdge(state, nfa->startState, "");
 	}
 
 	return nfa;
@@ -131,7 +131,7 @@ NFA* optionalOperation(NFA* nfa) {
 			i < finalStates.end(); i++) {
 		NFA::State* state = (*i);
 
-		nfa->addEdge(nfa->startState, state, RegularDefinition::L);
+		nfa->addEdge(nfa->startState, state, "");
 	}
 
 	return nfa;

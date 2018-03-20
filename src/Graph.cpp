@@ -11,10 +11,8 @@
 #include <iostream>
 
 Graph::Graph() {
-	// initialize startState and add it
-	// to the states vector
+	// initialize startState
 	startState = createState(false);
-	allStates.push_back(startState);
 }
 
 Graph::~Graph() {
@@ -28,11 +26,12 @@ void Graph::addEdge(State* srcState, State* destState, string transition) {
 	srcState->nextStates.push_back(pair<State*, string>(destState, transition));
 }
 
-/* Initialize a new state and return it.
+/* Initialize a new state and add it states vector.
  * */
 Graph::State* Graph::createState(bool accepted) {
 	State* newState = new State();
 	newState->accepted = accepted;
+	allStates.push_back(newState);
 
 	return newState;
 }
@@ -44,9 +43,12 @@ vector<Graph::State*> Graph::getFinalStates() {
 
 	for (vector<State*>::iterator i = allStates.begin(); i < allStates.end();
 			i++) {
+//		cout << *i << endl;
 		if ((*i)->accepted == true) {
 			finalStates.push_back((*i));
+//			cout << "HIIIIIIII" << endl;
 		}
+
 	}
 
 	return finalStates;
@@ -65,11 +67,17 @@ vector<Graph::State*> Graph::getFinalStates() {
 //	Graph* g = new Graph();
 //
 //	Graph::State* b = g->createState(true);
+//
+//	Graph::State* c = g->createState(true);
+//
 //	string s = "letter";
 //	g->addEdge(g->startState, b, s);
 //
+//	vector<Graph::State*> finals = g->getFinalStates();
+//
 //	cout << "!!!Hello World!!!" << endl;
-//	cout << g->startState->nextStates.back().second << endl;
+////	cout << g->startState->nextStates.back().second << endl;
+//	cout << g->allStates.size() << endl;
 //
 //	return 0;
 //}
