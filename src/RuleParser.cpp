@@ -66,7 +66,6 @@ int RuleParser::definitionRange(string &str, string &result)
     vector <string> vector2;
     if(vector1.size()==1)
     {
-        cout<<"not match"<<endl;
         result=RuleParser::removeWhiteSpaces(vector1[0]);
         return 2;
     }
@@ -93,7 +92,6 @@ int RuleParser::definitionRange(string &str, string &result)
         result.push_back(element);
     }
     return 1;
-    //cout<<result<<endl;
 }
 
 void RuleParser::keyWordParse(string line)
@@ -147,10 +145,6 @@ void RuleParser::operatorsParse(string line)
     {
         values.push_back(value);
         value.clear();
-    }
-    for(int i=0; i<values.size(); i++)
-    {
-        //cout <<values[i]<<endl;
     }
     //send values and key
     RegularDefinition::setOperators(key,values);
@@ -270,7 +264,6 @@ void RuleParser::regularExpressionParse(string line)
     split(line,v1,':');
     string name=v1[0];
     name = removeWhiteSpaces(name);
-    cout<<name<<endl;
     string exp=v1[1];
     exp=RuleParser::addSpace(exp);
     v1.clear();
@@ -296,15 +289,10 @@ void RuleParser::regularExpressionParse(string line)
             {
                 string p_a = it->first;
                 string p_b = it->second;
-                cout<<conditions[i]<<"--------"<<p_a<<"-----"<<p_b<<endl;
                 if(conditions[i]==p_a)
                     conditions[i]=p_b;
             }
         }
-    }
-    for(int i=0; i<conditions.size(); i++)
-    {
-        cout<<conditions[i]<<endl;
     }
     RegularDefinition::createSubGraph(name,conditions);
 }
@@ -326,9 +314,8 @@ void RuleParser::parseLine(string line)
     }
     else if(RuleParser::checkExpression(line))
     {
-        cout<<"match expression"<<endl;
-        RuleParser::regularExpressionParse(line);
         // expression work
+        RuleParser::regularExpressionParse(line);
     }
     else if(line=="\L")
     {

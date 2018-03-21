@@ -16,7 +16,12 @@ using namespace std;
 RegularDefinition::RegularDefinition()
 {
 // TODO Auto-generated constructor stub
-
+    string key="E";
+    string value="e";
+    RegularDefinition::definition.push_back(std::make_pair(key,value) );
+    key="L";
+    value="";
+    RegularDefinition::definition.push_back(std::make_pair(key,value) );
 }
 
 RegularDefinition::~RegularDefinition()
@@ -47,6 +52,7 @@ void RegularDefinition::setDefinitions(string key,string value)
 
 void RegularDefinition::setUnMatchedDefinitions(string key,string value)
 {
+
     RegularDefinition::unMatchedDefinition.push_back(std::make_pair(key,value) );
 }
 
@@ -55,22 +61,22 @@ void RegularDefinition::setPunctuation(vector<string>punc)
     RegularDefinition::punctuation.insert(RegularDefinition::punctuation.end(), punc.begin(), punc.end());
 }
 
-NFA* RegularDefinition::handleClosure(NFA* closureGraph)
+NFA RegularDefinition::handleClosure(NFA closureGraph)
 {
     return AutomataOperator::closureOperation(closureGraph);
 }
 
-NFA* RegularDefinition::handlePositiveClosure(NFA* closureGraph)
+NFA RegularDefinition::handlePositiveClosure(NFA closureGraph)
 {
     return AutomataOperator::positiveClosureOperation(closureGraph);
 }
 
-NFA* RegularDefinition::handleOr(vector<string>conditions)
+NFA RegularDefinition::handleOr(vector<string>conditions)
 {
-    NFA* orGraph,*temp2;
+    NFA orGraph,temp2;
     indexExp++;
     string condition=conditions[indexExp];
-    if((condition[0]>=65&&condition[0]<=90)||(condition[0]>=97&&condition[0]<=128))
+    if((condition[0]>=65&&condition[0]<=90)||(condition[0]>=97&&condition[0]<=122))
     {
         if(condition[condition.size()-1]=='*')
         {
@@ -105,20 +111,20 @@ NFA* RegularDefinition::handleOr(vector<string>conditions)
             break;
         condition=conditions[indexExp];
     }
-    //if(indexExp==conditions.size()-1)
     return orGraph;
 }
 
-NFA* RegularDefinition::handleBrackets(vector<string> conditions)
+NFA RegularDefinition::handleBrackets(vector<string> conditions)
 {
-    NFA* bracketGraph,*temp2;
+    NFA bracketGraph,temp2;
     indexExp++;
     string condition;
     while (conditions[indexExp]!=")")
     {
         condition=conditions[indexExp];
-        if((condition[0]>=65&&condition[0]<=90)||(condition[0]>=97&&condition[0]<=128))
+        if((condition[0]>=65&&condition[0]<=90)||(condition[0]>=97&&condition[0]<=122))
         {
+            int t=condition[0];
             if(condition[condition.size()-1]=='*')
             {
                 condition.erase(condition.size() - 1);
@@ -157,13 +163,14 @@ NFA* RegularDefinition::handleBrackets(vector<string> conditions)
         if(indexExp==conditions.size())
             break;
         condition=conditions[indexExp];
+
     }
-    if(indexExp==conditions.size()-1)
+    if(conditions[indexExp]==")"||indexExp==conditions.size())
         return bracketGraph;
+
     if(conditions[indexExp+1]=="*")
     {
         indexExp++;
-        cout<<"Done"<<endl;
         return RegularDefinition::handleClosure(bracketGraph);
     }
     if(conditions[indexExp+1]=="+")
@@ -171,6 +178,7 @@ NFA* RegularDefinition::handleBrackets(vector<string> conditions)
         indexExp++;
         return RegularDefinition::handlePositiveClosure(bracketGraph);
     }
+
     return bracketGraph;
 }
 
@@ -178,50 +186,47 @@ NFA* RegularDefinition::handleBrackets(vector<string> conditions)
 
 void RegularDefinition::createSubGraph(string name,vector<string> conditions)
 {
-    NFA largeGraph;
-    NFA *largeGraphPointer,*temp;
+    NFA largeGraph,temp;
     indexExp=0;
     string condition;
     while(indexExp>=0&&indexExp!=conditions.size())
     {
         condition=conditions[indexExp];
-        if((condition[0]>=65&&condition[0]<=90)||(condition[0]>=97&&condition[0]<=128))
+        if((condition[0]>=65&&condition[0]<=90)||(condition[0]>=97&&condition[0]<=122))
         {
             if(condition[condition.size()-1]=='*')
             {
                 condition.erase(condition.size() - 1);
                 temp=handleClosure(AutomataOperator::createBasicGraph(condition));
-                largeGraphPointer=AutomataOperator::andOperation(largeGraphPointer,temp);
+                largeGraph=AutomataOperator::andOperation(largeGraph,temp);
             }
             else if(condition[condition.size()-1]=='+')
             {
                 condition.erase(condition.size() - 1);
                 temp=handlePositiveClosure(AutomataOperator::createBasicGraph(condition));
-                largeGraphPointer=AutomataOperator::andOperation(largeGraphPointer,temp);
+                largeGraph=AutomataOperator::andOperation(largeGraph,temp);
             }
             else
             {
                 temp=AutomataOperator::createBasicGraph(condition);
-                largeGraphPointer=AutomataOperator::andOperation(largeGraphPointer,temp);
+                largeGraph=AutomataOperator::andOperation(largeGraph,temp);
             }
         }
         else if(condition=="(")
         {
-            cout<<"sent"<<endl;
             temp=handleBrackets(conditions);
-            cout<<"returned"<<endl;
-            largeGraphPointer=AutomataOperator::andOperation(largeGraphPointer,temp);
+            largeGraph=AutomataOperator::andOperation(largeGraph,temp);
         }
         else if(condition==".")
         {
             temp=AutomataOperator::createBasicGraph(condition);
-            largeGraphPointer=AutomataOperator::andOperation(largeGraphPointer,temp);
+            largeGraph=AutomataOperator::andOperation(largeGraph,temp);
         }
         else if(condition=="|")
         {
             temp=handleOr(conditions);
             indexExp--;
-            largeGraphPointer=AutomataOperator::orOperation(largeGraphPointer,temp);
+            largeGraph=AutomataOperator::orOperation(largeGraph,temp);
         }
         indexExp++;
     }

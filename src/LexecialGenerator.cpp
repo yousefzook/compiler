@@ -32,7 +32,7 @@ void LexecialGenerator::readRuleFile()
 
     for( string line; getline( myReadFile, line ); )
     {
-        cout << line<<endl;
+//        cout << line<<endl;
         RuleParser::parseLine(line);
     }
     myReadFile.close();
@@ -48,17 +48,29 @@ void LexecialGenerator::startLexical()
 {
     readRuleFile();
     readProgramFile();
+    createMainGraph();
 }
 
 void LexecialGenerator::createMainGraph()
 {
     NFA mainGraph;
-    NFA* mainGraphPointer;
     for(int i=0; i<RegularDefinition::mainGraphV.size(); i++)
     {
-        mainGraphPointer=AutomataOperator::orOperation(mainGraphPointer,& mainGraphV[i]);
+        mainGraph=AutomataOperator::orOperation(mainGraph,mainGraphV[i]);
     }
 
+    for (vector<graph::State*>::iterator i = mainGraph.allStates.begin(); i != mainGraph.allStates.end();
+            i++)
+    {
+        cout<<(*i)->nextStates.size()<<endl;
+        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
+
+                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
+                it++)
+        {
+            cout << it->first<<"---------"<<it->second<<endl;; // Use ->
+        }
+    }
 }
 
 /*

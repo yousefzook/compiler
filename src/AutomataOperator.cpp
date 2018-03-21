@@ -24,63 +24,143 @@ AutomataOperator::~AutomataOperator()
     // TODO Auto-generated destructor stub
 }
 
-NFA* AutomataOperator::createBasicGraph(string value)
+NFA AutomataOperator::createBasicGraph(string value)
 {
     NFA newGraph;
-    vector<pair<graph::State*,string> >prev;
-    prev.push_back(std::make_pair(newGraph.startState,value));
-    vector<pair<graph::State*,string> >next;
-    newGraph.createState(prev,next,true);
-    NFA *largeGraphPointer=&newGraph;
-    return largeGraphPointer;
+    graph::State *des=newGraph.createState(true);
+    newGraph.addEdge(newGraph.startState,des,value);
+    return newGraph;
 }
 
-NFA* AutomataOperator::orOperation(NFA* nfa1, NFA* nfa2)
+NFA AutomataOperator::orOperation(NFA nfa1, NFA nfa2)
 {
+// Concatenate nfa2 to nfa1
+    nfa1.allStates.insert(nfa1.allStates.end(), nfa2.allStates.begin(),
+                          nfa2.allStates.end());
+    // Get final states of both NFAs (which now in nfa1).
+    vector<NFA::State*> finalStates = nfa1.getFinalStates();
 
-    // [TODO] --- to be implemented .....
+    // Create new final state.
+    NFA::State* newFinalState = nfa1.createState(true);
+
+    // The old final states will not be accepted
+    // and we create an edge between every one of
+    // them and the new final state.
+    for (vector<NFA::State*>::iterator i = finalStates.begin();
+            i < finalStates.end(); i++)
+    {
+        NFA::State* state = (*i);
+
+        state->accepted = false;
+        nfa1.addEdge(state, newFinalState, "");
+    }
+
+    // The old start states will not be start
+    // and we create an edge between them and
+    // the new start state.
+    NFA::State* oldStartState = nfa1.startState;
+    nfa1.startState = nfa1.createState(false);
+
+    nfa1.addEdge(nfa1.startState, oldStartState, "");
+    nfa1.addEdge(nfa1.startState, nfa2.startState, "");
 
     return nfa1;
 }
 
-NFA* AutomataOperator::andOperation(NFA* nfa1, NFA* nfa2)
+/* Anding the two NFAs and put the result in nfa1
+ * */
+NFA AutomataOperator::andOperation(NFA nfa1, NFA nfa2)
 {
+    // Get final states of nfa1.
+    vector<NFA::State*> finalStates1 = nfa1.getFinalStates();
 
-    // [TODO] --- to be implemented .....
+    // Concatenate nfa2 to nfa1
+    nfa1.allStates.insert(nfa1.allStates.end(), nfa2.allStates.begin(),
+                          nfa2.allStates.end());
 
-    return 0;
+    // The old final states of nfa1 will not be
+    // accepted and we create an edge between every
+    // one of them and the start state of nfa2.
+    for (vector<NFA::State*>::iterator i = finalStates1.begin();
+            i < finalStates1.end(); i++)
+    {
+        NFA::State* state = (*i);
+
+        state->accepted = false;
+        nfa1.addEdge(state, nfa2.startState, "");
+    }
+
+    return nfa1;
 }
 
-NFA* AutomataOperator::closureOperation(NFA* nfa1)
+NFA AutomataOperator::closureOperation(NFA nfa)
 {
+    // Get final states.
+    vector<NFA::State*> finalStates = nfa.getFinalStates();
 
-    // [TODO] --- to be implemented .....
-NFA *R;
-    return R;
+    // Create new final state.
+    NFA::State* newFinalState = nfa.createState(true);
+
+    // The old final states will not be accepted
+    // and we create an edge between every
+    // one of them and the new final state.
+    for (vector<NFA::State*>::iterator i = finalStates.begin();
+            i < finalStates.end(); i++)
+    {
+        NFA::State* state = (*i);
+
+        state->accepted = false;
+        nfa.addEdge(state, newFinalState, "");
+    }
+
+    // We create two edges in two directions
+    // between start and new final states.
+    nfa.addEdge(nfa.startState, newFinalState, "");
+    nfa.addEdge(newFinalState, nfa.startState, "");
+
+    return nfa;
 }
 
-
-NFA* AutomataOperator::positiveClosureOperation(NFA* nfa1)
+NFA AutomataOperator::positiveClosureOperation(NFA nfa)
 {
+    //Get final states.
+    vector<NFA::State*> finalStates = nfa.getFinalStates();
 
-    // [TODO] --- to be implemented .....
+    // we create an edge between every
+    // final state and the start state.
+    for (vector<NFA::State*>::iterator i = finalStates.begin();
+            i < finalStates.end(); i++)
+    {
+        NFA::State* state = (*i);
 
+        nfa.addEdge(state, nfa.startState, "");
+    }
 
-    return 0;
+    return nfa;
 }
 
-NFA* AutomataOperator::optionalOperation(NFA* nfa1, NFA* nfa2)
+NFA AutomataOperator::optionalOperation(NFA nfa)
 {
+    // Get final states.
+    vector<NFA::State*> finalStates = nfa.getFinalStates();
 
-    // [TODO] --- to be implemented .....
+    // Create an edge between start
+    // state and every final state.
+    for (vector<NFA::State*>::iterator i = finalStates.begin();
+            i < finalStates.end(); i++)
+    {
+        NFA::State* state = (*i);
 
-    return 0;
+        nfa.addEdge(nfa.startState, state, "");
+    }
+
+    return nfa;
 }
-/*
+
 DFA* NFAToDFA(NFA* nfa)
 {
 
     // [TODO] --- to be implemented .....
 
     return 0;
-}*/
+}

@@ -32,13 +32,14 @@ public:
     void setPunctuation(vector<string>punc);
     void createSubGraph(string name,vector<string> conditions);
     string L="";
+    string E="e";
     vector< pair<string, string> > unMatchedDefinition;
 
 
-    NFA* handleClosure(NFA* closureGraph);
-    NFA* handlePositiveClosure(NFA* closureGraph);
-    NFA* handleOr(vector<string>conditions);
-    NFA* handleBrackets(vector<string> conditions);
+    NFA handleClosure(NFA closureGraph);
+    NFA handlePositiveClosure(NFA closureGraph);
+    NFA handleOr(vector<string>conditions);
+    NFA handleBrackets(vector<string> conditions);
     vector<NFA> mainGraphV;
 private:
     vector< pair<string, string> > definition;
