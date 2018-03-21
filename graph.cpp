@@ -24,6 +24,6 @@ void graph::addEdge(State *src,State *dest, string value){
 	value_v.push_back(value);
 }
 void graph::createState(bool acceptance){
-	State state = new State();
+	State state;
 	state.acceptance = acceptance;
 }

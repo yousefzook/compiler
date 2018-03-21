@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1521225137 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/AutomataOperator.cpp
+	"AutomataOperator.h"
+
+1521572145 /media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/AutomataOperator.h
+	"NFA.h"
+	"DFA.h"
+
+1521572135 /media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/NFA.h
+	<vector>
+	"graph.h"
+
+1521648366 /media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/graph.h
+	<vector>
+	<string>
+
+1521572160 /media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/DFA.h
+	"graph.h"
+
+1521572825 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/CompilerMain.cpp
+	<iostream>
+
+1521225137 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/DFA.cpp
+	"DFA.h"
+
+1521572180 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/graph.cpp
+	"graph.h"
+	<string>
+
+1521225137 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/LexecialGenerator.cpp
+	"LexecialGenerator.h"
+
+1521225137 /media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/LexecialGenerator.h
+
+1521225137 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/RegularDefinition.cpp
+	"RegularDefinition.h"
+
+1521225137 /media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/RegularDefinition.h
+	<string>
+	<map>
+
+1521225137 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/RuleParser.cpp
+	"RuleParser.h"
+
+1521225137 /media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/RuleParser.h
+
+1521572313 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/NFA.cpp
+	"NFA.h"
+
+1521649439 source:/media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/TransitionTableConverter.cpp
+	"TransitionTableConverter.h"
+
+1521649846 /media/yousef/01D3143E7D223CC0/Engineering/C-C++ Programs/Compiler/TransitionTableConverter.h
+	"NFA.h"
+	<vector>
+	<string>
+

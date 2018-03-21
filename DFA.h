@@ -4,7 +4,7 @@
  *  Created on: Mar 16, 2018
  *      Author: yousef
  */
-
+#include "graph.h"
 #ifndef DFA_H_
 #define DFA_H_
 

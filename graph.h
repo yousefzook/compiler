@@ -24,6 +24,8 @@ public:
 	void addEdge(State *s1, State *s2, string value);
 	void createState(bool acceptance);
 
+	static vector<State*> allStates;
+
 private:
 	vector<State *> src_v;
 	vector<State *> dest_v;

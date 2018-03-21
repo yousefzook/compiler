@@ -3,13 +3,13 @@
 // Author      : Yousef Zook
 // Version     :
 // Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Description : Compiler in C++, Ansi-style
 //============================================================================
 
 #include <iostream>
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	cout << "Test if compiled" << endl; // prints !!!Hello World!!!
 	return 0;
 }

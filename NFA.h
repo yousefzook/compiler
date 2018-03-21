@@ -5,6 +5,7 @@
  *      Author: yousef
  */
 #include <vector>
+#include "graph.h"
 using namespace std;
 
 #ifndef NFA_H_
