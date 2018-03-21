@@ -18,6 +18,7 @@ public:
 	virtual ~graph();
 
 	struct State {
+        vector<pair<State*, string>> nextStates;
 		bool acceptance;
 	};
 
@@ -25,6 +26,7 @@ public:
 	void createState(bool acceptance);
 
 	static vector<State*> allStates;
+	static vector<string> allInputs;
 
 private:
 	vector<State *> src_v;
