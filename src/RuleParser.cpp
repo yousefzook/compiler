@@ -294,6 +294,8 @@ void RuleParser::regularExpressionParse(string line)
             }
         }
     }
+    for(int i=0;i<conditions.size();i++)
+        cout<<conditions[i]<<endl;
     RegularDefinition::createSubGraph(name,conditions);
 }
 

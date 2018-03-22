@@ -24,11 +24,12 @@ public:
    struct State {
 		vector<pair<State*, string> > nextStates;
 		bool accepted;
+		int id;
 	};
 
 	/* Create a state choosing whether it's accepted or not.
 	 * */
-	State* createState(bool accepted);
+	State* createState(bool accepted,int id);
 
 	/* Create an edge with a transition between two states.
 	 * */

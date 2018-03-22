@@ -19,7 +19,8 @@ using namespace std;
 graph::graph()
 {
     // initialize startState
-    startState = createState(false);
+    startState = createState(false,555555);
+
 }
 
 graph::~graph()
@@ -38,9 +39,10 @@ void graph::addEdge(State* srcState, State* destState, string transition)
 
 /* Initialize a new state and add it states vector.
  * */
-graph::State* graph::createState(bool accepted)
+graph::State* graph::createState(bool accepted,int id)
 {
     State* newState = new State();
+    newState->id=id;
     newState->accepted = accepted;
     allStates.push_back(newState);
 

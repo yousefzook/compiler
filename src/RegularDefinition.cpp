@@ -63,6 +63,7 @@ void RegularDefinition::setPunctuation(vector<string>punc)
 
 NFA RegularDefinition::handleClosure(NFA closureGraph)
 {
+    cout<<"clousere ////"<<endl;
     return AutomataOperator::closureOperation(closureGraph);
 }
 
@@ -74,6 +75,9 @@ NFA RegularDefinition::handlePositiveClosure(NFA closureGraph)
 NFA RegularDefinition::handleOr(vector<string>conditions)
 {
     NFA orGraph,temp2;
+    orGraph.startState->id=AutomataOperator::getID();
+    cout<<"orGraph ID "<<orGraph.startState->id<<"++++++++++++++++++"<<endl;
+
     indexExp++;
     string condition=conditions[indexExp];
     if((condition[0]>=65&&condition[0]<=90)||(condition[0]>=97&&condition[0]<=122))
@@ -117,6 +121,8 @@ NFA RegularDefinition::handleOr(vector<string>conditions)
 NFA RegularDefinition::handleBrackets(vector<string> conditions)
 {
     NFA bracketGraph,temp2;
+    bracketGraph.startState->id=AutomataOperator::getID();
+    cout<<"bracket ID "<<bracketGraph.startState->id<<"++++++++++++++++++++++++"<<endl;
     indexExp++;
     string condition;
     while (conditions[indexExp]!=")")
@@ -163,9 +169,8 @@ NFA RegularDefinition::handleBrackets(vector<string> conditions)
         if(indexExp==conditions.size())
             break;
         condition=conditions[indexExp];
-
     }
-    if(conditions[indexExp]==")"||indexExp==conditions.size())
+    if(indexExp==conditions.size()-1)
         return bracketGraph;
 
     if(conditions[indexExp+1]=="*")
@@ -173,11 +178,15 @@ NFA RegularDefinition::handleBrackets(vector<string> conditions)
         indexExp++;
         return RegularDefinition::handleClosure(bracketGraph);
     }
+    cout<<"done holloe"<<endl;
     if(conditions[indexExp+1]=="+")
     {
         indexExp++;
         return RegularDefinition::handlePositiveClosure(bracketGraph);
     }
+    if(conditions[indexExp]==")"||indexExp==conditions.size())
+        return bracketGraph;
+
 
     return bracketGraph;
 }
@@ -187,6 +196,9 @@ NFA RegularDefinition::handleBrackets(vector<string> conditions)
 void RegularDefinition::createSubGraph(string name,vector<string> conditions)
 {
     NFA largeGraph,temp;
+    largeGraph.startState->id=AutomataOperator::getID();
+    cout<<"largeGraph ID "<<largeGraph.startState->id<<"++++++++++++++++++"<<endl;
+
     indexExp=0;
     string condition;
     while(indexExp>=0&&indexExp!=conditions.size())
@@ -230,6 +242,31 @@ void RegularDefinition::createSubGraph(string name,vector<string> conditions)
         }
         indexExp++;
     }
+
+    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
+            i++)
+    {
+        cout<<"Node Name:  "<<(*i)->id<<"*******size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+
+    }
+
+    cout <<"-----------------------------------------------------"<<endl;
+    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
+            i++)
+    {
+        cout<<"Node Name:  "<<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+//        cout<<<endl;
+        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
+
+                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
+                it++)
+        {
+            cout << it->first->id<<"---------"<<it->second<<endl;; // Use ->
+        }
+    }
+
+    cout<<"----------------------------------------------------------"<<endl;
+
     RegularDefinition::mainGraphV.push_back(largeGraph);
 }
 

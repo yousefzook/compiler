@@ -58,19 +58,22 @@ void LexecialGenerator::createMainGraph()
     {
         mainGraph=AutomataOperator::orOperation(mainGraph,mainGraphV[i]);
     }
-
-    for (vector<graph::State*>::iterator i = mainGraph.allStates.begin(); i != mainGraph.allStates.end();
-            i++)
-    {
-        cout<<(*i)->nextStates.size()<<endl;
-        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
-
-                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
-                it++)
-        {
-            cout << it->first<<"---------"<<it->second<<endl;; // Use ->
-        }
-    }
+    cout<<"----------------------------------------------------------------"<<endl;
+    cout<<"Graph Information"<<endl;
+    cout<<"-----------------:"<<endl;
+//    for (vector<graph::State*>::iterator i = mainGraph.allStates.begin(); i != mainGraph.allStates.end();
+//            i++)
+//    {
+//        cout<<(*i)->nextStates.size()<<endl;
+//        cout<<(*i)->id<<endl;
+//        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
+//
+//                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
+//                it++)
+//        {
+//            cout << it->first->id<<"---------"<<it->second<<endl;; // Use ->
+//        }
+//    }
 }
 
 /*

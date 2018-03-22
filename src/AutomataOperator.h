@@ -23,5 +23,7 @@ public:
     NFA positiveClosureOperation(NFA nfa1);
     NFA optionalOperation(NFA nfa1);
     DFA* NFAToDFA(NFA* nfa);
+    int getID();
+    int ID;
 };
 #endif /* AUTOMATAOPERATOR_H_ */
