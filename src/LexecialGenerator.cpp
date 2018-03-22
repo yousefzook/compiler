@@ -48,24 +48,34 @@ void LexecialGenerator::startLexical()
 {
     readRuleFile();
     readProgramFile();
-    createMainGraph();
+    NFA test=createMainGraph();
 }
 
-void LexecialGenerator::createMainGraph()
+NFA LexecialGenerator::createMainGraph()
 {
     NFA mainGraph;
+
     for(int i=0; i<RegularDefinition::mainGraphV.size(); i++)
     {
+        // cout<<"main Graph start state : "<<mainGraph.startState->id<<"  Graph i :"<<mainGraphV[i].startState->id<<endl;
         mainGraph=AutomataOperator::orOperation(mainGraph,mainGraphV[i]);
     }
-    cout<<"----------------------------------------------------------------"<<endl;
-    cout<<"Graph Information"<<endl;
-    cout<<"-----------------:"<<endl;
+    //    cout<<"----------------------------------------------------------------"<<endl;
+//    cout<<"Graph Information"<<endl;
+//    cout<<"-----------------:"<<endl;
 //    for (vector<graph::State*>::iterator i = mainGraph.allStates.begin(); i != mainGraph.allStates.end();
 //            i++)
 //    {
-//        cout<<(*i)->nextStates.size()<<endl;
-//        cout<<(*i)->id<<endl;
+//        cout<<"Node Name:  "<<(*i)->id<<"*******size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+//
+//    }
+//
+//    cout <<"-----------------------------------------------------"<<endl;
+//    for (vector<graph::State*>::iterator i = mainGraph.allStates.begin(); i != mainGraph.allStates.end();
+//            i++)
+//    {
+//        cout<<"Node Name:  "<<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+////        cout<<<endl;
 //        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
 //
 //                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
@@ -74,6 +84,10 @@ void LexecialGenerator::createMainGraph()
 //            cout << it->first->id<<"---------"<<it->second<<endl;; // Use ->
 //        }
 //    }
+//
+//    cout<<"----------------------------------------------------------"<<endl;
+    return mainGraph;
+
 }
 
 /*

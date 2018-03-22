@@ -21,7 +21,7 @@ public:
 private:
     void readRuleFile();
     void readProgramFile();
-    void createMainGraph();
+    NFA createMainGraph();
 
 };
 /*

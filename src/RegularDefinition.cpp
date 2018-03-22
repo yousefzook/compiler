@@ -63,7 +63,6 @@ void RegularDefinition::setPunctuation(vector<string>punc)
 
 NFA RegularDefinition::handleClosure(NFA closureGraph)
 {
-    cout<<"clousere ////"<<endl;
     return AutomataOperator::closureOperation(closureGraph);
 }
 
@@ -76,8 +75,6 @@ NFA RegularDefinition::handleOr(vector<string>conditions)
 {
     NFA orGraph,temp2;
     orGraph.startState->id=AutomataOperator::getID();
-    cout<<"orGraph ID "<<orGraph.startState->id<<"++++++++++++++++++"<<endl;
-
     indexExp++;
     string condition=conditions[indexExp];
     if((condition[0]>=65&&condition[0]<=90)||(condition[0]>=97&&condition[0]<=122))
@@ -108,8 +105,23 @@ NFA RegularDefinition::handleOr(vector<string>conditions)
         orGraph=AutomataOperator::andOperation(orGraph,temp2);
         indexExp++;
         condition=conditions[indexExp];
-        temp2=AutomataOperator::createBasicGraph(condition);
-        orGraph=AutomataOperator::andOperation(orGraph,temp2);
+        if(condition[condition.size()-1]=='*')
+        {
+            condition.erase(condition.size() - 1);
+            temp2=handleClosure(AutomataOperator::createBasicGraph(condition));
+            orGraph=AutomataOperator::andOperation(orGraph,temp2);
+        }
+        else if(condition[condition.size()-1]=='+')
+        {
+            condition.erase(condition.size() - 1);
+            temp2=handlePositiveClosure(AutomataOperator::createBasicGraph(condition));
+            orGraph=AutomataOperator::andOperation(orGraph,temp2);
+        }
+        else
+        {
+            temp2=AutomataOperator::createBasicGraph(condition);
+            orGraph=AutomataOperator::andOperation(orGraph,temp2);
+        }
         indexExp++;
         if(indexExp==conditions.size())
             break;
@@ -122,7 +134,6 @@ NFA RegularDefinition::handleBrackets(vector<string> conditions)
 {
     NFA bracketGraph,temp2;
     bracketGraph.startState->id=AutomataOperator::getID();
-    cout<<"bracket ID "<<bracketGraph.startState->id<<"++++++++++++++++++++++++"<<endl;
     indexExp++;
     string condition;
     while (conditions[indexExp]!=")")
@@ -197,8 +208,6 @@ void RegularDefinition::createSubGraph(string name,vector<string> conditions)
 {
     NFA largeGraph,temp;
     largeGraph.startState->id=AutomataOperator::getID();
-    cout<<"largeGraph ID "<<largeGraph.startState->id<<"++++++++++++++++++"<<endl;
-
     indexExp=0;
     string condition;
     while(indexExp>=0&&indexExp!=conditions.size())
@@ -243,29 +252,29 @@ void RegularDefinition::createSubGraph(string name,vector<string> conditions)
         indexExp++;
     }
 
-    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
-            i++)
-    {
-        cout<<"Node Name:  "<<(*i)->id<<"*******size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
-
-    }
-
-    cout <<"-----------------------------------------------------"<<endl;
-    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
-            i++)
-    {
-        cout<<"Node Name:  "<<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
-//        cout<<<endl;
-        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
-
-                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
-                it++)
-        {
-            cout << it->first->id<<"---------"<<it->second<<endl;; // Use ->
-        }
-    }
-
-    cout<<"----------------------------------------------------------"<<endl;
+//    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
+//            i++)
+//    {
+//        cout<<"Node Name:  "<<(*i)->id<<"*******size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+//
+//    }
+//
+//    cout <<"-----------------------------------------------------"<<endl;
+//    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
+//            i++)
+//    {
+//        cout<<"Node Name:  "<<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+////        cout<<<endl;
+//        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
+//
+//                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
+//                it++)
+//        {
+//            cout << it->first->id<<"---------"<<it->second<<endl;; // Use ->
+//        }
+//    }
+//
+//    cout<<"----------------------------------------------------------"<<endl;
 
     RegularDefinition::mainGraphV.push_back(largeGraph);
 }
