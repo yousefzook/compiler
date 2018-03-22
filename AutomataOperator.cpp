@@ -65,6 +65,9 @@ vector<vector<int>> AutomataOperator::NFAToDFATable(vector<vector<set<int>>> nfa
 
     // set the first set of states in the queue
     toBeProcessed.push(firstCell);
+    vector<int> temp (2, -1);
+    dfaTransTable.insert(dfaTransTable.begin() + counter, temp); // init the row of the table
+    dfaStatesMap[firstCell] = counter++;
 
     set<int> currentSet;
     while (!toBeProcessed.empty()) {
@@ -74,19 +77,23 @@ vector<vector<int>> AutomataOperator::NFAToDFATable(vector<vector<set<int>>> nfa
         set<int> nextSet; // to get each new set of next state closures
 
         // loop on each input 'i' except lambda input '0'; to get the next state
-        for (int input = 1; input < TransitionTableConverter::inputsMap.size(); input++) {
+        for (int input = 1; input < 3; input++) {
             for (auto state : currentSet)
                 nextSet.insert(nfaTransTable[state][input].begin(), nfaTransTable[state][input].end());
             nextSet = getClosures(nextSet, nfaTransTable);
 
 
             if (dfaStatesMap.count(nextSet) == 0) { // this new state is not put into the dfa map before
+                // init the row of the table
+                vector<int> temp (2, -1);
+                dfaTransTable.insert(dfaTransTable.begin() + counter, temp);
                 dfaStatesMap[nextSet] = counter++;
                 toBeProcessed.push(nextSet);
             }
 
             // set the cell in the dfa trans table
-            dfaTransTable[dfaStatesMap[currentSet]][input] = dfaStatesMap[nextSet];
+            dfaTransTable[dfaStatesMap[currentSet]][input-1] = dfaStatesMap[nextSet];
+            nextSet.clear();
         }
     }
 
