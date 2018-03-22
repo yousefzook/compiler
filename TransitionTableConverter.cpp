@@ -11,6 +11,7 @@ TransitionTableConverter::~TransitionTableConverter() {
 
 // initializing static members
 vector<graph::State *> graph::allStates;
+vector<string> graph::allInputs;
 Bimap<int, graph::State *> TransitionTableConverter::statesMap;
 Bimap<int, string> TransitionTableConverter::inputsMap;
 vector<vector<set<int>>> TransitionTableConverter::transTable;
@@ -24,9 +25,14 @@ vector<vector<set<int>>> TransitionTableConverter::NFAToTable(NFA *nfa) {
 
     for (vector<graph::State *>::iterator iter = graph::allStates.begin(); iter != graph::allStates.end(); ++iter) {
 
-        // get src index in the table and init the lambda transition with the state itself
+        // get src index in the table
         src = *iter;
         srcInt = *TransitionTableConverter::statesMap.keysForValue(src).begin();
+        // initialize each row with empty sets
+        set<int> emptySet;
+        vector<set<int>> emptyRow(graph::allInputs.size(), emptySet);
+        transTable[srcInt] = emptyRow;
+        // init the lambda transition with the state itself
         cell = &TransitionTableConverter::transTable[srcInt][0];
         cell->insert(srcInt);
 
@@ -57,7 +63,19 @@ NFA TransitionTableConverter::tableToNFA(vector<vector<set<int>>> *table) {
 }
 
 void TransitionTableConverter::initInputsMap(vector<string> *inputs) {
+
+    // set the first input index is lambda , i.e. /L = 0
+    TransitionTableConverter::inputsMap.set(0,"\\L");
+
+    // map each input for an int value
+    int counter = 0;
+    for(auto it: *inputs)
+        TransitionTableConverter::inputsMap.set(counter++, it);
 }
 
 void TransitionTableConverter::initStatesMap(vector<graph::State *> *states) {
+    // map each state for an int value
+    int counter = 0;
+    for(auto it: *states)
+        TransitionTableConverter::statesMap.set(counter++, it);
 }

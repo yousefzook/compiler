@@ -73,11 +73,11 @@ vector<vector<int>> AutomataOperator::NFAToDFA(vector<vector<set<int>>> nfaTrans
 
         set<int> nextSet; // to get each new set of next state closures
 
-        // loop on each input 'i' to get the next state
-        for (int input = 0; input < TransitionTableConverter::inputsMap.size(); input++) {
+        // loop on each input 'i' except lambda input '0'; to get the next state
+        for (int input = 1; input < TransitionTableConverter::inputsMap.size(); input++) {
             for (auto state : currentSet)
                 nextSet.insert(nfaTransTable[state][input].begin(), nfaTransTable[state][input].end());
-            nextSet = getClosures(nextSet);
+            nextSet = getClosures(nextSet, nfaTransTable);
 
 
             if (dfaStatesMap.count(nextSet) == 0) { // this new state is not put into the dfa map before
@@ -93,6 +93,13 @@ vector<vector<int>> AutomataOperator::NFAToDFA(vector<vector<set<int>>> nfaTrans
     return dfaTransTable;
 }
 
-set<int> AutomataOperator::getClosures(set<int>) {
-    // to be implemented ......
+set<int> AutomataOperator::getClosures(set<int> oldSet, vector<vector<set<int>>> nfaTransTable) {
+    // get set of closures of a set oldSet
+    set<int> newSet;
+    for(auto it : oldSet)
+        newSet.insert(nfaTransTable[it][0].begin(), nfaTransTable[it][0].end());
+    if(newSet == oldSet) // base case that the set of closures is the same
+        return newSet;
+    else // if new states are added to the set, get their closures also
+        return getClosures(newSet, nfaTransTable);
 }

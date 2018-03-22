@@ -22,7 +22,7 @@ public:
 	NFA* optionalOperation(NFA* nfa1, NFA* nfa2);
 	vector<vector<int>> NFAToDFA(vector<vector<set<int>>>);
 private:
-	set<int> getClosures(set<int>);
+	set<int> getClosures(set<int>, vector<vector<set<int>>>);
 };
 
 #endif /* AUTOMATAOPERATOR_H_ */
