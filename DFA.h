@@ -14,7 +14,6 @@ public:
 	virtual ~DFA();
 
 	DFA* minimize(DFA* dfa);
-	void printTest();
 };
 
 #endif /* DFA_H_ */

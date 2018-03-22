@@ -20,17 +20,22 @@ vector<vector<set<int>>> TransitionTableConverter::NFAToTable(NFA *nfa) {
     graph::State *dest, *src;
     string trans;
     int destInt, srcInt, transInt;
+    set<int> *cell; // pointer for a cell in the table rows -set type-
 
     for (vector<graph::State *>::iterator iter = graph::allStates.begin(); iter != graph::allStates.end(); ++iter) {
+
+        // get src index in the table and init the lambda transition with the state itself
         src = *iter;
-        // get src index in the table
         srcInt = *TransitionTableConverter::statesMap.keysForValue(src).begin();
+        cell = &TransitionTableConverter::transTable[srcInt][0];
+        cell->insert(srcInt);
 
         // for each state loop on all edges it has
         graph::State *temp = *iter;
         vector<pair<graph::State *, string>> nextStates = temp->nextStates;
         for (vector<pair<graph::State *, string>>::iterator iter2 = nextStates.begin();
              iter2 != nextStates.end(); ++iter2) {
+
             dest = iter2->first;
             trans = iter2->second;
 
@@ -38,19 +43,14 @@ vector<vector<set<int>>> TransitionTableConverter::NFAToTable(NFA *nfa) {
             destInt = *TransitionTableConverter::statesMap.keysForValue(dest).begin();
             transInt = *TransitionTableConverter::inputsMap.keysForValue(trans).begin();
 
-            vector<set<int>>::iterator it;
-            vector<set<int>> row;
-            row = TransitionTableConverter::transTable[srcInt];
-            it = row.begin();
-            set<int> * cell = &row[transInt];
+            // add the destination to the set of the destinations of the state
+            cell = &TransitionTableConverter::transTable[srcInt][transInt];
             cell->insert(destInt);
-//            row.insert(it + transInt, addedDest);
 
         }
 
     }
 }
-
 
 NFA TransitionTableConverter::tableToNFA(vector<vector<set<int>>> *table) {
 

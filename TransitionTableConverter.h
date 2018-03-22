@@ -38,6 +38,7 @@ class TransitionTableConverter
 
     protected:
     private:
+        void initLambdaCol();
 };
 
 #endif // TRANSITIONTABLECONVERTER_H

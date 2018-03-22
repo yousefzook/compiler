@@ -6,6 +6,7 @@
  */
 #include "NFA.h"
 #include "DFA.h"
+#include <set>
 #ifndef AUTOMATAOPERATOR_H_
 #define AUTOMATAOPERATOR_H_
 
@@ -19,7 +20,9 @@ public:
 	NFA* closureOperation(NFA* nfa1, NFA* nfa2);
 	NFA* positiveClosureOperation(NFA* nfa1, NFA* nfa2);
 	NFA* optionalOperation(NFA* nfa1, NFA* nfa2);
-	DFA* NFAToDFA(NFA* nfa);
+	vector<vector<int>> NFAToDFA(vector<vector<set<int>>>);
+private:
+	set<int> getClosures(set<int>);
 };
 
 #endif /* AUTOMATAOPERATOR_H_ */

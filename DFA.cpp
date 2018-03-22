@@ -10,7 +10,6 @@
 
 DFA::DFA() {
 	// TODO Auto-generated constructor stub
-	DFA::printTest();
 }
 
 DFA::~DFA() {
@@ -24,6 +23,3 @@ DFA* DFA::minimize(DFA* dfa){
 	return 0;
 }
 
-void DFA::printTest(){
-	cout<<"Tessssstttt";
-}
