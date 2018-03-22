@@ -54,7 +54,7 @@ NFA *AutomataOperator::optionalOperation(NFA *nfa1, NFA *nfa2) {
     return 0;
 }
 
-vector<vector<int>> AutomataOperator::NFAToDFA(vector<vector<set<int>>> nfaTransTable) {
+vector<vector<int>> AutomataOperator::NFAToDFATable(vector<vector<set<int>>> nfaTransTable) {
 
     // declaring variables
     map<set<int>, int> dfaStatesMap; // mapping each state of dfa into one integer

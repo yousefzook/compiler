@@ -13,7 +13,7 @@ public:
 	DFA();
 	virtual ~DFA();
 
-	DFA* minimize(DFA* dfa);
+	vector<vector<int>> minimize(vector<vector<int>> dfa);
 };
 
 #endif /* DFA_H_ */

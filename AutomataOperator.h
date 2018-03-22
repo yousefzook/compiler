@@ -20,7 +20,7 @@ public:
 	NFA* closureOperation(NFA* nfa1, NFA* nfa2);
 	NFA* positiveClosureOperation(NFA* nfa1, NFA* nfa2);
 	NFA* optionalOperation(NFA* nfa1, NFA* nfa2);
-	vector<vector<int>> NFAToDFA(vector<vector<set<int>>>);
+	vector<vector<int>> NFAToDFATable(vector<vector<set<int>>>);
 private:
 	set<int> getClosures(set<int>, vector<vector<set<int>>>);
 };

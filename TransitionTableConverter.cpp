@@ -16,6 +16,7 @@ Bimap<int, graph::State *> TransitionTableConverter::statesMap;
 Bimap<int, string> TransitionTableConverter::inputsMap;
 vector<vector<set<int>>> TransitionTableConverter::transTable;
 
+
 vector<vector<set<int>>> TransitionTableConverter::NFAToTable(NFA *nfa) {
 
     graph::State *dest, *src;
