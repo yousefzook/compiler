@@ -22,6 +22,7 @@ public:
     NFA closureOperation(NFA nfa1);
     NFA positiveClosureOperation(NFA nfa1);
     NFA optionalOperation(NFA nfa1);
+    NFA orMainGraph(NFA nfa1, NFA nfa2);
     DFA* NFAToDFA(NFA* nfa);
     int getID();
     int ID;

@@ -163,6 +163,13 @@ int AutomataOperator::getID()
     return AutomataOperator::ID;
 }
 
+NFA AutomataOperator::orMainGraph(NFA nfa1, NFA nfa2)
+{
+    nfa1.allStates.insert(nfa1.allStates.end(), nfa2.allStates.begin(),
+                          nfa2.allStates.end());
+    nfa1.addEdge(nfa1.startState, nfa2.startState, "L");
+    return nfa1;
+}
 
 DFA* NFAToDFA(NFA* nfa)
 {
