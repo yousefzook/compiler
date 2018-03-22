@@ -252,29 +252,29 @@ void RegularDefinition::createSubGraph(string name,vector<string> conditions)
         indexExp++;
     }
 
-    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
-            i++)
-    {
-        cout<<"Node Name:  "<<(*i)->id<<"*******size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
-
-    }
-
-    cout <<"-----------------------------------------------------"<<endl;
-    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
-            i++)
-    {
-        cout<<"Node Name:  "<<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
-//        cout<<<endl;
-        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
-
-                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
-                it++)
-        {
-            cout << it->first->id<<"---------"<<it->second<<endl;; // Use ->
-        }
-    }
-
-    cout<<"----------------------------------------------------------"<<endl;
+//    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
+//            i++)
+//    {
+//        cout<<"Node Name:  "<<(*i)->id<<"*******size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+//
+//    }
+//
+//    cout <<"-----------------------------------------------------"<<endl;
+//    for (vector<graph::State*>::iterator i = largeGraph.allStates.begin(); i != largeGraph.allStates.end();
+//            i++)
+//    {
+//        cout<<"Node Name:  "<<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+////        cout<<<endl;
+//        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
+//
+//                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo
+//                it++)
+//        {
+//            cout << it->first->id<<"---------"<<it->second<<endl;; // Use ->
+//        }
+//    }
+//
+//    cout<<"----------------------------------------------------------"<<endl;
 
     RegularDefinition::mainGraphV.push_back(largeGraph);
 }
