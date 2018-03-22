@@ -13,9 +13,9 @@ TransitionTableConverter::~TransitionTableConverter() {
 vector<graph::State *> graph::allStates;
 Bimap<int, graph::State *> TransitionTableConverter::statesMap;
 Bimap<int, string> TransitionTableConverter::inputsMap;
-vector<vector<int>> TransitionTableConverter::transTable;
+vector<vector<set<int>>> TransitionTableConverter::transTable;
 
-vector<vector<int>> NFAToTable(NFA *nfa) {
+vector<vector<set<int>>> TransitionTableConverter::NFAToTable(NFA *nfa) {
 
     graph::State *dest, *src;
     string trans;
@@ -38,11 +38,13 @@ vector<vector<int>> NFAToTable(NFA *nfa) {
             destInt = *TransitionTableConverter::statesMap.keysForValue(dest).begin();
             transInt = *TransitionTableConverter::inputsMap.keysForValue(trans).begin();
 
-            vector<int>::iterator it;
-            vector<int> row;
+            vector<set<int>>::iterator it;
+            vector<set<int>> row;
             row = TransitionTableConverter::transTable[srcInt];
             it = row.begin();
-            row.insert(it + transInt, destInt);
+            set<int> * cell = &row[transInt];
+            cell->insert(destInt);
+//            row.insert(it + transInt, addedDest);
 
         }
 
@@ -50,12 +52,12 @@ vector<vector<int>> NFAToTable(NFA *nfa) {
 }
 
 
-NFA tableToNFA(vector<vector<int>> *table) {
+NFA TransitionTableConverter::tableToNFA(vector<vector<set<int>>> *table) {
 
 }
 
-void initInputsMap(vector<string> *inputs) {
+void TransitionTableConverter::initInputsMap(vector<string> *inputs) {
 }
 
-void initStatesMap(vector<graph::State *> *states) {
+void TransitionTableConverter::initStatesMap(vector<graph::State *> *states) {
 }

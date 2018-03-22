@@ -7,6 +7,8 @@
 //============================================================================
 
 #include <iostream>
+#include "DFA.h"
+
 using namespace std;
 
 int main() {

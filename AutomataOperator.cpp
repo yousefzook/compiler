@@ -16,42 +16,42 @@ AutomataOperator::~AutomataOperator() {
 	// TODO Auto-generated destructor stub
 }
 
-NFA* orOperation(NFA* nfa1, NFA* nfa2){
+NFA* AutomataOperator::orOperation(NFA* nfa1, NFA* nfa2){
 
 	// [TODO] --- to be implemented .....
 
 	return 0;
 }
 
-NFA* andOperation(NFA* nfa1, NFA* nfa2){
+NFA* AutomataOperator::andOperation(NFA* nfa1, NFA* nfa2){
 
 	// [TODO] --- to be implemented .....
 
 	return 0;
 }
 
-NFA* closureOperation(NFA* nfa1, NFA* nfa2){
+NFA* AutomataOperator::closureOperation(NFA* nfa1, NFA* nfa2){
 
 	// [TODO] --- to be implemented .....
 
 	return 0;
 }
 
-NFA* positiveClosureOperation(NFA* nfa1, NFA* nfa2){
+NFA* AutomataOperator::positiveClosureOperation(NFA* nfa1, NFA* nfa2){
 
 	// [TODO] --- to be implemented .....
 
 	return 0;
 }
 
-NFA* optionalOperation(NFA* nfa1, NFA* nfa2){
+NFA* AutomataOperator::optionalOperation(NFA* nfa1, NFA* nfa2){
 
 	// [TODO] --- to be implemented .....
 
 	return 0;
 }
 
-DFA* NFAToDFA(NFA* nfa){
+DFA* AutomataOperator::NFAToDFA(NFA* nfa){
 
 	// [TODO] --- to be implemented .....
 
