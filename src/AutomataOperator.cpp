@@ -25,11 +25,12 @@ AutomataOperator::~AutomataOperator()
     // TODO Auto-generated destructor stub
 }
 
-NFA AutomataOperator::createBasicGraph(string value)
+NFA AutomataOperator::createBasicGraph(string key,string value)
 {
     NFA newGraph;
     newGraph.startState->id=AutomataOperator::getID();
-    graph::State *des=newGraph.createState(true,AutomataOperator::getID());
+    newGraph.startState->graphName=key;
+    graph::State *des=newGraph.createState(true,AutomataOperator::getID(),key);
     newGraph.addEdge(newGraph.startState,des,value);
     return newGraph;
 }
@@ -43,7 +44,7 @@ NFA AutomataOperator::orOperation(NFA nfa1, NFA nfa2)
     vector<NFA::State*> finalStates = nfa1.getFinalStates();
 
     // Create new final state.
-    NFA::State* newFinalState = nfa1.createState(true,AutomataOperator::getID());
+    NFA::State* newFinalState = nfa1.createState(true,AutomataOperator::getID(),nfa2.startState->graphName);
 
     // The old final states will not be accepted
     // and we create an edge between every one of
@@ -52,6 +53,7 @@ NFA AutomataOperator::orOperation(NFA nfa1, NFA nfa2)
             i < finalStates.end(); i++)
     {
         NFA::State* state = (*i);
+        newFinalState->graphName=state->graphName;
         state->accepted = false;
         nfa1.addEdge(state, newFinalState, "L");
     }
@@ -61,7 +63,7 @@ NFA AutomataOperator::orOperation(NFA nfa1, NFA nfa2)
     // and we create an edge between them and
     // the new start state.
     NFA::State* oldStartState = nfa1.startState;
-    nfa1.startState = nfa1.createState(false,AutomataOperator::getID());
+    nfa1.startState = nfa1.createState(false,AutomataOperator::getID(),nfa2.startState->graphName);
     nfa1.addEdge(nfa1.startState, oldStartState, "L");
     nfa1.addEdge(nfa1.startState, nfa2.startState, "L");
     return nfa1;
@@ -83,7 +85,6 @@ NFA AutomataOperator::andOperation(NFA nfa1, NFA nfa2)
             i < finalStates1.end(); i++)
     {
         NFA::State* state = (*i);
-
         state->accepted = false;
         nfa1.addEdge(state, nfa2.startState, "L");
     }
@@ -99,7 +100,7 @@ NFA AutomataOperator::closureOperation(NFA nfa)
     vector<NFA::State*> finalStates = nfa.getFinalStates();
 
     // Create new final state.
-    NFA::State* newFinalState = nfa.createState(true,AutomataOperator::getID());
+    NFA::State* newFinalState = nfa.createState(true,AutomataOperator::getID(),nfa.startState->graphName);
 
     // The old final states will not be accepted
     // and we create an edge between every
@@ -108,8 +109,8 @@ NFA AutomataOperator::closureOperation(NFA nfa)
             i < finalStates.end(); i++)
     {
         NFA::State* state = (*i);
-
         state->accepted = false;
+        newFinalState->graphName=state->graphName;
         nfa.addEdge(state, newFinalState, "L");
     }
 
@@ -132,7 +133,6 @@ NFA AutomataOperator::positiveClosureOperation(NFA nfa)
             i < finalStates.end(); i++)
     {
         NFA::State* state = (*i);
-
         nfa.addEdge(state, nfa.startState, "L");
     }
     return nfa;
@@ -149,7 +149,6 @@ NFA AutomataOperator::optionalOperation(NFA nfa)
             i < finalStates.end(); i++)
     {
         NFA::State* state = (*i);
-
         nfa.addEdge(nfa.startState, state, "L");
     }
 

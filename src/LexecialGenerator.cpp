@@ -60,22 +60,23 @@ NFA LexecialGenerator::createMainGraph()
         // cout<<"main Graph start state : "<<mainGraph.startState->id<<"  Graph i :"<<mainGraphV[i].startState->id<<endl;
         mainGraph=AutomataOperator::orMainGraph(mainGraph,mainGraphV[i]);
     }
-//    cout<<"----------------------------------------------------------------"<<endl;
+    //    cout<<"----------------------------------------------------------------"<<endl;
 //    cout<<"Graph Information"<<endl;
 //    cout<<"-----------------:"<<endl;
 //    for (vector<graph::State*>::iterator i = mainGraph.allStates.begin(); i != mainGraph.allStates.end();
 //            i++)
 //    {
-//        cout<<"Node Name:  "<<(*i)->id<<"*******size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
-//
+//        cout<<"Graph Name :  "<< (*i)->graphName<<"     Node Name:  "
+//            <<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
 //    }
 //
 //    cout <<"-----------------------------------------------------"<<endl;
 //    for (vector<graph::State*>::iterator i = mainGraph.allStates.begin(); i != mainGraph.allStates.end();
 //            i++)
 //    {
-//        cout<<"Node Name:  "<<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
-////        cout<<<endl;
+//        cout<<"Graph Name :  "<< (*i)->graphName<<"     Node Name:  "
+//            <<(*i)->id<<" size of vector: "<<"---"<<(*i)->nextStates.size()<<endl;
+//
 //        for ( vector < pair<graph::State*,string > >::const_iterator it = (*i)->nextStates.begin() ;
 //
 //                it != (*i)->nextStates.end () ;  // Use (), and assuming itt was a typo

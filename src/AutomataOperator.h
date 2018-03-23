@@ -16,7 +16,7 @@ public:
     AutomataOperator();
     virtual ~AutomataOperator();
 
-    NFA createBasicGraph(string value);
+    NFA createBasicGraph(string key,string value);
     NFA orOperation(NFA nfa1, NFA nfa2);
     NFA andOperation(NFA nfa1, NFA nfa2);
     NFA closureOperation(NFA nfa1);

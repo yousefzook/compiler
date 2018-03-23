@@ -38,8 +38,8 @@ public:
 
     NFA handleClosure(NFA closureGraph);
     NFA handlePositiveClosure(NFA closureGraph);
-    NFA handleOr(vector<string>conditions);
-    NFA handleBrackets(vector<string> conditions);
+    NFA handleOr(string key,vector<string>conditions);
+    NFA handleBrackets(string key,vector<string> conditions);
     vector<NFA> mainGraphV;
 private:
     vector< pair<string, string> > definition;
