@@ -25,6 +25,13 @@ LexecialGenerator::~LexecialGenerator()
     // TODO Auto-generated destructor stub
 }
 
+void LexecialGenerator::startLexical()
+{
+    readRuleFile();
+    readProgramFile();
+    NFA test=createMainGraph();
+}
+
 void LexecialGenerator::readRuleFile()
 {
     ifstream myReadFile("/home/rizk/Desktop/rules.txt");
@@ -44,12 +51,6 @@ void LexecialGenerator::readProgramFile()
 
 }
 
-void LexecialGenerator::startLexical()
-{
-    readRuleFile();
-    readProgramFile();
-    NFA test=createMainGraph();
-}
 
 NFA LexecialGenerator::createMainGraph()
 {

@@ -42,12 +42,35 @@ void RegularDefinition::setKeywords(string keyword)
 
 void RegularDefinition::setOperators(string key,vector<string>values)
 {
+
+    // for (std::map<string,vector<string> >::iterator it=RegularDefinition::operators.begin(); it!=RegularDefinition::operators.end(); ++it){
+//    std::cout << it->first << " " << '\n';
+//        for(int i=0;i<it->second.size();i++){
+//                cout<<it->second[i]<<endl;
+//            }
+//    }
+
+
+//     for ( vector < pair<string,string > >::const_iterator it = definition.begin() ;
+//
+//                it != definition.end () ;  // Use (), and assuming itt was a typo
+//                it++)
+//        {
+//            cout << it->first<<"---------"<<it->second<<endl;; // Use ->
+//        }
     RegularDefinition::operators.insert(make_pair(key,values));
 }
 
 void RegularDefinition::setDefinitions(string key,string value)
 {
     RegularDefinition::definition.push_back(std::make_pair(key,value) );
+//    for ( vector < pair<string,string > >::const_iterator it = definition.begin() ;
+//
+//                it != definition.end () ;  // Use (), and assuming itt was a typo
+//                it++)
+//        {
+//            cout << it->first<<"---------"<<it->second<<endl;; // Use ->
+//        }
 }
 
 void RegularDefinition::setUnMatchedDefinitions(string key,string value)

@@ -109,6 +109,18 @@ void RuleParser::keyWordParse(string line)
     }
 }
 
+string RuleParser::removeBackSlash(string op)
+{
+    string newString;
+    for(int i=0; i<op.size(); i++)
+    {
+//    cout<<op.size()<<"enter"<<endl;
+        if(op[i]!='\\')
+            newString.push_back(op[i]);
+    }
+    return newString;
+}
+
 void RuleParser::operatorsParse(string line)
 {
     string key ;
@@ -146,8 +158,14 @@ void RuleParser::operatorsParse(string line)
         values.push_back(value);
         value.clear();
     }
+    vector <string>tempValues;
+
+    for(int i=0; i<values.size(); i++)
+    {
+        tempValues.push_back(RuleParser::removeBackSlash(values[i]));
+    }
     //send values and key
-    RegularDefinition::setOperators(key,values);
+    RegularDefinition::setOperators(key,tempValues);
 }
 
 void RuleParser::definitionsParse(string line)

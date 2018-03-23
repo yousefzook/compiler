@@ -35,6 +35,7 @@ private:
     int definitionRange(string &str, string &result);
     void punctuationParse(string line);
     void regularExpressionParse(string line);
+    string removeBackSlash(string op);
 
 };
 
