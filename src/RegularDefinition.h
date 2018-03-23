@@ -42,7 +42,7 @@ public:
     NFA handleBrackets(string key,vector<string> conditions);
     vector<NFA> mainGraphV;
 private:
-    vector< pair<string, string> > definition;
+    map< string, string > definition;
     vector<string> keywords;
     map <string, vector<string> > operators;
     vector<string> punctuation;

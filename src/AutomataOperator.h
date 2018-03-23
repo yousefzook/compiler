@@ -9,6 +9,7 @@
 #define AUTOMATAOPERATOR_H_
 #include "NFA.h"
 #include "DFA.h"
+#include <set>
 
 class AutomataOperator
 {
@@ -23,8 +24,12 @@ public:
     NFA positiveClosureOperation(NFA nfa1);
     NFA optionalOperation(NFA nfa1);
     NFA orMainGraph(NFA nfa1, NFA nfa2);
-    DFA* NFAToDFA(NFA* nfa);
     int getID();
     int ID;
+
+    vector<vector<int>> NFAToDFATable(vector<vector<set<int>>>);
+private:
+    set<int> getClosures(set<int>, vector<vector<set<int>>>);
 };
+
 #endif /* AUTOMATAOPERATOR_H_ */

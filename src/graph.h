@@ -54,9 +54,11 @@ public:
      */
     State * startState;
 
+
     /* Vector contains all created states
      */
     vector<State*> allStates;
+	static vector<string> allInputs;
 };
 
 #endif /* GRAPH_H_ */

@@ -17,11 +17,11 @@ RegularDefinition::RegularDefinition()
 {
 // TODO Auto-generated constructor stub
     string key="E";
-    string value="e";
-    RegularDefinition::definition.push_back(std::make_pair(key,value) );
+    string value="E";
+    RegularDefinition::definition.insert(std::make_pair(key,value) );
     key="L";
     value="";
-    RegularDefinition::definition.push_back(std::make_pair(key,value) );
+    RegularDefinition::definition.insert(std::make_pair(key,value) );
 }
 
 RegularDefinition::~RegularDefinition()
@@ -57,14 +57,12 @@ void RegularDefinition::setOperators(string key,vector<string>values)
 
 void RegularDefinition::setDefinitions(string key,string value)
 {
-    RegularDefinition::definition.push_back(std::make_pair(key,value) );
-//    for ( vector < pair<string,string > >::const_iterator it = definition.begin() ;
-//
-//                it != definition.end () ;  // Use (), and assuming itt was a typo
-//                it++)
-//        {
-//            cout << it->first<<"---------"<<it->second<<endl;; // Use ->
-//        }
+    RegularDefinition::definition.insert(make_pair(key,value));
+//    for (std::map<string,string >::iterator it=RegularDefinition::definition.begin();
+//            it!=RegularDefinition::definition.end(); ++it)
+//    {
+//        std::cout << it->first << " " <<it->second<<endl;
+//    }
 }
 
 void RegularDefinition::setUnMatchedDefinitions(string key,string value)

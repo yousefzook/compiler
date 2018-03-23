@@ -9,6 +9,7 @@
 #define LEXECIALGENERATOR_H_
 
 #include "RuleParser.h"
+#include "TransitionTableConverter.h"
 
 class LexecialGenerator: public RuleParser
 {

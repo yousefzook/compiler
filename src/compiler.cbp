@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="compiler" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/compiler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/compiler" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="AutomataOperator.cpp" />
+		<Unit filename="AutomataOperator.h" />
+		<Unit filename="Bimap.h" />
+		<Unit filename="DFA.cpp" />
+		<Unit filename="DFA.h" />
+		<Unit filename="LexecialGenerator.cpp" />
+		<Unit filename="LexecialGenerator.h" />
+		<Unit filename="NFA.cpp" />
+		<Unit filename="NFA.h" />
+		<Unit filename="RegularDefinition.cpp" />
+		<Unit filename="RegularDefinition.h" />
+		<Unit filename="RuleParser.cpp" />
+		<Unit filename="RuleParser.h" />
+		<Unit filename="TransitionTableConverter.cpp" />
+		<Unit filename="TransitionTableConverter.h" />
+		<Unit filename="graph.cpp" />
+		<Unit filename="graph.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
