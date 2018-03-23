@@ -129,7 +129,7 @@ void RuleParser::operatorsParse(string line)
     bool keyValid=true;
     for (int i=0; i<line.size(); i++)
     {
-        if(line[i]==' '|| line[i]=='|')
+        if(line[i]==' ')//|| line[i]=='|')
         {
             if(value.size()>0)
             {
@@ -165,7 +165,9 @@ void RuleParser::operatorsParse(string line)
         tempValues.push_back(RuleParser::removeBackSlash(values[i]));
     }
     //send values and key
+    RegularDefinition::createSubGraph(key,tempValues);
     RegularDefinition::setOperators(key,tempValues);
+
 }
 
 void RuleParser::definitionsParse(string line)
