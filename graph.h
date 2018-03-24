@@ -4,35 +4,61 @@
  *  Created on: Mar 16, 2018
  *      Author: Yousef Zook
  */
-#include <vector>
-#include <string>
-using namespace std;
 
 #ifndef GRAPH_H_
 #define GRAPH_H_
 
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <vector>
+using namespace std;
 
-class graph {
+class graph
+{
 public:
-	graph();
-	virtual ~graph();
+    graph();
+    virtual ~graph();
 
-	struct State {
-        vector<pair<State*, string>> nextStates;
-		bool acceptance;
-	};
+    struct State
+    {
+        vector<pair<State*, string> > nextStates;
+        bool accepted;
+        int id;
+        string graphName;
+    };
 
-	void addEdge(State *s1, State *s2, string value);
-	void createState(bool acceptance);
+    /* Create a state choosing whether it's accepted or not.
+     * */
+    State* createState(bool accepted,int id, string graphName);
 
-	static vector<State*> allStates;
-	static vector<string> allInputs;
+    /* Create an edge with a transition between two states.
+     * */
+    void addEdge(State* srcState, State* destState, string transition);
 
-private:
-	vector<State *> src_v;
-	vector<State *> dest_v;
-	vector<string> value_v;
-	State * start_state;
+    /* Remove state from the graph and delete all
+     * its corresponding edges.
+     * */
+//	void deleteState(State* state);
+
+    /* Get all final states
+     * */
+    vector<State*> getFinalStates();
+
+public:
+
+    /* It's the user duty to use this start state
+     * as the graph actual start state because
+     * it will be used in other operations
+     */
+    State * startState;
+
+
+    /* Vector contains all created states
+     */
+    vector<State*> allStates;
+	vector<string> allInputs;
 };
 
 #endif /* GRAPH_H_ */

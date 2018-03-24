@@ -14,10 +14,11 @@ class TransitionTableConverter
     public:
         TransitionTableConverter();
         virtual ~TransitionTableConverter();
-        vector<vector<set<int>>> NFAToTable(NFA * nfa);
+        void NFAToTable(NFA * nfa);
         NFA tableToNFA(vector<vector<set<int>>> * table);
         void initInputsMap(vector<string> * inputs);
         void initStatesMap(vector<graph::State*> * states);
+        void initAllInputsVector(NFA * nfa);
 
         /*
         * transition table:

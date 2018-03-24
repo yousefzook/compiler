@@ -8,12 +8,23 @@
 #ifndef LEXECIALGENERATOR_H_
 #define LEXECIALGENERATOR_H_
 
-class LexecialGenerator {
-public:
-	LexecialGenerator();
-	virtual ~LexecialGenerator();
-};
+#include "RuleParser.h"
+#include "TransitionTableConverter.h"
 
+class LexecialGenerator: public RuleParser
+{
+public:
+    LexecialGenerator();
+    virtual ~LexecialGenerator();
+
+    void startLexical();
+
+private:
+    void readRuleFile();
+    void readProgramFile();
+    NFA createMainGraph();
+
+};
 /*
  * [TODO] to be implemented ...........
 */

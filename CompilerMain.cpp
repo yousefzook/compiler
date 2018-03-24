@@ -1,18 +1,27 @@
 //============================================================================
-// Name        : compilerMain.cpp
-// Author      : Yousef Zook
+// Name        : test.cpp
+// Author      :
 // Version     :
 // Copyright   : Your copyright notice
-// Description : Compiler in C++, Ansi-style
+// Description : Hello World in C++, Ansi-style
 //============================================================================
 
+#include "LexecialGenerator.h"
 #include <iostream>
-#include "DFA.h"
-#include "AutomataOperator.h"
+#include <fstream>
+#include <string>
 
 using namespace std;
+static void test();
 
-int main() {
+int main()
+{
+    LexecialGenerator lexecialGenerator;
+    lexecialGenerator.startLexical();
+//    test();
+    return 0;
+}
+static void test(){
     cout << "Test if compiled" << endl;
     vector<vector<set<int>>> dfaOld;
     vector<vector<int>> newOld;
@@ -68,7 +77,9 @@ int main() {
     }
 
     AutomataOperator obj;
-    newOld = obj.NFAToDFATable(dfaOld);
+/*
+    newOld = obj.NFAToDFATable(dfaOld,);
+*/
 
     cout << "\n dfa from nfa is : \n\n";
     for (auto it: newOld) {
@@ -77,7 +88,6 @@ int main() {
             cout << itt;
             cout << " , ";
         }
-            cout << "\n";
+        cout << "\n";
     }
-    return 0;
 }

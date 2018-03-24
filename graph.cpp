@@ -7,23 +7,61 @@
 
 #include "graph.h"
 
+
+#include <iostream>
+#include <fstream>
 #include <string>
+#include <sstream>
+#include <vector>
+using namespace std;
 
-graph::graph() {
-	// TODO Auto-generated constructor stub
-	start_state = nullptr;
+
+graph::graph()
+{
+    // initialize startState
+    startState = createState(false,555555,"Main Graph");
+
 }
 
-graph::~graph() {
-	// TODO Auto-generated destructor stub
+graph::~graph()
+{
+    // TODO Auto-generated destructor stub
 }
 
-void graph::addEdge(State *src,State *dest, string value){
-	src_v.push_back(src);
-	dest_v.push_back(dest);
-	value_v.push_back(value);
+/* There will not be a physical edge , we just put
+ * the destination state and its transition in
+ * the source state nextStates vector
+ *  */
+void graph::addEdge(State* srcState, State* destState, string transition)
+{
+    srcState->nextStates.push_back(pair<State*, string>(destState, transition));
 }
-void graph::createState(bool acceptance){
-	State state;
-	state.acceptance = acceptance;
+
+/* Initialize a new state and add it states vector.
+ * */
+graph::State* graph::createState(bool accepted, int id, string graphName)
+{
+    State* newState = new State();
+    newState->id=id;
+    newState->graphName=graphName;
+    newState->accepted = accepted;
+    allStates.push_back(newState);
+
+    return newState;
+}
+
+/* Get all final states
+ * */
+vector<graph::State*> graph::getFinalStates()
+{
+    vector<State*> finalStates;
+    for (vector<State*>::iterator i = allStates.begin(); i != allStates.end();
+            i++)
+    {
+        if ((*i)->accepted == true)
+        {
+            finalStates.push_back((*i));
+        }
+    }
+    return finalStates;
 }
