@@ -8,6 +8,7 @@
 #include <iostream>
 #include <set>
 #include "DFA.h"
+#include "TransitionTableConverter.h"
 
 DFA::DFA() {
     // TODO Auto-generated constructor stub
@@ -24,7 +25,7 @@ vector<vector<int>> DFA::minimize(vector<vector<int>> dfaOld) {
         same = true;
         for (int i = 0; i < dfaOld.size()-1; i++) { // for each state except the last state
             for (int j = i + 1; j < dfaOld.size(); j++) { // loop to find similarities
-                if (dfaOld[i] == dfaOld[j]){
+                if (dfaOld[i] == dfaOld[j] && sameType(i,j)){
                     equivalentStates.insert(j);
                     dfaOld.erase(dfaOld.begin()+j);
                     j--; // decrement j as the size is decremented by 1
@@ -45,5 +46,13 @@ vector<vector<int>> DFA::minimize(vector<vector<int>> dfaOld) {
         }
     }
     return dfaOld;
+}
+
+bool DFA::sameType(int s0, int s1){
+    State* state0 = TransitionTableConverter::statesMap.valueForKey(s0);
+    State* state1 = TransitionTableConverter::statesMap.valueForKey(s1);
+    if(state0->accepted == state1->accepted)
+        return true;
+    return false;
 }
 

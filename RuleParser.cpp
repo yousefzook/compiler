@@ -337,7 +337,7 @@ void RuleParser::parseLine(string line)
         // expression work
         RuleParser::regularExpressionParse(line);
     }
-    else if(line=="\L")
+    else if(line=="\\L")
     {
         //lamda symbol
     }

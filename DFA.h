@@ -14,6 +14,11 @@ public:
 	virtual ~DFA();
 
 	vector<vector<int>> minimize(vector<vector<int>> dfa);
+
+private:
+	/* check if state 0 and state 1 are both accepted or not
+	 * */
+	bool sameType(int s0, int s1);
 };
 
 #endif /* DFA_H_ */
