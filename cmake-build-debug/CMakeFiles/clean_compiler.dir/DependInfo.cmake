@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yousef/clean compiler/DFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/DFA.cpp.o"
   "/home/yousef/clean compiler/Graph.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Graph.cpp.o"
+  "/home/yousef/clean compiler/LexicalAnalyzer.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o"
   "/home/yousef/clean compiler/NFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/NFA.cpp.o"
   "/home/yousef/clean compiler/RulesParser.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/RulesParser.cpp.o"
   "/home/yousef/clean compiler/main.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/main.cpp.o"

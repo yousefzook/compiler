@@ -1,0 +1,64 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yousef/clean compiler/DFA.cpp
+DFA.h
+/home/yousef/clean compiler/DFA.h
+
+/home/yousef/clean compiler/DFA.h
+
+/home/yousef/clean compiler/Graph.cpp
+Graph.h
+/home/yousef/clean compiler/Graph.h
+
+/home/yousef/clean compiler/Graph.h
+
+/home/yousef/clean compiler/LexicalAnalyzer.cpp
+LexicalAnalyzer.h
+/home/yousef/clean compiler/LexicalAnalyzer.h
+RulesParser.h
+/home/yousef/clean compiler/RulesParser.h
+
+/home/yousef/clean compiler/LexicalAnalyzer.h
+iostream
+-
+fstream
+-
+map
+-
+vector
+-
+
+/home/yousef/clean compiler/NFA.cpp
+NFA.h
+/home/yousef/clean compiler/NFA.h
+
+/home/yousef/clean compiler/NFA.h
+
+/home/yousef/clean compiler/RulesParser.cpp
+RulesParser.h
+/home/yousef/clean compiler/RulesParser.h
+iostream
+-
+sstream
+-
+
+/home/yousef/clean compiler/RulesParser.h
+string
+-
+vector
+-
+map
+-
+
+/home/yousef/clean compiler/main.cpp
+iostream
+-
+LexicalAnalyzer.h
+/home/yousef/clean compiler/LexicalAnalyzer.h
+

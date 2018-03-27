@@ -96,6 +96,12 @@
 		<Unit filename="/home/yousef/clean compiler/Graph.h">
 			<Option target="clean_compiler"/>
 		</Unit>
+		<Unit filename="/home/yousef/clean compiler/LexicalAnalyzer.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/LexicalAnalyzer.h">
+			<Option target="clean_compiler"/>
+		</Unit>
 		<Unit filename="/home/yousef/clean compiler/NFA.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>

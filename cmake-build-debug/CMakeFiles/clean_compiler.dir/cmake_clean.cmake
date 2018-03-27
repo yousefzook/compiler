@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/clean_compiler.dir/DFA.cpp.o"
   "CMakeFiles/clean_compiler.dir/Graph.cpp.o"
   "CMakeFiles/clean_compiler.dir/RulesParser.cpp.o"
+  "CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o"
   "clean_compiler.pdb"
   "clean_compiler"
 )

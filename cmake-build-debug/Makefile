@@ -177,6 +177,33 @@ Graph.cpp.s:
 	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
 
+LexicalAnalyzer.o: LexicalAnalyzer.cpp.o
+
+.PHONY : LexicalAnalyzer.o
+
+# target to build an object file
+LexicalAnalyzer.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
+.PHONY : LexicalAnalyzer.cpp.o
+
+LexicalAnalyzer.i: LexicalAnalyzer.cpp.i
+
+.PHONY : LexicalAnalyzer.i
+
+# target to preprocess a source file
+LexicalAnalyzer.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.i
+.PHONY : LexicalAnalyzer.cpp.i
+
+LexicalAnalyzer.s: LexicalAnalyzer.cpp.s
+
+.PHONY : LexicalAnalyzer.s
+
+# target to generate assembly for a file
+LexicalAnalyzer.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.s
+.PHONY : LexicalAnalyzer.cpp.s
+
 NFA.o: NFA.cpp.o
 
 .PHONY : NFA.o
@@ -273,6 +300,9 @@ help:
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"
+	@echo "... LexicalAnalyzer.o"
+	@echo "... LexicalAnalyzer.i"
+	@echo "... LexicalAnalyzer.s"
 	@echo "... NFA.o"
 	@echo "... NFA.i"
 	@echo "... NFA.s"
