@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/clean_compiler.dir/main.cpp.o CMakeFiles/clean_compiler.dir/NFA.cpp.o CMakeFiles/clean_compiler.dir/DFA.cpp.o CMakeFiles/clean_compiler.dir/Graph.cpp.o CMakeFiles/clean_compiler.dir/RulesParser.cpp.o  -o clean_compiler 
