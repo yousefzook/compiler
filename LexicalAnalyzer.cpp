@@ -8,34 +8,34 @@
 void LexicalAnalyzer::startLexical() {
 
     readRulesFile();
-    // now this.keyWords, this.punctuations vectors ,
-    // this.definitions map and this.regexs map are set
+    /**
+     *  now this.keyWords, this.punctuations vectors ,
+     *  this.definitions map and this.regexs map are set
+     */
 
     // spilt each regex into vector of tokens
     tokenizeRegexs();
-    
+
     // substitute definition with its rhs in each regex
     relaxRegexs();
+
+    for (auto a: this->tokenizedRegexs)
+        for (auto b: a.second)
+            cout << a.first << "  " << b << endl;
 
 
 }
 
 /*
- * substitute definition with its rhs in each regex
+ * substitute definition with its rhs in each tokenized regex
  */
 void LexicalAnalyzer::relaxRegexs() {
-//    for(auto regexPair: this->regexs){
-//        bool hasDefs = true;
-//        while(hasDefs){
-//            for(auto defPair: this->definitions){
-//                if(regexPair.second.find(defPair.first) != string::npos){
-//                    int pos = regexPair.second.find(defPair.first);
-//                    regexPair.second.replace(pos, defPair.first.length(), defPair.second);
-//                    hasDefs
-//                }
-//            }
-//        }
-//    }
+    for (map<string, vector<string>>::iterator regex = this->tokenizedRegexs.begin();
+         regex != this->tokenizedRegexs.end(); ++regex)
+        for (vector<string>::iterator token = regex->second.begin(); token != regex->second.end(); ++token)
+            if (token->size() > 1)
+                token->replace(0, token->size(), this->definitions[*token]);
+
 }
 
 /*
@@ -47,7 +47,7 @@ void LexicalAnalyzer::tokenizeRegexs() {
         string rhs = regexPair.second;
         int i = 0;
         while (i < rhs.size()) {
-            if(rhs[i] == ' '){
+            if (rhs[i] == ' ') {
                 i++;
                 continue;
             }
@@ -74,7 +74,7 @@ void LexicalAnalyzer::tokenizeRegexs() {
     }
 }
 
-void LexicalAnalyzer::handlePossibleDef(string token, string lhs){
+void LexicalAnalyzer::handlePossibleDef(string token, string lhs) {
     for (auto defPair: this->definitions) { // compare each def with the token
         if (token == defPair.first) {
             this->tokenizedRegexs[lhs].push_back(token);
