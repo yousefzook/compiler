@@ -16,15 +16,24 @@ using namespace std;
 class LexicalAnalyzer {
 
 public:
-    void startLexical();
-    map<string,string> definitions;
-    map<string,string> regexs;
+    map<string, vector<string>> tokenizedRegexs;
+    map<string, string> definitions;
+    map<string, string> regexs;
     vector<string> keyWords;
     vector<string> punctuations;
 
+    void startLexical();
+
 private:
     ifstream rulesFile;
+
     void readRulesFile();
+
+    void relaxRegexs();
+
+    void tokenizeRegexs();
+
+    void handlePossibleDef(string token, string lhs);
 };
 
 

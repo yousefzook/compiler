@@ -39,11 +39,7 @@ void RulesParser::regularsParse(string line, map<string, string> *regMap, char d
         i++;
     }
     i++;
-    while (line[i] != '\0') {
-        if (line[i] != ' ')
-            rhs.push_back(line[i]);
-        i++;
-    }
+    rhs = line.substr(i);
 
     regMap->insert(make_pair(lhs, rhs));
 }
