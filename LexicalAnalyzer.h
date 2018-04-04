@@ -29,11 +29,14 @@ private:
 
     void readRulesFile();
 
-    void relaxRegexs();
+    void relaxDefinitions();
 
     void tokenizeRegexs();
 
-    void handlePossibleDef(string token, string lhs);
+    string getEqualValue(string token, string lhs);
+
+    void substituteRHS(map<string, string>::reverse_iterator defPair);
+
 };
 
 

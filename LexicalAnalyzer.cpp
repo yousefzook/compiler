@@ -13,12 +13,17 @@ void LexicalAnalyzer::startLexical() {
      *  this.definitions map and this.regexs map are set
      */
 
+    // substitute definition with its rhs in each regex
+    relaxDefinitions();
+
     // spilt each regex into vector of tokens
     tokenizeRegexs();
 
-    // substitute definition with its rhs in each regex
-    relaxRegexs();
+    // print definitions map
+    for (auto a: this->definitions)
+        cout << a.first << "  " << a.second << endl;
 
+    // print regexs tokenized map
     for (auto a: this->tokenizedRegexs)
         for (auto b: a.second)
             cout << a.first << "  " << b << endl;
@@ -29,12 +34,42 @@ void LexicalAnalyzer::startLexical() {
 /*
  * substitute definition with its rhs in each tokenized regex
  */
-void LexicalAnalyzer::relaxRegexs() {
-    for (map<string, vector<string>>::iterator regex = this->tokenizedRegexs.begin();
-         regex != this->tokenizedRegexs.end(); ++regex)
-        for (vector<string>::iterator token = regex->second.begin(); token != regex->second.end(); ++token)
-            if (token->size() > 1)
-                token->replace(0, token->size(), this->definitions[*token]);
+void LexicalAnalyzer::relaxDefinitions() {
+    for (map<string, string>::reverse_iterator defPair = this->definitions.rbegin();
+         defPair != this->definitions.rend(); ++defPair) { // loop in reversed order on definitions
+        substituteRHS(defPair); // if rhs has definitions, replace the def with it's value
+    }
+
+}
+
+// if rhs has definitions, replace the def with it's value
+void LexicalAnalyzer::substituteRHS(map<string, string>::reverse_iterator defPair) {
+    string rhs = defPair->second;
+    rhs.insert(0, "("); // to make the def calculated first in nfa
+    for (map<string, string>::reverse_iterator defPair2 = defPair;
+         defPair2 != this->definitions.rend(); ++defPair2) {
+        int pos = rhs.find(defPair2->first);
+        if (pos != string::npos)
+            rhs.replace(pos, defPair2->first.size(), defPair2->second); // replace the def in rhs with its value
+    }
+    rhs.push_back(')'); // to make the def calculated first in nfa
+
+    // trim spaces before and after '-' if exists
+    int dashPos = rhs.find('-');
+    int i = dashPos - 1;
+    if (dashPos != string::npos) {
+        while (rhs[i] == ' ') {
+            rhs.erase(i, 1);
+            i -= 2;
+        }
+        dashPos = rhs.find('-');
+        i = dashPos + 1;
+        while (rhs[i] == ' ')
+            rhs.erase(i, 1);
+
+    }
+
+    defPair->second = rhs;
 
 }
 
@@ -52,6 +87,12 @@ void LexicalAnalyzer::tokenizeRegexs() {
                 continue;
             }
             string token;
+            if (rhs[i] != '\\' && rhs[i + 1] == '-') {
+                token = rhs.substr(i, 3);
+                this->tokenizedRegexs[lhs].push_back(token);
+                i += 3;
+                continue;
+            }
             if (!isalpha(rhs[i])) { // if letter i.e. not a definition, just push it
                 if (rhs[i] == '\\') {
                     if (rhs[i + 1] == 'L')
@@ -64,30 +105,37 @@ void LexicalAnalyzer::tokenizeRegexs() {
                 token.clear();
                 i++;
             } else { // if a letter i.e. may be a definition
-                while (isalnum(rhs[i])) {// get the whole word
-                    token.push_back(rhs[i]);
-                    i++;
+                int j = i;
+                while (isalnum(rhs[j])) {// get the whole word
+                    token.push_back(rhs[j]);
+                    j++;
                 }
-                handlePossibleDef(token, lhs);
+                string equalValue = getEqualValue(token, lhs);
+
+                if (equalValue == rhs.substr(i, j - i)) {
+                    // this mean it is a word not definition, then push it
+                    while (rhs[i] != ' ') {
+                        token = rhs[i];
+                        this->tokenizedRegexs[lhs].push_back(token);
+                        i++;
+                    }
+                } else {
+                    // this is a defintion then, replace the word with it's value
+                    rhs.replace(i, j - i, equalValue);
+                }
+
             }
         }
     }
 }
 
-void LexicalAnalyzer::handlePossibleDef(string token, string lhs) {
+string LexicalAnalyzer::getEqualValue(string token, string lhs) {
     for (auto defPair: this->definitions) { // compare each def with the token
-        if (token == defPair.first) {
-            this->tokenizedRegexs[lhs].push_back(token);
-            token.clear();
-            break;
-        }
+        if (token == defPair.first)
+            return this->definitions[token];
     }
-    if (!token.empty()) // i.e. the word was not definition
-        for (auto ch : token) { // push eaach char as token
-            string temp;
-            temp.push_back(ch);
-            this->tokenizedRegexs[lhs].push_back(temp);
-        }
+    // if arrived here this means the word was not definition
+    return token;
 }
 
 /*

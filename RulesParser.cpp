@@ -39,6 +39,8 @@ void RulesParser::regularsParse(string line, map<string, string> *regMap, char d
         i++;
     }
     i++;
+    while(line[i] == ' ')
+        i++;
     rhs = line.substr(i);
 
     regMap->insert(make_pair(lhs, rhs));
