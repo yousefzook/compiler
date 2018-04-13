@@ -4,16 +4,29 @@
 
 #ifndef CLEAN_COMPILER_GROUPEDNFA_H
 #define CLEAN_COMPILER_GROUPEDNFA_H
+
 #include <string>
+
 using namespace std;
+
 #include <vector>
 #include "Graph.h"
 
+/*
+ * Grouped NFA is implemented using singleton pattern
+ * */
 class GroupedNFA {
 
 public:
-    vector<Graph::State*> allStates;
+    static GroupedNFA *getInstance();
+
+    vector<Graph::State *> allStates;
     vector<string> allInputs;
+protected:
+    GroupedNFA();
+
+private:
+    static GroupedNFA *groupedNFA;
 };
 
 
