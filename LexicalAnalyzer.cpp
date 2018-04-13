@@ -27,15 +27,6 @@ void LexicalAnalyzer::startLexical() {
     // build nfa of each regex
     buildNFAs();
 
-    // print definitions map
-    for (auto a: this->definitions)
-        cout << a.first << "  " << a.second << endl;
-
-    // print regexs tokenized map
-    for (auto a: this->tokenizedRegexs)
-        for (auto b: a.second)
-            cout << a.first << "  " << b << endl;
-
 
 }
 
@@ -77,7 +68,6 @@ void LexicalAnalyzer::buildNFAs() {
         while (inputStack.size() > 1)
             doOperationInTOS();
         regexsNFAs.insert(pair<string, NFA>(regexName, inputStack.top()));
-        cout << regexName + ":  " + inputStack.top().name << endl;
         inputStack.pop();
     }
 }
