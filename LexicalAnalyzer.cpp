@@ -25,7 +25,7 @@ void LexicalAnalyzer::startLexical() {
     tokenizeRegexs();
 
     // build nfa of each regex
-//    buildNFAs();
+    buildNFAs();
 
     // print definitions map
     for (auto a: this->definitions)
@@ -53,26 +53,37 @@ void LexicalAnalyzer::buildNFAs() {
             string token = tokens[i];
             if (token[0] == ')')
                 finishBrackets();
-            else if (token[0] == '(')
+            else if (token[0] == '(') {
+                if (i != 0 && tokens[i - 1] != "|" && tokens[i - 1] != "(")// we should add '.' operation in stack
+                    pushOperation('.');
                 operationStack.push(token[0]);
-            else if (token == "." || !operationsPriority.count(token[0])) { // if the token not an operation
+            } else if (token == "." || !operationsPriority.count(token[0])) { // if the token not an operation
+                if (i != 0 && tokens[i - 1] != "|" && tokens[i - 1] != "(") // we should add '.' operation in stack
+                    pushOperation('.');
+
+                if (token[0] == '\\' && token[1] != 'L')
+                    token = token[1];
                 NFA tokenNFA;
                 tokenNFA.startState = tokenNFA.createState(false);
                 tokenNFA.finalState = tokenNFA.createState(true);
                 tokenNFA.addEdge(tokenNFA.startState, tokenNFA.finalState, token);
+                tokenNFA.name = token;
                 inputStack.push(tokenNFA);
-                if (i != 0 && tokens[i - 1] != "|") { // we should add '.' operation in stack
-                    pushOperation('.');
-                }
             } else { // an operation
                 pushOperation(token[0]);
             }
+
         }
+        while (inputStack.size() > 1)
+            doOperationInTOS();
+        regexsNFAs.insert(pair<string, NFA>(regexName, inputStack.top()));
+        cout << regexName + ":  " + inputStack.top().name << endl;
+        inputStack.pop();
     }
 }
 
 void LexicalAnalyzer::pushOperation(char operation) {
-    if (operationStack.empty()) {
+    if (operationStack.empty() || operationStack.top() == '(') {
         operationStack.push(operation);
     } else { // if there exist operation, check priority first
         int priority = operationsPriority[operation];
@@ -81,6 +92,7 @@ void LexicalAnalyzer::pushOperation(char operation) {
             operationStack.push(operation);
         } else { // here, the top operation in stack must be finished first
             doOperationInTOS();
+            pushOperation(operation);
         }
 
     }
@@ -188,8 +200,7 @@ void LexicalAnalyzer::tokenizeRegexs() {
             }
             if (!isalpha(rhs[i])) { // if letter i.e. not a definition, just push it
                 if (rhs[i] == '\\') {
-                    if (rhs[i + 1] == 'L')
-                        token.push_back(rhs[i]);
+                    token.push_back(rhs[i]);
                     token.push_back(rhs[i + 1]);
                     i++;
                 } else
@@ -247,8 +258,8 @@ void LexicalAnalyzer::readRulesFile() {
  * Adding possible operations with an int to indicate its priority - top priority = 1 -
  * */
 void LexicalAnalyzer::initOperationsMap() {
-    operationsPriority.insert(pair<char, int>('*', 1));
-    operationsPriority.insert(pair<char, int>('+', 1));
-    operationsPriority.insert(pair<char, int>('|', 0));
-    operationsPriority.insert(pair<char, int>('.', 0));
+    operationsPriority.insert(pair<char, int>('*', 1)); // kleene closure
+    operationsPriority.insert(pair<char, int>('+', 1)); // positive closure
+    operationsPriority.insert(pair<char, int>('|', 0)); // OR
+    operationsPriority.insert(pair<char, int>('.', 0)); // AND - concatenation
 }

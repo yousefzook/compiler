@@ -23,7 +23,7 @@ public:
     map<string, string> definitions;
     vector<string> keyWords;
     vector<string> punctuations;
-    map<string, NFA *> regexsNFAs;
+    map<string, NFA> regexsNFAs;
 
     void startLexical();
 

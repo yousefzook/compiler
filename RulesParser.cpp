@@ -39,7 +39,7 @@ void RulesParser::regularsParse(string line, map<string, string> *regMap, char d
         i++;
     }
     i++;
-    while(line[i] == ' ')
+    while (line[i] == ' ')
         i++;
     rhs = line.substr(i);
 
@@ -51,7 +51,7 @@ void RulesParser::regularsParse(string line, map<string, string> *regMap, char d
  * Parse line of constant definitions and push it into the vector of key words
  * or punctuations thorugh constDefs pointer
  */
-void RulesParser::constDefsParse(string line, vector<string> * constDefs) {
+void RulesParser::constDefsParse(string line, vector<string> *constDefs) {
     line.erase(0, 1); // erase from char number 0 till char number 1
     line.erase(line.size() - 1); // erase from char number line.size() - 1 till end of line
     vector<string> keyWordsTemp;
@@ -68,11 +68,9 @@ vector<string> RulesParser::split(string &txt, char ch) {
     vector<string> result;
     stringstream ss(txt);
     while (getline(ss, token, ch))
-        if (token != "") {
-            if (token[0] == '\\' && token[1] != 'L')
-                token.erase(0, 1);
+        if (token != "")
             result.push_back(token);
-        }
+
     return result;
 }
 

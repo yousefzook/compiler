@@ -4,10 +4,26 @@
 
 #include "NFAOperator.h"
 
-NFA OR(NFA nfa1, NFA nfa2) {}
+NFA OR(NFA nfa1, NFA nfa2) {
+    NFA temp;
+    temp.name = nfa1.name + "|" + nfa2.name;
+    return temp;
+}
 
-NFA AND(NFA nfa1, NFA nfa2) {}
+NFA AND(NFA nfa1, NFA nfa2) {
+    NFA temp;
+    temp.name = nfa1.name + "." + nfa2.name;
+    return temp;
+}
 
-NFA kleeneClosure(NFA nfa) {}
+NFA kleeneClosure(NFA nfa) {
+    NFA temp;
+    temp.name = nfa.name + "*";
+    return temp;
+}
 
-NFA positiveClosure(NFA nfa) {}
+NFA positiveClosure(NFA nfa) {
+    NFA temp;
+    temp.name = nfa.name + "+";
+    return temp;
+}
