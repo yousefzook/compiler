@@ -12,20 +12,31 @@ using namespace std;
 #include <fstream>
 #include <map>
 #include <vector>
+#include "NFA.h"
 
 class LexicalAnalyzer {
 
 public:
-    map<string, vector<string>> tokenizedRegexs;
+    LexicalAnalyzer();
+
     map<string, string> definitions;
     vector<string> keyWords;
     vector<string> punctuations;
+    map<string, NFA *> regexsNFAs;
 
     void startLexical();
 
 private:
     ifstream rulesFile;
     map<string, string> regexs;
+    map<string, vector<string>> tokenizedRegexs;
+    map<char, int> operationsPriority;
+
+    NFA finishBrackets(stack<char>*, stack<string>*);
+
+    void buildNFAs();
+
+    void initOperationsMap();
 
     void readRulesFile();
 

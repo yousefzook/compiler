@@ -2,8 +2,14 @@
 // Created by yousef on 27/03/18.
 //
 
+#include <stack>
+#include "NFAOperator.h"
 #include "LexicalAnalyzer.h"
 #include "RulesParser.h"
+
+LexicalAnalyzer::LexicalAnalyzer() {
+    initOperationsMap();
+}
 
 void LexicalAnalyzer::startLexical() {
 
@@ -19,6 +25,8 @@ void LexicalAnalyzer::startLexical() {
     // spilt each regex into vector of tokens
     tokenizeRegexs();
 
+    buildNFAs();
+
     // print definitions map
     for (auto a: this->definitions)
         cout << a.first << "  " << a.second << endl;
@@ -28,6 +36,47 @@ void LexicalAnalyzer::startLexical() {
         for (auto b: a.second)
             cout << a.first << "  " << b << endl;
 
+
+}
+
+/*
+ * For each regex, build its NFA and put it in the regexsNFAs map
+ * */
+void LexicalAnalyzer::buildNFAs() {
+
+    stack<string> inputStack;
+    stack<char> operationStack;
+
+    for (auto tokenizedRegex : tokenizedRegexs) { // looping on each regex
+        string regexName = tokenizedRegex.first; // name of nfa = regex lhs
+        vector<string> tokens = tokenizedRegex.second;
+
+        for (auto token : tokens) { // looping on each token in the regex
+
+            NFA nfa;
+            if (token[0] == ')')
+                nfa = finishBrackets(&operationStack, &inputStack);
+            else if (token[0] == '(')
+                operationStack.push(token[0]);
+            else if (!operationsPriority.count(token[0])) // if the token not an operation
+                inputStack.push(token);
+            else { // an operation
+                if (!operationStack.empty()) { // if there exist operation, check priority first
+                    int priority = operationsPriority[token[0]];
+                    int tosPriority = operationsPriority[operationStack.top()]; // top of stack priority
+                    if (priority > tosPriority) {
+                        operationStack.push(token[0]);
+                    } else {// here, the top operation in stack must be finished first
+                        
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+NFA LexicalAnalyzer::finishBrackets(stack<char> *operationStack, stack<string> *inputStack) {
 
 }
 
@@ -42,7 +91,9 @@ void LexicalAnalyzer::relaxDefinitions() {
 
 }
 
-// if rhs has definitions, replace the def with it's value
+/*
+ * if rhs has definitions, replace the def with it's value
+ * */
 void LexicalAnalyzer::substituteRHS(map<string, string>::reverse_iterator defPair) {
     string rhs = defPair->second;
     rhs.insert(0, "("); // to make the def calculated first in nfa
@@ -148,4 +199,14 @@ void LexicalAnalyzer::readRulesFile() {
     while (getline(rulesFile, line))
         rParser.parseLine(line, &this->definitions, &this->regexs, &this->punctuations, &this->keyWords);
     rulesFile.close();
+}
+
+/*
+ * Adding possible operations with an int to indicate its priority - top priority = 1 -
+ * */
+void LexicalAnalyzer::initOperationsMap() {
+    operationsPriority.insert(pair<char, int>('*', 1));
+    operationsPriority.insert(pair<char, int>('+', 1));
+    operationsPriority.insert(pair<char, int>('|', 0));
+    operationsPriority.insert(pair<char, int>('.', 0));
 }

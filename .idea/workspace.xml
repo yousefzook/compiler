@@ -12,9 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32d765aa-8bc4-4229-8286-d252f83b807e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/clean_compiler" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graph.cpp" afterPath="$PROJECT_DIR$/Graph.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GroupedNFA.cpp" afterPath="$PROJECT_DIR$/GroupedNFA.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LexicalAnalyzer.cpp" afterPath="$PROJECT_DIR$/LexicalAnalyzer.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LexicalAnalyzer.h" afterPath="$PROJECT_DIR$/LexicalAnalyzer.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -39,23 +37,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LexicalAnalyzer.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.cpp">
+      <file leaf-file-name="LexicalAnalyzer.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="343">
+              <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+              <folding>
+                <element signature="e#147#166#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LexicalAnalyzer.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.h">
+      <file leaf-file-name="LexicalAnalyzer.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+            <state relative-caret-position="378">
+              <caret line="69" column="24" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
               <folding>
-                <element signature="e#147#166#0" expanded="true" />
+                <element signature="e#0#2#0" expanded="false" />
+                <element signature="e#41#57#0" expanded="true" />
+                <element signature="e#138#201#0" expanded="false" />
+                <element signature="e#268#391#0" expanded="false" />
+                <element signature="e#2326#2394#0" expanded="false" />
+                <element signature="e#2326#2722#0" expanded="false" />
+                <element signature="e#2724#2791#0" expanded="false" />
+                <element signature="e#2724#3759#0" expanded="false" />
+                <element signature="e#3761#3821#0" expanded="false" />
+                <element signature="e#3761#5697#0" expanded="false" />
+                <element signature="e#5699#6012#0" expanded="false" />
+                <element signature="e#6014#6101#0" expanded="false" />
+                <element signature="e#6014#6403#0" expanded="false" />
+                <element signature="e#6405#6501#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupedNFA.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GroupedNFA.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GroupedNFA.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -133,14 +146,14 @@
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/RulesParser.h" />
         <option value="$PROJECT_DIR$/RulesParser.cpp" />
-        <option value="$PROJECT_DIR$/LexicalAnalyzer.cpp" />
         <option value="$PROJECT_DIR$/NFA.h" />
         <option value="$PROJECT_DIR$/NFAOperator.h" />
         <option value="$PROJECT_DIR$/GroupedNFA.h" />
         <option value="$PROJECT_DIR$/Graph.h" />
-        <option value="$PROJECT_DIR$/LexicalAnalyzer.h" />
         <option value="$PROJECT_DIR$/Graph.cpp" />
         <option value="$PROJECT_DIR$/GroupedNFA.cpp" />
+        <option value="$PROJECT_DIR$/LexicalAnalyzer.h" />
+        <option value="$PROJECT_DIR$/LexicalAnalyzer.cpp" />
       </list>
     </option>
   </component>
@@ -232,12 +245,12 @@
       <workItem from="1522858899873" duration="10134000" />
       <workItem from="1522875655787" duration="273000" />
       <workItem from="1523632460929" duration="98000" />
-      <workItem from="1523632592593" duration="7689000" />
+      <workItem from="1523632592593" duration="11275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40252000" />
+    <option name="totallyTimeSpent" value="43838000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1325" height="780" extended-state="6" />
@@ -321,7 +334,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#41#57#0" expanded="true" />
+            <element signature="e#138#201#0" expanded="false" />
+            <element signature="e#268#391#0" expanded="false" />
+            <element signature="e#2326#2394#0" expanded="false" />
+            <element signature="e#2326#2722#0" expanded="false" />
+            <element signature="e#2724#2791#0" expanded="false" />
+            <element signature="e#2724#3759#0" expanded="false" />
+            <element signature="e#3761#3821#0" expanded="false" />
+            <element signature="e#3761#5697#0" expanded="false" />
+            <element signature="e#5699#6012#0" expanded="false" />
+            <element signature="e#6014#6101#0" expanded="false" />
+            <element signature="e#6014#6403#0" expanded="false" />
+            <element signature="e#6405#6501#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -339,7 +367,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2610">
           <caret line="145" column="16" lean-forward="false" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#41#57#0" expanded="true" />
+            <element signature="e#138#201#0" expanded="false" />
+            <element signature="e#268#391#0" expanded="false" />
+            <element signature="e#2326#2394#0" expanded="false" />
+            <element signature="e#2326#2722#0" expanded="false" />
+            <element signature="e#2724#2791#0" expanded="false" />
+            <element signature="e#2724#3759#0" expanded="false" />
+            <element signature="e#3761#3821#0" expanded="false" />
+            <element signature="e#3761#5697#0" expanded="false" />
+            <element signature="e#5699#6012#0" expanded="false" />
+            <element signature="e#6014#6101#0" expanded="false" />
+            <element signature="e#6014#6403#0" expanded="false" />
+            <element signature="e#6405#6501#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -417,7 +460,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2610">
           <caret line="145" column="16" lean-forward="true" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#41#57#0" expanded="true" />
+            <element signature="e#138#201#0" expanded="false" />
+            <element signature="e#268#391#0" expanded="false" />
+            <element signature="e#2326#2394#0" expanded="false" />
+            <element signature="e#2326#2722#0" expanded="false" />
+            <element signature="e#2724#2791#0" expanded="false" />
+            <element signature="e#2724#3759#0" expanded="false" />
+            <element signature="e#3761#3821#0" expanded="false" />
+            <element signature="e#3761#5697#0" expanded="false" />
+            <element signature="e#5699#6012#0" expanded="false" />
+            <element signature="e#6014#6101#0" expanded="false" />
+            <element signature="e#6014#6403#0" expanded="false" />
+            <element signature="e#6405#6501#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -465,7 +523,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
           <caret line="37" column="0" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="37" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#41#57#0" expanded="true" />
+            <element signature="e#138#201#0" expanded="false" />
+            <element signature="e#268#391#0" expanded="false" />
+            <element signature="e#2326#2394#0" expanded="false" />
+            <element signature="e#2326#2722#0" expanded="false" />
+            <element signature="e#2724#2791#0" expanded="false" />
+            <element signature="e#2724#3759#0" expanded="false" />
+            <element signature="e#3761#3821#0" expanded="false" />
+            <element signature="e#3761#5697#0" expanded="false" />
+            <element signature="e#5699#6012#0" expanded="false" />
+            <element signature="e#6014#6101#0" expanded="false" />
+            <element signature="e#6014#6403#0" expanded="false" />
+            <element signature="e#6405#6501#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -558,13 +631,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.h">
+    <entry file="file://$PROJECT_DIR$/GroupedNFA.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        <state relative-caret-position="174">
+          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
           <folding>
-            <element signature="e#147#166#0" expanded="true" />
+            <element signature="e#155#172#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GroupedNFA.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -578,20 +659,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.cpp">
+    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GroupedNFA.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="343">
+          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
-            <element signature="e#155#172#0" expanded="true" />
+            <element signature="e#147#166#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -606,11 +679,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GroupedNFA.cpp">
+    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="69" column="24" lean-forward="false" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#41#57#0" expanded="true" />
+            <element signature="e#138#201#0" expanded="false" />
+            <element signature="e#268#391#0" expanded="false" />
+            <element signature="e#2326#2394#0" expanded="false" />
+            <element signature="e#2326#2722#0" expanded="false" />
+            <element signature="e#2724#2791#0" expanded="false" />
+            <element signature="e#2724#3759#0" expanded="false" />
+            <element signature="e#3761#3821#0" expanded="false" />
+            <element signature="e#3761#5697#0" expanded="false" />
+            <element signature="e#5699#6012#0" expanded="false" />
+            <element signature="e#6014#6101#0" expanded="false" />
+            <element signature="e#6014#6403#0" expanded="false" />
+            <element signature="e#6405#6501#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
