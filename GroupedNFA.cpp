@@ -8,7 +8,9 @@ GroupedNFA *GroupedNFA::groupedNFA = 0;
 
 GroupedNFA *GroupedNFA::getInstance() {
     if (groupedNFA == 0) {
-        groupedNFA = new GroupedNFA;
+        groupedNFA = new GroupedNFA();
     }
     return groupedNFA;
 }
+
+GroupedNFA::GroupedNFA() {}

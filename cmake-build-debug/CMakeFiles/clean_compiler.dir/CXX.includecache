@@ -15,7 +15,25 @@ DFA.h
 /home/yousef/clean compiler/Graph.cpp
 Graph.h
 /home/yousef/clean compiler/Graph.h
+GroupedNFA.h
+/home/yousef/clean compiler/GroupedNFA.h
 
+/home/yousef/clean compiler/Graph.h
+string
+-
+vector
+-
+
+/home/yousef/clean compiler/GroupedNFA.cpp
+GroupedNFA.h
+/home/yousef/clean compiler/GroupedNFA.h
+
+/home/yousef/clean compiler/GroupedNFA.h
+string
+-
+vector
+-
+Graph.h
 /home/yousef/clean compiler/Graph.h
 
 /home/yousef/clean compiler/LexicalAnalyzer.cpp
@@ -38,6 +56,18 @@ vector
 NFA.h
 /home/yousef/clean compiler/NFA.h
 
+/home/yousef/clean compiler/NFA.h
+string
+-
+Graph.h
+/home/yousef/clean compiler/Graph.h
+
+/home/yousef/clean compiler/NFAOperator.cpp
+NFAOperator.h
+/home/yousef/clean compiler/NFAOperator.h
+
+/home/yousef/clean compiler/NFAOperator.h
+NFA.h
 /home/yousef/clean compiler/NFA.h
 
 /home/yousef/clean compiler/RulesParser.cpp

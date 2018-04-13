@@ -4,7 +4,7 @@
 
 #include "Graph.h"
 #include "GroupedNFA.h"
-#include ""
+
 /* Initialize a new state and add it states vector.
  * */
 Graph::State *Graph::createState(bool accepted) {

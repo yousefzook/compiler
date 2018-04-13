@@ -18,7 +18,6 @@ class LexicalAnalyzer {
 public:
     map<string, vector<string>> tokenizedRegexs;
     map<string, string> definitions;
-    map<string, string> regexs;
     vector<string> keyWords;
     vector<string> punctuations;
 
@@ -26,6 +25,7 @@ public:
 
 private:
     ifstream rulesFile;
+    map<string, string> regexs;
 
     void readRulesFile();
 
