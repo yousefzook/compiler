@@ -24,6 +24,7 @@ CMakeFiles/clean_compiler.dir/NFA.cpp.o: ../NFA.cpp
 CMakeFiles/clean_compiler.dir/NFA.cpp.o: ../NFA.h
 
 CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: ../Graph.h
+CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: ../GroupedNFA.h
 CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: ../NFA.h
 CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: ../NFAOperator.cpp
 CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: ../NFAOperator.h

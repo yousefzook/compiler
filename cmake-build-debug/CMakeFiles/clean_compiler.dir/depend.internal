@@ -25,6 +25,7 @@ CMakeFiles/clean_compiler.dir/NFA.cpp.o
  /home/yousef/clean compiler/NFA.h
 CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o
  /home/yousef/clean compiler/Graph.h
+ /home/yousef/clean compiler/GroupedNFA.h
  /home/yousef/clean compiler/NFA.h
  /home/yousef/clean compiler/NFAOperator.cpp
  /home/yousef/clean compiler/NFAOperator.h

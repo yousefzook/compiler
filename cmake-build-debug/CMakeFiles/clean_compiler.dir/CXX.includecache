@@ -71,6 +71,8 @@ Graph.h
 /home/yousef/clean compiler/NFAOperator.cpp
 NFAOperator.h
 /home/yousef/clean compiler/NFAOperator.h
+GroupedNFA.h
+/home/yousef/clean compiler/GroupedNFA.h
 
 /home/yousef/clean compiler/NFAOperator.h
 NFA.h
