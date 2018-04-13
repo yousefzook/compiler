@@ -44,44 +44,82 @@ void LexicalAnalyzer::startLexical() {
  * */
 void LexicalAnalyzer::buildNFAs() {
 
-    stack<string> inputStack;
-    stack<char> operationStack;
 
     for (auto tokenizedRegex : tokenizedRegexs) { // looping on each regex
         string regexName = tokenizedRegex.first; // name of nfa = regex lhs
         vector<string> tokens = tokenizedRegex.second;
 
-        for (auto token : tokens) { // looping on each token in the regex
-
-            NFA nfa;
+        for (int i = 0; i < tokens.size(); i++) { // looping on each token in the regex
+            string token = tokens[i];
             if (token[0] == ')')
-                nfa = finishBrackets(&operationStack, &inputStack);
+                finishBrackets();
             else if (token[0] == '(')
                 operationStack.push(token[0]);
-            else if (!operationsPriority.count(token[0])) // if the token not an operation
-                inputStack.push(token);
-            else { // an operation
-                if (!operationStack.empty()) { // if there exist operation, check priority first
-                    int priority = operationsPriority[token[0]];
-                    int tosPriority = operationsPriority[operationStack.top()]; // top of stack priority
-                    if (priority > tosPriority) {
-                        operationStack.push(token[0]);
-                    } else {// here, the top operation in stack must be finished first
-                        doOperationInTOS(&operationStack, &inputStack);
-                    }
-
+            else if (token == "." || !operationsPriority.count(token[0])) { // if the token not an operation
+                NFA tokenNFA;
+                tokenNFA.startState = tokenNFA.createState(false);
+                tokenNFA.finalState = tokenNFA.createState(true);
+                tokenNFA.addEdge(tokenNFA.startState, tokenNFA.finalState, token);
+                inputStack.push(tokenNFA);
+                if (i != 0 && tokens[i - 1] != "|") { // we should add '.' operation in stack
+                    pushOperation('.');
                 }
+            } else { // an operation
+                pushOperation(token[0]);
             }
         }
     }
 }
 
-void LexicalAnalyzer::doOperationInTOS(stack<char> *operationStack, stack<string> *inputStack) {
+void LexicalAnalyzer::pushOperation(char operation) {
+    if (operationStack.empty()) {
+        operationStack.push(operation);
+    } else { // if there exist operation, check priority first
+        int priority = operationsPriority[operation];
+        int tosPriority = operationsPriority[operationStack.top()]; // top of stack priority
+        if (priority > tosPriority) {
+            operationStack.push(operation);
+        } else { // here, the top operation in stack must be finished first
+            doOperationInTOS();
+        }
 
+    }
 }
 
-NFA LexicalAnalyzer::finishBrackets(stack<char> *operationStack, stack<string> *inputStack) {
+void LexicalAnalyzer::doOperationInTOS() {
+    char operation = operationStack.top();
+    operationStack.pop();
+    NFA nfa2 = inputStack.top();
+    NFA nfa1;
+    inputStack.pop();
+    switch (operation) {
+        case '*':
+            inputStack.push(kleeneClosure(nfa2));
+            break;
+        case '+':
+            inputStack.push(positiveClosure(nfa2));
+            break;
+        case '.':
+            nfa1 = inputStack.top();
+            inputStack.pop();
+            inputStack.push(AND(nfa1, nfa2));
+            break;
+        case '|':
+            nfa1 = inputStack.top();
+            inputStack.pop();
+            inputStack.push(OR(nfa1, nfa2));
+            break;
+        default:
+            cout << "Error in operations stack handling!" << endl;
+    }
+}
 
+void LexicalAnalyzer::finishBrackets() {
+
+    while (operationStack.top() != '(') {
+        doOperationInTOS();
+    }
+    operationStack.pop(); // pop '(' form stack
 }
 
 /*

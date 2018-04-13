@@ -32,10 +32,14 @@ private:
     map<string, string> regexs;
     map<string, vector<string>> tokenizedRegexs;
     map<char, int> operationsPriority;
+    stack<NFA> inputStack;
+    stack<char> operationStack;
 
-    void doOperationInTOS(stack<char> *, stack<string> *);
+    void doOperationInTOS();
 
-    NFA finishBrackets(stack<char> *, stack<string> *);
+    void finishBrackets();
+
+    void pushOperation(char operation);
 
     void buildNFAs();
 
