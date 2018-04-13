@@ -201,6 +201,54 @@ CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.provides: CMakeFiles/clean_c
 CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
 
 
+CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o: ../GroupedNFA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o -c "/home/yousef/clean compiler/GroupedNFA.cpp"
+
+CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/GroupedNFA.cpp" > CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.i
+
+CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/GroupedNFA.cpp" -o CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.s
+
+CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.requires:
+
+.PHONY : CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.requires
+
+CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.provides
+
+CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o
+
+
+CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: ../NFAOperator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o -c "/home/yousef/clean compiler/NFAOperator.cpp"
+
+CMakeFiles/clean_compiler.dir/NFAOperator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/NFAOperator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/NFAOperator.cpp" > CMakeFiles/clean_compiler.dir/NFAOperator.cpp.i
+
+CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/NFAOperator.cpp" -o CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s
+
+CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.requires:
+
+.PHONY : CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.requires
+
+CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.provides: CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.provides
+
+CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o
+
+
 # Object files for target clean_compiler
 clean_compiler_OBJECTS = \
 "CMakeFiles/clean_compiler.dir/main.cpp.o" \
@@ -208,7 +256,9 @@ clean_compiler_OBJECTS = \
 "CMakeFiles/clean_compiler.dir/DFA.cpp.o" \
 "CMakeFiles/clean_compiler.dir/Graph.cpp.o" \
 "CMakeFiles/clean_compiler.dir/RulesParser.cpp.o" \
-"CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o"
+"CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o" \
+"CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o" \
+"CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o"
 
 # External object files for target clean_compiler
 clean_compiler_EXTERNAL_OBJECTS =
@@ -219,9 +269,11 @@ clean_compiler: CMakeFiles/clean_compiler.dir/DFA.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/Graph.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/RulesParser.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/build.make
 clean_compiler: CMakeFiles/clean_compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable clean_compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable clean_compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/clean_compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -235,6 +287,8 @@ CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/DFA.cpp.o.
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Graph.cpp.o.requires
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.requires
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.requires
 
 .PHONY : CMakeFiles/clean_compiler.dir/requires
 

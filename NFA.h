@@ -4,10 +4,15 @@
 
 #ifndef CLEAN_COMPILER_NFA_H
 #define CLEAN_COMPILER_NFA_H
+#include <string>
+#include "Graph.h"
 
+using namespace std;
 
-class NFA {
+class NFA: public Graph {
 
+public:
+    string name;
 };
 
 

@@ -177,6 +177,33 @@ Graph.cpp.s:
 	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
 
+GroupedNFA.o: GroupedNFA.cpp.o
+
+.PHONY : GroupedNFA.o
+
+# target to build an object file
+GroupedNFA.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o
+.PHONY : GroupedNFA.cpp.o
+
+GroupedNFA.i: GroupedNFA.cpp.i
+
+.PHONY : GroupedNFA.i
+
+# target to preprocess a source file
+GroupedNFA.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.i
+.PHONY : GroupedNFA.cpp.i
+
+GroupedNFA.s: GroupedNFA.cpp.s
+
+.PHONY : GroupedNFA.s
+
+# target to generate assembly for a file
+GroupedNFA.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.s
+.PHONY : GroupedNFA.cpp.s
+
 LexicalAnalyzer.o: LexicalAnalyzer.cpp.o
 
 .PHONY : LexicalAnalyzer.o
@@ -230,6 +257,33 @@ NFA.s: NFA.cpp.s
 NFA.cpp.s:
 	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFA.cpp.s
 .PHONY : NFA.cpp.s
+
+NFAOperator.o: NFAOperator.cpp.o
+
+.PHONY : NFAOperator.o
+
+# target to build an object file
+NFAOperator.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o
+.PHONY : NFAOperator.cpp.o
+
+NFAOperator.i: NFAOperator.cpp.i
+
+.PHONY : NFAOperator.i
+
+# target to preprocess a source file
+NFAOperator.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.i
+.PHONY : NFAOperator.cpp.i
+
+NFAOperator.s: NFAOperator.cpp.s
+
+.PHONY : NFAOperator.s
+
+# target to generate assembly for a file
+NFAOperator.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s
+.PHONY : NFAOperator.cpp.s
 
 RulesParser.o: RulesParser.cpp.o
 
@@ -300,12 +354,18 @@ help:
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"
+	@echo "... GroupedNFA.o"
+	@echo "... GroupedNFA.i"
+	@echo "... GroupedNFA.s"
 	@echo "... LexicalAnalyzer.o"
 	@echo "... LexicalAnalyzer.i"
 	@echo "... LexicalAnalyzer.s"
 	@echo "... NFA.o"
 	@echo "... NFA.i"
 	@echo "... NFA.s"
+	@echo "... NFAOperator.o"
+	@echo "... NFAOperator.i"
+	@echo "... NFAOperator.s"
 	@echo "... RulesParser.o"
 	@echo "... RulesParser.i"
 	@echo "... RulesParser.s"

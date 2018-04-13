@@ -96,6 +96,12 @@
 		<Unit filename="/home/yousef/clean compiler/Graph.h">
 			<Option target="clean_compiler"/>
 		</Unit>
+		<Unit filename="/home/yousef/clean compiler/GroupedNFA.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/GroupedNFA.h">
+			<Option target="clean_compiler"/>
+		</Unit>
 		<Unit filename="/home/yousef/clean compiler/LexicalAnalyzer.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
@@ -106,6 +112,12 @@
 			<Option target="clean_compiler"/>
 		</Unit>
 		<Unit filename="/home/yousef/clean compiler/NFA.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/NFAOperator.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/NFAOperator.h">
 			<Option target="clean_compiler"/>
 		</Unit>
 		<Unit filename="/home/yousef/clean compiler/RulesParser.cpp">
