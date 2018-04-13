@@ -13,6 +13,7 @@ using namespace std;
 #include <map>
 #include <vector>
 #include "NFA.h"
+#include <stack>
 
 class LexicalAnalyzer {
 
@@ -32,7 +33,9 @@ private:
     map<string, vector<string>> tokenizedRegexs;
     map<char, int> operationsPriority;
 
-    NFA finishBrackets(stack<char>*, stack<string>*);
+    void doOperationInTOS(stack<char> *, stack<string> *);
+
+    NFA finishBrackets(stack<char> *, stack<string> *);
 
     void buildNFAs();
 

@@ -2,7 +2,6 @@
 // Created by yousef on 27/03/18.
 //
 
-#include <stack>
 #include "NFAOperator.h"
 #include "LexicalAnalyzer.h"
 #include "RulesParser.h"
@@ -25,7 +24,8 @@ void LexicalAnalyzer::startLexical() {
     // spilt each regex into vector of tokens
     tokenizeRegexs();
 
-    buildNFAs();
+    // build nfa of each regex
+//    buildNFAs();
 
     // print definitions map
     for (auto a: this->definitions)
@@ -67,13 +67,17 @@ void LexicalAnalyzer::buildNFAs() {
                     if (priority > tosPriority) {
                         operationStack.push(token[0]);
                     } else {// here, the top operation in stack must be finished first
-                        
+                        doOperationInTOS(&operationStack, &inputStack);
                     }
 
                 }
             }
         }
     }
+}
+
+void LexicalAnalyzer::doOperationInTOS(stack<char> *operationStack, stack<string> *inputStack) {
+
 }
 
 NFA LexicalAnalyzer::finishBrackets(stack<char> *operationStack, stack<string> *inputStack) {

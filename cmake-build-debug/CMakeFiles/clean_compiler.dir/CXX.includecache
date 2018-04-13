@@ -37,6 +37,8 @@ Graph.h
 /home/yousef/clean compiler/Graph.h
 
 /home/yousef/clean compiler/LexicalAnalyzer.cpp
+NFAOperator.h
+/home/yousef/clean compiler/NFAOperator.h
 LexicalAnalyzer.h
 /home/yousef/clean compiler/LexicalAnalyzer.h
 RulesParser.h
@@ -50,6 +52,10 @@ fstream
 map
 -
 vector
+-
+NFA.h
+/home/yousef/clean compiler/NFA.h
+stack
 -
 
 /home/yousef/clean compiler/NFA.cpp

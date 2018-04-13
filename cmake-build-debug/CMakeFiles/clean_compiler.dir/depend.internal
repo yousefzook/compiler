@@ -13,8 +13,11 @@ CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o
  /home/yousef/clean compiler/GroupedNFA.cpp
  /home/yousef/clean compiler/GroupedNFA.h
 CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
+ /home/yousef/clean compiler/Graph.h
  /home/yousef/clean compiler/LexicalAnalyzer.cpp
  /home/yousef/clean compiler/LexicalAnalyzer.h
+ /home/yousef/clean compiler/NFA.h
+ /home/yousef/clean compiler/NFAOperator.h
  /home/yousef/clean compiler/RulesParser.h
 CMakeFiles/clean_compiler.dir/NFA.cpp.o
  /home/yousef/clean compiler/Graph.h
@@ -29,5 +32,7 @@ CMakeFiles/clean_compiler.dir/RulesParser.cpp.o
  /home/yousef/clean compiler/RulesParser.cpp
  /home/yousef/clean compiler/RulesParser.h
 CMakeFiles/clean_compiler.dir/main.cpp.o
+ /home/yousef/clean compiler/Graph.h
  /home/yousef/clean compiler/LexicalAnalyzer.h
+ /home/yousef/clean compiler/NFA.h
  /home/yousef/clean compiler/main.cpp
