@@ -1,23 +1,21 @@
-/*
- * NFA.h
- *
- *  Created on: Mar 16, 2018
- *      Author: yousef
- */
-#include <vector>
+//
+// Created by yousef on 27/03/18.
+//
+
+#ifndef CLEAN_COMPILER_NFA_H
+#define CLEAN_COMPILER_NFA_H
+#include <string>
 #include "Graph.h"
 
 using namespace std;
 
-#ifndef NFA_H_
-#define NFA_H_
+class NFA: public Graph {
 
-class NFA: public Graph{
 public:
 	NFA();
 	virtual ~NFA();
-
-	vector<State *>  getClosures(State * state);
+    string name;
 };
 
-#endif /* NFA_H_ */
+
+#endif //CLEAN_COMPILER_NFA_H

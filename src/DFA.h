@@ -1,21 +1,14 @@
-/*
- * DFA.h
- *
- *  Created on: Mar 16, 2018
- *      Author: yousef
- */
+//
+// Created by yousef on 27/03/18.
+//
 
-#include "Graph.h"
+#ifndef CLEAN_COMPILER_DFA_H
+#define CLEAN_COMPILER_DFA_H
 
-#ifndef DFA_H_
-#define DFA_H_
 
-class DFA: public Graph{
-public:
-	DFA();
-	virtual ~DFA();
+class DFA {
 
-	DFA* minimize(DFA* dfa);
 };
 
-#endif /* DFA_H_ */
+
+#endif //CLEAN_COMPILER_DFA_H

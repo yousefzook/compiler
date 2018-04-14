@@ -4,34 +4,34 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/AutomataOperator.cpp \
-../src/CompilerMain.cpp \
 ../src/DFA.cpp \
 ../src/Graph.cpp \
-../src/LexecialGenerator.cpp \
+../src/GroupedNFA.cpp \
+../src/LexicalAnalyzer.cpp \
 ../src/NFA.cpp \
-../src/RegularDefinition.cpp \
-../src/RuleParser.cpp 
+../src/NFAOperator.cpp \
+../src/RulesParser.cpp \
+../src/main.cpp 
 
 OBJS += \
-./src/AutomataOperator.o \
-./src/CompilerMain.o \
 ./src/DFA.o \
 ./src/Graph.o \
-./src/LexecialGenerator.o \
+./src/GroupedNFA.o \
+./src/LexicalAnalyzer.o \
 ./src/NFA.o \
-./src/RegularDefinition.o \
-./src/RuleParser.o 
+./src/NFAOperator.o \
+./src/RulesParser.o \
+./src/main.o 
 
 CPP_DEPS += \
-./src/AutomataOperator.d \
-./src/CompilerMain.d \
 ./src/DFA.d \
 ./src/Graph.d \
-./src/LexecialGenerator.d \
+./src/GroupedNFA.d \
+./src/LexicalAnalyzer.d \
 ./src/NFA.d \
-./src/RegularDefinition.d \
-./src/RuleParser.d 
+./src/NFAOperator.d \
+./src/RulesParser.d \
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
