@@ -21,6 +21,8 @@ public:
 
     void minimizeDFA();
 
+    void prettyPrintTransTable();
+
 };
 
 

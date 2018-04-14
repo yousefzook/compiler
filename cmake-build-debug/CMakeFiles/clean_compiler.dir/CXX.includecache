@@ -15,8 +15,12 @@ unordered_set
 -
 
 /home/yousef/clean compiler/DFA.cpp
+iostream
+-
 DFA.h
 /home/yousef/clean compiler/DFA.h
+GroupedNFA.h
+/home/yousef/clean compiler/GroupedNFA.h
 
 /home/yousef/clean compiler/DFA.h
 set

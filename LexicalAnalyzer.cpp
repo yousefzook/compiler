@@ -33,6 +33,7 @@ void LexicalAnalyzer::startLexical() {
     GroupedNFA::getInstance()->buildNFATransTable();
     // create DFA not minimized
     DFA dfa = convertToDFA();
+    dfa.prettyPrintTransTable();
 
 
 }
@@ -258,7 +259,7 @@ string LexicalAnalyzer::getEqualValue(string token, string lhs) {
  * Read rules file and pass it to the parser and fill regex and definitions maps
  */
 void LexicalAnalyzer::readRulesFile() {
-    rulesFile.open("/home/yousef/tests/test.txt");
+    rulesFile.open("/home/yousef/tests/rules.txt");
     string line;
     RulesParser rParser;
     while (getline(rulesFile, line))

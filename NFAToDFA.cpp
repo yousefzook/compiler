@@ -22,10 +22,11 @@ DFA convertToDFA() {
     // first set of states, Start state and its closures
     // in nfa table, start state is the last row
     set<int> firstCell = nfa->transTable[nfa->transTable.size()-1][0];
+    firstCell = getClosures(firstCell);
 
     // set the first set of states in the queue
     toBeProcessed.push(firstCell);
-    vector<int> temp (nfa->allInputs.size()-1, -1);
+    vector<int> temp (nfa->allInputs.size(), -1);
     dfa.transTable.insert(dfa.transTable.begin() + counter, temp); // init the row of the table
     string acceptedName = editAcceptedDFAStates(firstCell); // check if the set has an accepted state
     if(!acceptedName.empty())
@@ -40,7 +41,7 @@ DFA convertToDFA() {
         set<int> nextSet; // to get each new set of next state closures
 
         // loop on each input 'i' except lambda input '0'; to get the next state
-        for (int input = 1; input < nfa->allInputs.size(); input++) {
+        for (int input = 1; input <= nfa->allInputs.size(); input++) {
             for (auto state : currentSet)
                 nextSet.insert(nfa->transTable[state][input].begin(), nfa->transTable[state][input].end());
             nextSet = getClosures(nextSet);
@@ -48,10 +49,10 @@ DFA convertToDFA() {
 
             if (dfaStatesMap.count(nextSet) == 0) { // this new state is not put into the dfa map before
                 // init the row of the table
-                vector<int> temp (nfa->allInputs.size()-1, -1);
+                vector<int> temp (nfa->allInputs.size(), -1);
                 dfa.transTable.insert(dfa.transTable.begin() + counter, temp);
                 string acceptedName = editAcceptedDFAStates(nextSet); // check if the set has an accepted state
-                if(acceptedName.empty())
+                if(!acceptedName.empty())
                     dfa.acceptedStates[counter] = acceptedName;
                 dfaStatesMap[nextSet] = counter++;
                 toBeProcessed.push(nextSet);
