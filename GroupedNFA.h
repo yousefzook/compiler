@@ -53,6 +53,8 @@ private:
 
     GroupedNFA();
 
+    void prettyPrintTransTable();
+
     static GroupedNFA *groupedNFA;
 };
 
