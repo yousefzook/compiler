@@ -5,6 +5,7 @@
 #include "NFAOperator.h"
 #include "LexicalAnalyzer.h"
 #include "RulesParser.h"
+#include "GroupedNFA.h"
 
 LexicalAnalyzer::LexicalAnalyzer() {
     initOperationsMap();
@@ -20,12 +21,14 @@ void LexicalAnalyzer::startLexical() {
 
     // substitute definition with its rhs in each regex
     relaxDefinitions();
-
     // spilt each regex into vector of tokens
     tokenizeRegexs();
-
     // build nfa of each regex
     buildNFAs();
+    // build grouped nfa
+    buildGroupedNFA();
+    // build transition table for grouped NFA
+    GroupedNFA::getInstance()->buildNFATransTable();
 
 //    // print definitions map
 //    for (auto a: this->definitions)
@@ -38,6 +41,19 @@ void LexicalAnalyzer::startLexical() {
 
 
 }
+
+/*
+ * build grouped nfa using regexs nfas
+ * */
+void LexicalAnalyzer::buildGroupedNFA() {
+    GroupedNFA *groupedNFA = GroupedNFA::getInstance();
+    groupedNFA->startState = groupedNFA->createState(false);
+    for (auto regexsNFA: regexsNFAs) {
+        NFA nfa = regexsNFA.second;
+        groupedNFA->addEdge(groupedNFA->startState, nfa.startState, "\\L");
+    }
+}
+
 
 /*
  * For each regex, build its NFA and put it in the regexsNFAs map
@@ -76,8 +92,8 @@ void LexicalAnalyzer::buildNFAs() {
         }
         while (inputStack.size() > 1)
             doOperationInTOS();
+        inputStack.top().name = regexName;
         regexsNFAs.insert(pair<string, NFA>(regexName, inputStack.top()));
-        cout << regexName + "   " + inputStack.top().name << endl;
         inputStack.pop();
     }
 }
@@ -218,7 +234,7 @@ void LexicalAnalyzer::tokenizeRegexs() {
 
                 if (equalValue == rhs.substr(i, j - i)) {
                     // this mean it is a word not definition, then push it
-                    while (rhs[i] != ' ') {
+                    while (rhs[i] != ' ' && i < rhs.size()) {
                         token = rhs[i];
                         this->tokenizedRegexs[lhs].push_back(token);
                         i++;

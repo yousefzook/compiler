@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/yousef/clean compiler/Bimap.h">
+			<Option target="clean_compiler"/>
+		</Unit>
 		<Unit filename="/home/yousef/clean compiler/DFA.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>

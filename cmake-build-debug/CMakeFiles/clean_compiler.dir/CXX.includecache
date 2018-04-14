@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/yousef/clean compiler/Bimap.h
+unordered_map
+-
+map
+-
+unordered_set
+-
+
 /home/yousef/clean compiler/DFA.cpp
 DFA.h
 /home/yousef/clean compiler/DFA.h
@@ -25,16 +33,20 @@ vector
 -
 
 /home/yousef/clean compiler/GroupedNFA.cpp
+iostream
+-
 GroupedNFA.h
 /home/yousef/clean compiler/GroupedNFA.h
 
 /home/yousef/clean compiler/GroupedNFA.h
-string
--
 vector
 -
 Graph.h
 /home/yousef/clean compiler/Graph.h
+Bimap.h
+/home/yousef/clean compiler/Bimap.h
+set
+-
 
 /home/yousef/clean compiler/LexicalAnalyzer.cpp
 NFAOperator.h
@@ -43,6 +55,8 @@ LexicalAnalyzer.h
 /home/yousef/clean compiler/LexicalAnalyzer.h
 RulesParser.h
 /home/yousef/clean compiler/RulesParser.h
+GroupedNFA.h
+/home/yousef/clean compiler/GroupedNFA.h
 
 /home/yousef/clean compiler/LexicalAnalyzer.h
 iostream

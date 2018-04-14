@@ -28,6 +28,12 @@ NFA AND(NFA nfa1, NFA nfa2) {
         if (nfa1.finalState == groupedNFA->allStates[i]) {
             groupedNFA->allStates.erase(groupedNFA->allStates.begin() + i);
         }
+    for (auto state: groupedNFA->allStates) {
+        vector<pair<Graph::State *, string>> *nextStates = &state->nextStates;
+        for (int i = 0; i < nextStates->size(); i++)
+            if (nextStates->at(i).first == nfa1.finalState)
+                nextStates->at(i).first = nfa2.startState;
+    }
     nfa1.finalState = nfa2.startState;
     nfa.startState = nfa1.startState;
     nfa.finalState = nfa2.finalState;

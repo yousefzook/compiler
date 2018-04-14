@@ -35,6 +35,7 @@ private:
     stack<NFA> inputStack;
     stack<char> operationStack;
 
+    void buildGroupedNFA();
     void doOperationInTOS();
 
     void finishBrackets();
