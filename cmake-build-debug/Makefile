@@ -285,6 +285,33 @@ NFAOperator.cpp.s:
 	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s
 .PHONY : NFAOperator.cpp.s
 
+NFAToDFA.o: NFAToDFA.cpp.o
+
+.PHONY : NFAToDFA.o
+
+# target to build an object file
+NFAToDFA.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o
+.PHONY : NFAToDFA.cpp.o
+
+NFAToDFA.i: NFAToDFA.cpp.i
+
+.PHONY : NFAToDFA.i
+
+# target to preprocess a source file
+NFAToDFA.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.i
+.PHONY : NFAToDFA.cpp.i
+
+NFAToDFA.s: NFAToDFA.cpp.s
+
+.PHONY : NFAToDFA.s
+
+# target to generate assembly for a file
+NFAToDFA.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.s
+.PHONY : NFAToDFA.cpp.s
+
 RulesParser.o: RulesParser.cpp.o
 
 .PHONY : RulesParser.o
@@ -366,6 +393,9 @@ help:
 	@echo "... NFAOperator.o"
 	@echo "... NFAOperator.i"
 	@echo "... NFAOperator.s"
+	@echo "... NFAToDFA.o"
+	@echo "... NFAToDFA.i"
+	@echo "... NFAToDFA.s"
 	@echo "... RulesParser.o"
 	@echo "... RulesParser.i"
 	@echo "... RulesParser.s"

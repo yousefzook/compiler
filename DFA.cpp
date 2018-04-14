@@ -3,3 +3,8 @@
 //
 
 #include "DFA.h"
+
+
+void DFA::minimizeDFA() {
+
+}

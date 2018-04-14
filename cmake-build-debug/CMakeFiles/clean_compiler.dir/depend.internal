@@ -16,12 +16,14 @@ CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o
  /home/yousef/clean compiler/GroupedNFA.h
 CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
  /home/yousef/clean compiler/Bimap.h
+ /home/yousef/clean compiler/DFA.h
  /home/yousef/clean compiler/Graph.h
  /home/yousef/clean compiler/GroupedNFA.h
  /home/yousef/clean compiler/LexicalAnalyzer.cpp
  /home/yousef/clean compiler/LexicalAnalyzer.h
  /home/yousef/clean compiler/NFA.h
  /home/yousef/clean compiler/NFAOperator.h
+ /home/yousef/clean compiler/NFAToDFA.h
  /home/yousef/clean compiler/RulesParser.h
 CMakeFiles/clean_compiler.dir/NFA.cpp.o
  /home/yousef/clean compiler/Graph.h
@@ -34,6 +36,13 @@ CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o
  /home/yousef/clean compiler/NFA.h
  /home/yousef/clean compiler/NFAOperator.cpp
  /home/yousef/clean compiler/NFAOperator.h
+CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o
+ /home/yousef/clean compiler/Bimap.h
+ /home/yousef/clean compiler/DFA.h
+ /home/yousef/clean compiler/Graph.h
+ /home/yousef/clean compiler/GroupedNFA.h
+ /home/yousef/clean compiler/NFAToDFA.cpp
+ /home/yousef/clean compiler/NFAToDFA.h
 CMakeFiles/clean_compiler.dir/RulesParser.cpp.o
  /home/yousef/clean compiler/RulesParser.cpp
  /home/yousef/clean compiler/RulesParser.h

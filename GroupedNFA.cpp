@@ -6,9 +6,6 @@
 #include "GroupedNFA.h"
 
 GroupedNFA *GroupedNFA::groupedNFA = 0;
-Bimap<int, Graph::State *> GroupedNFA::statesMap;
-Bimap<int, string> GroupedNFA::inputsMap;
-vector<vector<set<int>>> GroupedNFA::transTable;
 
 /*
  * Convert grouped NFA from graph to transition table

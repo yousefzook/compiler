@@ -6,6 +6,8 @@
 #include "LexicalAnalyzer.h"
 #include "RulesParser.h"
 #include "GroupedNFA.h"
+#include "DFA.h"
+#include "NFAToDFA.h"
 
 LexicalAnalyzer::LexicalAnalyzer() {
     initOperationsMap();
@@ -29,15 +31,8 @@ void LexicalAnalyzer::startLexical() {
     buildGroupedNFA();
     // build transition table for grouped NFA
     GroupedNFA::getInstance()->buildNFATransTable();
-
-//    // print definitions map
-//    for (auto a: this->definitions)
-//        cout << a.first << "  " << a.second << endl;
-//
-//    // print regexs tokenized map
-//    for (auto a: this->tokenizedRegexs)
-//        for (auto b: a.second)
-//            cout << a.first << "  " << b << endl;
+    // create DFA not minimized
+    DFA dfa = convertToDFA();
 
 
 }
@@ -50,6 +45,7 @@ void LexicalAnalyzer::buildGroupedNFA() {
     groupedNFA->startState = groupedNFA->createState(false);
     for (auto regexsNFA: regexsNFAs) {
         NFA nfa = regexsNFA.second;
+        groupedNFA->acceptedStatesName[nfa.finalState] = regexsNFA.first;
         groupedNFA->addEdge(groupedNFA->startState, nfa.startState, "\\L");
     }
 }
@@ -262,7 +258,7 @@ string LexicalAnalyzer::getEqualValue(string token, string lhs) {
  * Read rules file and pass it to the parser and fill regex and definitions maps
  */
 void LexicalAnalyzer::readRulesFile() {
-    rulesFile.open("/home/yousef/tests/rules.txt");
+    rulesFile.open("/home/yousef/tests/test.txt");
     string line;
     RulesParser rParser;
     while (getline(rulesFile, line))

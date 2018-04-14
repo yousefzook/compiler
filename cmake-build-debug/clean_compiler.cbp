@@ -123,6 +123,12 @@
 		<Unit filename="/home/yousef/clean compiler/NFAOperator.h">
 			<Option target="clean_compiler"/>
 		</Unit>
+		<Unit filename="/home/yousef/clean compiler/NFAToDFA.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/NFAToDFA.h">
+			<Option target="clean_compiler"/>
+		</Unit>
 		<Unit filename="/home/yousef/clean compiler/RulesParser.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>

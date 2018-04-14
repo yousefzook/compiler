@@ -19,8 +19,9 @@ using namespace std;
 class GroupedNFA : public Graph {
 
 public:
-    vector<Graph::State *> allStates;
+    vector<State *> allStates;
     vector<string> allInputs;
+    map<State *, string> acceptedStatesName;
 
     static GroupedNFA *getInstance();
 
@@ -44,9 +45,9 @@ public:
     * .             .
     * .                 .
     */
-    static vector<vector<set<int>>> transTable;
-    static Bimap<int, State *> statesMap;
-    static Bimap<int, string> inputsMap;
+    vector<vector<set<int>>> transTable;
+    Bimap<int, State *> statesMap;
+    Bimap<int, string> inputsMap;
 
 private:
     void initLambdaCol();

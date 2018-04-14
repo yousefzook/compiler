@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o"
   "CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o"
   "CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o"
+  "CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o"
   "clean_compiler.pdb"
   "clean_compiler"
 )
