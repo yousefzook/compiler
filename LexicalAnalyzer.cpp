@@ -90,7 +90,7 @@ void LexicalAnalyzer::buildNFAs() {
             }
 
         }
-        while (inputStack.size() > 1)
+        while (!operationStack.empty())
             doOperationInTOS();
         inputStack.top().name = regexName;
         regexsNFAs.insert(pair<string, NFA>(regexName, inputStack.top()));
@@ -274,8 +274,8 @@ void LexicalAnalyzer::readRulesFile() {
  * Adding possible operations with an int to indicate its priority - top priority = 1 -
  * */
 void LexicalAnalyzer::initOperationsMap() {
-    operationsPriority.insert(pair<char, int>('*', 1)); // kleene closure
-    operationsPriority.insert(pair<char, int>('+', 1)); // positive closure
+    operationsPriority.insert(pair<char, int>('*', 2)); // kleene closure
+    operationsPriority.insert(pair<char, int>('+', 2)); // positive closure
+    operationsPriority.insert(pair<char, int>('.', 1)); // AND - concatenation
     operationsPriority.insert(pair<char, int>('|', 0)); // OR
-    operationsPriority.insert(pair<char, int>('.', 0)); // AND - concatenation
 }

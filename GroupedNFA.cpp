@@ -112,6 +112,7 @@ void GroupedNFA::prettyPrintTransTable() {
         cout << input << "   ";
     cout << endl<< "-------------------------------------------------------------------------" << endl;
     for (int i = 0; i < transTable.size(); i++) {
+        cout<<i<<" :: ";
         for (int j = 0; j < transTable[0].size(); j++) {
             if (transTable[i][j].empty())
                 cout << "__";
