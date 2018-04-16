@@ -1,24 +1,40 @@
-/*
- * DFA.h
- *
- *  Created on: Mar 16, 2018
- *      Author: yousef
- */
-#include "graph.h"
-#ifndef DFA_H_
-#define DFA_H_
+//
+// Created by yousef on 27/03/18.
+//
 
-class DFA: public graph{
+#ifndef CLEAN_COMPILER_DFA_H
+#define CLEAN_COMPILER_DFA_H
+
+#include <set>
+#include <vector>
+#include <string>
+#include <map>
+
+using namespace std;
+
+class DFA {
+
 public:
-	DFA();
-	virtual ~DFA();
+    vector<vector<int>> transTable;
 
-	vector<vector<int>> minimize(vector<vector<int>> dfa);
+    // each accepted state with it's token -name-
+    map<int, string> acceptedStates;
 
-private:
-	/* check if state 0 and state 1 are both accepted or not
-	 * */
-	bool sameType(int s0, int s1);
+    vector<int> setIndex; //index of each set as it becomes the same index of the new states of the new dfa table
+    vector<vector<vector<int>>> equivSets; //hold subsets of each level of partitioning
+    int counter; //keep track of current level we currently in partitioning ,
+    vector<int> markingVec; //show wether this state is already taken in a set or not (in actual code initialize it to be (# of states,0))
+
+    void minimizeDFA();
+    void init_DFA();
+    void print_subsets(vector<vector<int>> arr);
+    void partition();
+    vector<vector<int>> subset(vector<int> equivSet);
+    void build_min_DFA();
+    void prettyPrintTransTable(vector<vector<int>> table);
+    int check_status(int statusIndex);
+    void print_accepted_Map();
 };
 
-#endif /* DFA_H_ */
+
+#endif //CLEAN_COMPILER_DFA_H

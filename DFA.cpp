@@ -1,58 +1,203 @@
-/*
- * DFA.cpp
- *
- *  Created on: Mar 16, 2018
- *      Author: yousef
- */
+//
+// Created by yousef on 27/03/18.
+//
 
 #include <iostream>
-#include <set>
 #include "DFA.h"
-#include "TransitionTableConverter.h"
+#include "GroupedNFA.h"
 
-DFA::DFA() {
-    // TODO Auto-generated constructor stub
+
+void DFA::minimizeDFA() {
+    init_DFA();
+    partition();
+    build_min_DFA();
+    cout<<endl<<"Equivalent Subset is "<<endl;
+    print_subsets(equivSets[equivSets.size()-1]);
 }
 
-DFA::~DFA() {
-    // TODO Auto-generated destructor stub
+void DFA::prettyPrintTransTable(vector<vector<int>> table) {
+    cout << endl;
+    cout<<"\t\t\t\t\t\t\t\tDFA TABLE"<<endl;
+    cout<<"     "<<"\t";
+    for(int i = 0; i < GroupedNFA::getInstance()->allInputs.size(); i++)
+        cout<<GroupedNFA::getInstance()->allInputs[i]<<"\t";
+    cout <<endl<< "-------------------------------------------------------------------------" << endl;
+    for (int i = 0; i < table.size(); i++) {
+        if(i<10)
+            cout<<"0";
+        cout<<i<<" ::\t";
+        for (int j = 0; j < table[0].size(); j++) {
+            cout<<table[i][j];
+            cout << "\t";
+        }
+        cout << endl;
+    }
 }
 
-vector<vector<int>> DFA::minimize(vector<vector<int>> dfaOld) {
-    set<int> equivalentStates;
-    bool same; // to indicate if the dfa is at it's minimal form
-    while (!same) {
-        same = true;
-        for (int i = 0; i < dfaOld.size()-1; i++) { // for each state except the last state
-            for (int j = i + 1; j < dfaOld.size(); j++) { // loop to find similarities
-                if (dfaOld[i] == dfaOld[j] && sameType(i,j)){
-                    equivalentStates.insert(j);
-                    dfaOld.erase(dfaOld.begin()+j);
-                    j--; // decrement j as the size is decremented by 1
-                }
+void DFA::init_DFA() {
+    /*
+    map<string,vector<int>> firstRow;
+    firstRow.insert(pair<string,vector<int>>("notAccepted",{}));
+    for(int i = 0 ; i<transTable.size();i++){
+        if(check_status(i)){
+            if(firstRow.find(acceptedStates[i])!= firstRow.end()){
+                firstRow[acceptedStates[i]].push_back(i);
+            }else{
+                firstRow.insert(pair<string,vector<int>>(acceptedStates[i],{i}));
             }
-            if(equivalentStates.empty()) // no change should be done if no equivalents
-                continue;
-            for (int row = 0; row < dfaOld.size(); row++) { // loop to remove similarities
-                for (int col = 0; col < dfaOld.front().size(); col++) {
-                    if (equivalentStates.find(dfaOld[row][col]) != equivalentStates.end()){
-                        // replace the state with the other state
-                        dfaOld[row][col] = i;
-                        same = false;
-                    }
-                }
-            }
-            equivalentStates.clear();
+        }else{
+            firstRow["notAccepted"].push_back(i);
         }
     }
-    return dfaOld;
+    cout<<endl<<"Accepted Map contains:\n";
+    for (map<string,vector<int>>::iterator it = firstRow.begin(); it!=firstRow.end(); ++it)
+    {
+        cout << it->first<<" ";
+        for(auto j:it->second)
+            cout<< j<<" ";
+        cout<<endl;
+    }
+    for (map<int,string>::iterator it = acceptedStates.begin(); it!=acceptedStates.end(); ++it)
+    {
+        if(firstRow.find(it->second)!= firstRow.end()){
+            firstRow[it->second].push_back(it->first);
+        }else{
+            firstRow.insert(map<string,vector<int>pair(it->second,{it->first});
+        }
+    }
+*/
+    vector<int> notFinal,final;
+
+    for(int i = 0;i<transTable.size();i++) {
+        markingVec.push_back(0); //init marking vector too, all 0 means all set aren't taken initially
+        if (check_status(i))//since state is found in map then it's accepted
+        {
+            setIndex.push_back(1);
+            final.push_back(i);
+
+        } else {
+            setIndex.push_back(0);
+            notFinal.push_back(i);
+
+        }
+    }
+    equivSets.push_back({});
+    if(!notFinal.empty())
+        equivSets[0].push_back(notFinal);
+    if(!final.empty())
+        equivSets[0].push_back(final);
+    counter = 0;
 }
 
-bool DFA::sameType(int s0, int s1){
-    State* state0 = TransitionTableConverter::statesMap.valueForKey(s0);
-    State* state1 = TransitionTableConverter::statesMap.valueForKey(s1);
-    if(state0->accepted == state1->accepted)
-        return true;
-    return false;
+void DFA::partition() {
+    vector<vector<int>> currRow = equivSets[counter];
+    bool noNewSets = false;
+    vector<vector<int>> equiv;
+    while(!noNewSets){ //loop as long as there is no new sets
+        counter ++;    //that counter keeps track of current level of partitioning
+        equivSets.push_back({});    //add new empty level of partitioning
+        for(auto i : currRow) {
+            equiv = subset(i); //subset each set of current row into new subsets
+            for (auto j : equiv) { //for each of these subsets
+                for (auto k:j) {  //for each vector
+                    setIndex[k] = equivSets[counter].size(); //update status of each state to have index of it's curr new subset
+                }
+                equivSets[counter].push_back(j);
+            }
+        }
+        if(equivSets[counter].size() == equivSets[counter-1].size())
+            noNewSets = true;
+
+        currRow = equivSets[counter];
+
+        for(int k = 0 ; k<markingVec.size();k++) //reinitialize the marking vector for all sets
+            markingVec[k] = 0;
+    }
+}
+//distinguish between states by next states , and if both states is accepted they are distinguishable by it's accepting string first
+vector<vector<int>> DFA::subset(vector<int> equivSet) {
+    vector<int> temp,nextStates1,nextStates2;
+    vector<vector<int>> equivSubsets;
+    bool equivFlag = true;
+    for(int i = 0 ;i < equivSet.size(); i++)
+    {
+        if(!markingVec[equivSet[i]]){ //if state is not marked(not taken before)
+            temp.push_back(equivSet[i]); //create a new set for it
+            markingVec[equivSet[i]] = 1;  //mark it
+            nextStates1 = transTable[equivSet[i]]; //get next states of the current state
+
+            if(i!= equivSet.size()-1) //if not at the end of the set
+                for(int j = i+1 ; j<equivSet.size();j++) //loop on all next states
+                {
+                    if(!markingVec[equivSet[j]]) { //if it's not marked then it's not taken (need to test if it's equivalent to it's prev state then)
+                        if(check_status(equivSet[i]))
+                            if(acceptedStates[equivSet[i]] != acceptedStates[equivSet[j]])//if both accept different cases ,distinguish
+                                continue;
+                        nextStates2 = transTable[equivSet[j]];
+                        for (int k = 0; k < nextStates1.size(); k++) { //loop on nextStates
+                            if (setIndex[nextStates1[k]] != setIndex[nextStates2[k]]) { //compare that they are not equivalent
+                                equivFlag = false; //as soon as i found that next states doesn't match in sets exit
+                                break;
+                            }
+                        }
+                        if (equivFlag) { // if an equivalent state of the current state is found
+                            temp.push_back(equivSet[j]); // put them together in same state
+                            markingVec[equivSet[j]] = 1; // mark the found equiv state as taken
+                        }
+                        equivFlag = true;
+                    }
+
+                }
+            equivSubsets.push_back(temp);// equiv subsets has now the new equvalent set if found
+            temp.clear();
+        }
+    }
+    return equivSubsets;
+}
+/*
+ * build the new minimized DFA table and new map of acceptance state
+ */
+void DFA::build_min_DFA() {
+    vector<int> minRow;
+    vector<vector<int>> tempTransTable = transTable; //store prev transtable
+    map<int,string> newAcceptedStates;
+    transTable.clear(); //clear current transition table
+    int setCount = 0;
+    for(auto set : equivSets[counter]) //loop on final sets
+    {
+        for (auto nextState:tempTransTable[set[0]]) //loop on next states of first of each set
+        {
+            minRow.push_back(setIndex[nextState]); //push containing set of these next states in a row
+        }
+        if (check_status(set[0])) //if one of the states in a set is accepted insert it as a pair of the index of the set and string printed of it's acceptance
+            newAcceptedStates.insert(pair<int,string>(setCount,acceptedStates[set[0]]));
+
+        transTable.push_back(minRow); //push the whole row into the new DFA table
+        minRow.clear(); //make sure to clear row before next iteration
+        setCount++;
+    }
+    acceptedStates = newAcceptedStates;
+}
+/*
+ * check if state is acceptance or not by checking whether it's in acceptedState map or not
+ */
+int DFA::check_status(int statusIndex) {
+    if(acceptedStates.find(statusIndex) != acceptedStates.end())
+        return 1;
+    return 0;
 }
 
+void DFA::print_accepted_Map(){
+    cout<<endl<<"Accepted Map contains:\n";
+    for (map<int,string>::iterator it = acceptedStates.begin(); it!=acceptedStates.end(); ++it)
+        cout << it->first << " => " << it->second << '\n';
+}
+void DFA::print_subsets(vector<vector<int>> subsetsVector){
+    for(auto i : subsetsVector)
+    {
+        cout<<"{ ";
+        for(auto j:i)
+            cout<<j<<" ";
+        cout<<"}"<<endl;
+    }
+}
