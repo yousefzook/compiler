@@ -55,14 +55,14 @@ outfile.open("/home/yousef/tests/tokens.txt");
 ## Assumptions:
 * Rules File should be separated by spaces between each expression and letter or word. For example, If there is a regular definition defined as 
 `digit = 0-9` and a regular experssion that is `x : digityz` The lexical generator will consider `digityz` as a word not as `digit` and then `yz`
-* (https://en.wikipedia.org/wiki/Maximal_munch)[Maximal Munch] and Priority -in case of tie, first priority rule will be considerd- rules are appiled.
+* [Maximal Munch](https://en.wikipedia.org/wiki/Maximal_munch) and Priority rule-in case of tie, first priority rule will be considerd- are appiled.
 * Only `positive clousre +`, `kleene closure *`, `ORing |` and `Concatenation .` are applied, but is very easy to add more operators in the code, just to the next:
   * edit in `LexicalAnalyzer` files >> `initOperationsMap` and `doOperationInTOS` functions
   * add the operator function in `NFAOperator`
   
 ---
 ## Contributers:
-1. (https://github.com/aboelhamd)[Abo-ElHamd Ali]
-2. (https://github.com/AhmedMahmoudRizk)[Ahmed Rizk]
-3. (https://github.com/yahia-elshahawy)[Yahia ElShahawy]
+1. [Abo-ElHamd Ali](https://github.com/aboelhamd)
+2. [Ahmed Rizk](https://github.com/AhmedMahmoudRizk)
+3. [Yahia ElShahawy](https://github.com/yahia-elshahawy)
 
