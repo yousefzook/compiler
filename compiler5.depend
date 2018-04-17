@@ -1,0 +1,103 @@
+# depslib dependency file v1.0
+1523963829 source:/home/rizk/Public/workspace/compiler5/DFA.cpp
+	<iostream>
+	"DFA.h"
+	"GroupedNFA.h"
+
+1523919910 /home/rizk/Public/workspace/compiler5/DFA.h
+	<set>
+	<vector>
+	<string>
+	<map>
+
+1523919910 /home/rizk/Public/workspace/compiler5/GroupedNFA.h
+	<vector>
+	"Graph.h"
+	"Bimap.h"
+	<set>
+
+1523919910 /home/rizk/Public/workspace/compiler5/Graph.h
+	<string>
+	<vector>
+
+1523919910 /home/rizk/Public/workspace/compiler5/Bimap.h
+	<unordered_map>
+	<map>
+	<unordered_set>
+
+1523919910 source:/home/rizk/Public/workspace/compiler5/Graph.cpp
+	"Graph.h"
+	"GroupedNFA.h"
+
+1523919910 source:/home/rizk/Public/workspace/compiler5/GroupedNFA.cpp
+	<iostream>
+	"GroupedNFA.h"
+
+1523974148 source:/home/rizk/Public/workspace/compiler5/LexicalAnalyzer.cpp
+	"NFAOperator.h"
+	"LexicalAnalyzer.h"
+	"RulesParser.h"
+	"TestProgram.h"
+	"GroupedNFA.h"
+	"DFA.h"
+	"NFAToDFA.h"
+
+1523919910 /home/rizk/Public/workspace/compiler5/NFAOperator.h
+	"NFA.h"
+
+1523919910 /home/rizk/Public/workspace/compiler5/NFA.h
+	<string>
+	"Graph.h"
+
+1523967519 /home/rizk/Public/workspace/compiler5/LexicalAnalyzer.h
+	<iostream>
+	<fstream>
+	<map>
+	<vector>
+	"NFA.h"
+	<stack>
+
+1523919910 /home/rizk/Public/workspace/compiler5/RulesParser.h
+	<string>
+	<vector>
+	<map>
+
+1523919910 /home/rizk/Public/workspace/compiler5/NFAToDFA.h
+	"DFA.h"
+	"GroupedNFA.h"
+
+1523919910 source:/home/rizk/Public/workspace/compiler5/main.cpp
+	<iostream>
+	"LexicalAnalyzer.h"
+
+1523919910 source:/home/rizk/Public/workspace/compiler5/NFA.cpp
+	"NFA.h"
+
+1523919910 source:/home/rizk/Public/workspace/compiler5/NFAOperator.cpp
+	"NFAOperator.h"
+	"GroupedNFA.h"
+
+1523919910 source:/home/rizk/Public/workspace/compiler5/NFAToDFA.cpp
+	<queue>
+	<iostream>
+	"NFAToDFA.h"
+
+1523973909 source:/home/rizk/Public/workspace/compiler5/RulesParser.cpp
+	"RulesParser.h"
+	<iostream>
+	<sstream>
+
+1523973936 source:/home/rizk/Public/workspace/compiler5/TestProgram.cpp
+	"TestProgram.h"
+	"GroupedNFA.h"
+	<iostream>
+	<sstream>
+
+1523970065 /home/rizk/Public/workspace/compiler5/TestProgram.h
+	<iostream>
+	<stack>
+	<vector>
+	<map>
+	<iomanip>
+	<sstream>
+
