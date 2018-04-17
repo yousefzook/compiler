@@ -339,6 +339,33 @@ RulesParser.cpp.s:
 	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/RulesParser.cpp.s
 .PHONY : RulesParser.cpp.s
 
+TestProgram.o: TestProgram.cpp.o
+
+.PHONY : TestProgram.o
+
+# target to build an object file
+TestProgram.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/TestProgram.cpp.o
+.PHONY : TestProgram.cpp.o
+
+TestProgram.i: TestProgram.cpp.i
+
+.PHONY : TestProgram.i
+
+# target to preprocess a source file
+TestProgram.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/TestProgram.cpp.i
+.PHONY : TestProgram.cpp.i
+
+TestProgram.s: TestProgram.cpp.s
+
+.PHONY : TestProgram.s
+
+# target to generate assembly for a file
+TestProgram.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/TestProgram.cpp.s
+.PHONY : TestProgram.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -399,6 +426,9 @@ help:
 	@echo "... RulesParser.o"
 	@echo "... RulesParser.i"
 	@echo "... RulesParser.s"
+	@echo "... TestProgram.o"
+	@echo "... TestProgram.i"
+	@echo "... TestProgram.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

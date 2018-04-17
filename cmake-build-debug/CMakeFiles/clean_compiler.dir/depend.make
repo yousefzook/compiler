@@ -27,6 +27,7 @@ CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o: ../NFA.h
 CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o: ../NFAOperator.h
 CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o: ../NFAToDFA.h
 CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o: ../RulesParser.h
+CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o: ../TestProgram.h
 
 CMakeFiles/clean_compiler.dir/NFA.cpp.o: ../Graph.h
 CMakeFiles/clean_compiler.dir/NFA.cpp.o: ../NFA.cpp
@@ -48,6 +49,12 @@ CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o: ../NFAToDFA.h
 
 CMakeFiles/clean_compiler.dir/RulesParser.cpp.o: ../RulesParser.cpp
 CMakeFiles/clean_compiler.dir/RulesParser.cpp.o: ../RulesParser.h
+
+CMakeFiles/clean_compiler.dir/TestProgram.cpp.o: ../Bimap.h
+CMakeFiles/clean_compiler.dir/TestProgram.cpp.o: ../Graph.h
+CMakeFiles/clean_compiler.dir/TestProgram.cpp.o: ../GroupedNFA.h
+CMakeFiles/clean_compiler.dir/TestProgram.cpp.o: ../TestProgram.cpp
+CMakeFiles/clean_compiler.dir/TestProgram.cpp.o: ../TestProgram.h
 
 CMakeFiles/clean_compiler.dir/main.cpp.o: ../Graph.h
 CMakeFiles/clean_compiler.dir/main.cpp.o: ../LexicalAnalyzer.h

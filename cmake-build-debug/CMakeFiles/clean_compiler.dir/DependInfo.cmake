@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yousef/clean compiler/NFAOperator.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o"
   "/home/yousef/clean compiler/NFAToDFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o"
   "/home/yousef/clean compiler/RulesParser.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/RulesParser.cpp.o"
+  "/home/yousef/clean compiler/TestProgram.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/TestProgram.cpp.o"
   "/home/yousef/clean compiler/main.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

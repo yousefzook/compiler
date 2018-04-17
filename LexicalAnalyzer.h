@@ -28,14 +28,17 @@ public:
     void startLexical();
 
 private:
-    ifstream rulesFile;
+    ifstream readFile;
     map<string, string> regexs;
     map<string, vector<string>> tokenizedRegexs;
     map<char, int> operationsPriority;
     stack<NFA> inputStack;
     stack<char> operationStack;
 
+    void readTestFile(vector<vector<int> > dfaTable, map<int, string> acceptedStates);
+
     void buildGroupedNFA();
+
     void doOperationInTOS();
 
     void finishBrackets();

@@ -8,6 +8,7 @@
 #include "GroupedNFA.h"
 #include "DFA.h"
 #include "NFAToDFA.h"
+#include "TestProgram.h"
 
 LexicalAnalyzer::LexicalAnalyzer() {
     initOperationsMap();
@@ -27,15 +28,46 @@ void LexicalAnalyzer::startLexical() {
     tokenizeRegexs();
     // build nfa of each regex
     buildNFAs();
+
     // build grouped nfa
     buildGroupedNFA();
+
     // build transition table for grouped NFA
     GroupedNFA::getInstance()->buildNFATransTable();
+
     // create DFA not minimized
     DFA dfa = convertToDFA();
     dfa.prettyPrintTransTable();
 
+    // minimize DFA
+    dfa.minimizeDFA();
+    dfa.prettyPrintTransTable();
 
+    // read test file and execute token file
+    readTestFile(dfa.transTable,dfa.acceptedStates);
+
+}
+
+/*
+ * Function to read input file and convert it into tokens
+ * */
+void LexicalAnalyzer::readTestFile(vector<vector<int> > dfaTable,
+                                   map<int, string> acceptedStates)
+{
+    readFile.open("/home/yousef/tests/input.txt");
+    string line;
+    TestProgram testProgram;
+    cout<<"\nYour Program :-"<<endl;
+    cout<<"-------------------------"<<endl;
+    testProgram.setData(this->keyWords,this->punctuations,dfaTable,acceptedStates);
+    while (getline(readFile, line))
+        testProgram.parseLine(line);//,dfaTable,acceptedStates, &this->punctuations, &this->keyWords);
+    readFile.close();
+    cout<<"-------------------------"<<endl;
+    cout<<"Result of lexical generator :-"<<endl;
+    cout<<"-------------------------"<<endl;
+    testProgram.printTokens();
+    testProgram.executeTokensFile();
 }
 
 /*
@@ -259,12 +291,12 @@ string LexicalAnalyzer::getEqualValue(string token, string lhs) {
  * Read rules file and pass it to the parser and fill regex and definitions maps
  */
 void LexicalAnalyzer::readRulesFile() {
-    rulesFile.open("/home/yousef/tests/rules.txt");
+    readFile.open("/home/yousef/tests/rules.txt");
     string line;
     RulesParser rParser;
-    while (getline(rulesFile, line))
+    while (getline(readFile, line))
         rParser.parseLine(line, &this->definitions, &this->regexs, &this->punctuations, &this->keyWords);
-    rulesFile.close();
+    readFile.close();
 }
 
 /*

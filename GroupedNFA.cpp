@@ -56,10 +56,9 @@ void GroupedNFA::initInputsMap() {
     inputsMap.set(0, "\\L");
     // map each input for an int value
     int counter = 1;
-    for (auto input: allInputs) {
-        cout << input << "  " << counter << endl;
+    for (auto input: allInputs)
         inputsMap.set(counter++, input);
-    }
+
 }
 
 /*
@@ -105,8 +104,9 @@ void GroupedNFA::prettyPrintTransTable() {
     cout << endl;
     cout << "States size: " << allStates.size() << endl;
     cout << "Inputs size: " << allInputs.size() << endl;
+    cout<<"\t ";
     for (auto input: allInputs)
-        cout << input << "   ";
+        cout << input << "\t ";
     cout << endl<< "-------------------------------------------------------------------------" << endl;
     for (int i = 0; i < transTable.size(); i++) {
         cout<<i<<" :: ";
@@ -117,7 +117,7 @@ void GroupedNFA::prettyPrintTransTable() {
                 for (auto nextState: transTable[i][j])
                     cout << nextState << ',';
             }
-            cout << "   ";
+            cout << "\t";
         }
         cout << endl;
     }

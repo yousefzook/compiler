@@ -135,6 +135,12 @@
 		<Unit filename="/home/yousef/clean compiler/RulesParser.h">
 			<Option target="clean_compiler"/>
 		</Unit>
+		<Unit filename="/home/yousef/clean compiler/TestProgram.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/TestProgram.h">
+			<Option target="clean_compiler"/>
+		</Unit>
 		<Unit filename="/home/yousef/clean compiler/main.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>

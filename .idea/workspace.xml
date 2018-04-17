@@ -5,7 +5,7 @@
       <config projectName="clean_compiler" targetName="clean_compiler" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration CONFIG_NAME="Debug" />
     </configurations>
@@ -13,10 +13,31 @@
   <component name="ChangeListManager">
     <list default="true" id="32d765aa-8bc4-4229-8286-d252f83b807e" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/DFA.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/clean_compiler" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DFA.cpp" afterPath="$PROJECT_DIR$/DFA.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DFA.h" afterPath="$PROJECT_DIR$/DFA.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GroupedNFA.cpp" afterPath="$PROJECT_DIR$/GroupedNFA.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LexicalAnalyzer.cpp" afterPath="$PROJECT_DIR$/LexicalAnalyzer.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NFAToDFA.cpp" afterPath="$PROJECT_DIR$/NFAToDFA.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LexicalAnalyzer.h" afterPath="$PROJECT_DIR$/LexicalAnalyzer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/clean_compiler.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/clean_compiler.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,34 +52,10 @@
       <file leaf-file-name="LexicalAnalyzer.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="20" />
+            <state relative-caret-position="212">
+              <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <element signature="e#147#166#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NFAToDFA.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NFAToDFA.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="66" column="14" lean-forward="false" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="14" />
-              <folding>
-                <element signature="e#41#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NFAToDFA.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NFAToDFA.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#110#126#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,47 +64,10 @@
       <file leaf-file-name="DFA.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DFA.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="481">
+              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
               <folding>
                 <element signature="e#100#114#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DFA.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DFA.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
-              <folding>
-                <element signature="e#41#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupedNFA.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GroupedNFA.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="954">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="33" />
-              <folding>
-                <element signature="e#137#154#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupedNFA.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GroupedNFA.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-273">
-              <caret line="58" column="30" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#2#0" expanded="false" />
-                <element signature="e#41#60#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,21 +76,55 @@
       <file leaf-file-name="LexicalAnalyzer.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="261" column="44" lean-forward="false" selection-start-line="261" selection-start-column="44" selection-end-line="261" selection-end-column="44" />
+            <state relative-caret-position="249">
+              <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#41#65#0" expanded="true" />
-                <element signature="e#184#247#0" expanded="false" />
-                <element signature="e#314#437#0" expanded="false" />
-                <element signature="e#1324#1398#0" expanded="false" />
-                <element signature="e#4658#4726#0" expanded="false" />
-                <element signature="e#5056#5123#0" expanded="false" />
-                <element signature="e#5056#6091#0" expanded="false" />
-                <element signature="e#6093#6153#0" expanded="false" />
-                <element signature="e#8002#8315#0" expanded="false" />
-                <element signature="e#8317#8404#0" expanded="false" />
-                <element signature="e#8708#8804#0" expanded="false" />
+                <element signature="e#209#272#0" expanded="false" />
+                <element signature="e#339#462#0" expanded="false" />
+                <element signature="e#2365#2439#0" expanded="false" />
+                <element signature="e#5699#5767#0" expanded="false" />
+                <element signature="e#6097#6164#0" expanded="false" />
+                <element signature="e#6097#7132#0" expanded="false" />
+                <element signature="e#7134#7194#0" expanded="false" />
+                <element signature="e#9043#9356#0" expanded="false" />
+                <element signature="e#9358#9445#0" expanded="false" />
+                <element signature="e#9746#9842#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestProgram.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestProgram.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestProgram.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TestProgram.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="317" column="42" lean-forward="true" selection-start-line="317" selection-start-column="42" selection-end-line="317" selection-end-column="42" />
+              <folding>
+                <element signature="e#41#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NFAToDFA.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NFAToDFA.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <element signature="e#41#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,7 +142,15 @@
       <find>75</find>
       <find>dfa.transTable</find>
       <find>dfa.</find>
+      <find>cout</find>
+      <find>print_accepted_Map</find>
+      <find>removeWhiteSpaces</find>
+      <find>dfaStates</find>
+      <find>execute</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,20 +161,23 @@
         <option value="$PROJECT_DIR$/RulesParser.h" />
         <option value="$PROJECT_DIR$/NFA.h" />
         <option value="$PROJECT_DIR$/NFAOperator.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/RulesParser.cpp" />
         <option value="$PROJECT_DIR$/Graph.cpp" />
-        <option value="$PROJECT_DIR$/LexicalAnalyzer.h" />
         <option value="$PROJECT_DIR$/Graph.h" />
         <option value="$PROJECT_DIR$/NFAOperator.cpp" />
         <option value="$PROJECT_DIR$/Bimap.h" />
-        <option value="$PROJECT_DIR$/GroupedNFA.cpp" />
-        <option value="$PROJECT_DIR$/GroupedNFA.h" />
         <option value="$PROJECT_DIR$/NFAToDFA.h" />
-        <option value="$PROJECT_DIR$/DFA.h" />
         <option value="$PROJECT_DIR$/NFAToDFA.cpp" />
-        <option value="$PROJECT_DIR$/LexicalAnalyzer.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/LexicalAnalyzer.h" />
+        <option value="$PROJECT_DIR$/GroupedNFA.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/GroupedNFA.cpp" />
+        <option value="$PROJECT_DIR$/DFA.h" />
         <option value="$PROJECT_DIR$/DFA.cpp" />
+        <option value="$PROJECT_DIR$/LexicalAnalyzer.cpp" />
+        <option value="$PROJECT_DIR$/TestProgram.h" />
+        <option value="$PROJECT_DIR$/TestProgram.cpp" />
       </list>
     </option>
   </component>
@@ -270,35 +275,39 @@
       <workItem from="1523673203728" duration="1606000" />
       <workItem from="1523676693748" duration="2104000" />
       <workItem from="1523729580991" duration="5132000" />
-      <workItem from="1523737667767" duration="7962000" />
+      <workItem from="1523737667767" duration="8074000" />
+      <workItem from="1523780847736" duration="1167000" />
+      <workItem from="1523820686768" duration="2610000" />
+      <workItem from="1523823669339" duration="1441000" />
+      <workItem from="1523991218597" duration="3159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83406000" />
+    <option name="totallyTimeSpent" value="91895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1325" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20786092" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7882883" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32582584" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24324325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25675675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20786092" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4234234" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4009009" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -312,52 +321,36 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/LexicalAnalyzer.cpp</url>
-          <line>34</line>
-          <option name="timeStamp" value="56" />
+          <url>file://$PROJECT_DIR$/TestProgram.cpp</url>
+          <line>127</line>
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NFAToDFA.cpp</url>
-          <line>29</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/NFAToDFA.cpp</url>
-          <line>66</line>
-          <option name="timeStamp" value="63" />
+          <url>file://$PROJECT_DIR$/TestProgram.cpp</url>
+          <line>162</line>
+          <option name="timeStamp" value="72" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="64" />
+      <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="dfa" />
+        <watch expression="DFAtab" />
+        <watch expression="newDFA" />
+        <watch expression="newDFAStatus" />
+        <watch expression="status" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NFAOperator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GroupedNFA.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
           <caret line="57" column="27" lean-forward="true" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#41#60#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -367,7 +360,7 @@
         <state relative-caret-position="882">
           <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="39" />
           <folding>
-            <element signature="e#137#154#0" expanded="true" />
+            <element signature="e#137#154#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -387,7 +380,7 @@
         <state relative-caret-position="936">
           <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
           <folding>
-            <element signature="e#137#154#0" expanded="true" />
+            <element signature="e#137#154#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -399,16 +392,16 @@
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#41#65#0" expanded="true" />
-            <element signature="e#184#247#0" expanded="false" />
-            <element signature="e#314#437#0" expanded="false" />
-            <element signature="e#1324#1398#0" expanded="false" />
-            <element signature="e#4658#4726#0" expanded="false" />
-            <element signature="e#5056#5123#0" expanded="false" />
-            <element signature="e#5056#6091#0" expanded="false" />
-            <element signature="e#6093#6153#0" expanded="false" />
-            <element signature="e#8002#8315#0" expanded="false" />
-            <element signature="e#8317#8404#0" expanded="false" />
-            <element signature="e#8708#8804#0" expanded="false" />
+            <element signature="e#209#272#0" expanded="false" />
+            <element signature="e#339#462#0" expanded="false" />
+            <element signature="e#2365#2439#0" expanded="false" />
+            <element signature="e#5699#5767#0" expanded="false" />
+            <element signature="e#6097#6164#0" expanded="false" />
+            <element signature="e#6097#7132#0" expanded="false" />
+            <element signature="e#7134#7194#0" expanded="false" />
+            <element signature="e#9043#9356#0" expanded="false" />
+            <element signature="e#9358#9445#0" expanded="false" />
+            <element signature="e#9746#9842#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -419,7 +412,7 @@
           <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#41#60#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -465,16 +458,16 @@
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#41#65#0" expanded="true" />
-            <element signature="e#184#247#0" expanded="false" />
-            <element signature="e#314#437#0" expanded="false" />
-            <element signature="e#1324#1398#0" expanded="false" />
-            <element signature="e#4658#4726#0" expanded="false" />
-            <element signature="e#5056#5123#0" expanded="false" />
-            <element signature="e#5056#6091#0" expanded="false" />
-            <element signature="e#6093#6153#0" expanded="false" />
-            <element signature="e#8002#8315#0" expanded="false" />
-            <element signature="e#8317#8404#0" expanded="false" />
-            <element signature="e#8708#8804#0" expanded="false" />
+            <element signature="e#209#272#0" expanded="false" />
+            <element signature="e#339#462#0" expanded="false" />
+            <element signature="e#2365#2439#0" expanded="false" />
+            <element signature="e#5699#5767#0" expanded="false" />
+            <element signature="e#6097#6164#0" expanded="false" />
+            <element signature="e#6097#7132#0" expanded="false" />
+            <element signature="e#7134#7194#0" expanded="false" />
+            <element signature="e#9043#9356#0" expanded="false" />
+            <element signature="e#9358#9445#0" expanded="false" />
+            <element signature="e#9746#9842#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -496,16 +489,16 @@
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#41#65#0" expanded="true" />
-            <element signature="e#184#247#0" expanded="false" />
-            <element signature="e#314#437#0" expanded="false" />
-            <element signature="e#1324#1398#0" expanded="false" />
-            <element signature="e#4658#4726#0" expanded="false" />
-            <element signature="e#5056#5123#0" expanded="false" />
-            <element signature="e#5056#6091#0" expanded="false" />
-            <element signature="e#6093#6153#0" expanded="false" />
-            <element signature="e#8002#8315#0" expanded="false" />
-            <element signature="e#8317#8404#0" expanded="false" />
-            <element signature="e#8708#8804#0" expanded="false" />
+            <element signature="e#209#272#0" expanded="false" />
+            <element signature="e#339#462#0" expanded="false" />
+            <element signature="e#2365#2439#0" expanded="false" />
+            <element signature="e#5699#5767#0" expanded="false" />
+            <element signature="e#6097#6164#0" expanded="false" />
+            <element signature="e#6097#7132#0" expanded="false" />
+            <element signature="e#7134#7194#0" expanded="false" />
+            <element signature="e#9043#9356#0" expanded="false" />
+            <element signature="e#9358#9445#0" expanded="false" />
+            <element signature="e#9746#9842#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -575,16 +568,16 @@
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#41#65#0" expanded="true" />
-            <element signature="e#184#247#0" expanded="false" />
-            <element signature="e#314#437#0" expanded="false" />
-            <element signature="e#1324#1398#0" expanded="false" />
-            <element signature="e#4658#4726#0" expanded="false" />
-            <element signature="e#5056#5123#0" expanded="false" />
-            <element signature="e#5056#6091#0" expanded="false" />
-            <element signature="e#6093#6153#0" expanded="false" />
-            <element signature="e#8002#8315#0" expanded="false" />
-            <element signature="e#8317#8404#0" expanded="false" />
-            <element signature="e#8708#8804#0" expanded="false" />
+            <element signature="e#209#272#0" expanded="false" />
+            <element signature="e#339#462#0" expanded="false" />
+            <element signature="e#2365#2439#0" expanded="false" />
+            <element signature="e#5699#5767#0" expanded="false" />
+            <element signature="e#6097#6164#0" expanded="false" />
+            <element signature="e#6097#7132#0" expanded="false" />
+            <element signature="e#7134#7194#0" expanded="false" />
+            <element signature="e#9043#9356#0" expanded="false" />
+            <element signature="e#9358#9445#0" expanded="false" />
+            <element signature="e#9746#9842#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -630,24 +623,17 @@
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#41#65#0" expanded="true" />
-            <element signature="e#184#247#0" expanded="false" />
-            <element signature="e#314#437#0" expanded="false" />
-            <element signature="e#1324#1398#0" expanded="false" />
-            <element signature="e#4658#4726#0" expanded="false" />
-            <element signature="e#5056#5123#0" expanded="false" />
-            <element signature="e#5056#6091#0" expanded="false" />
-            <element signature="e#6093#6153#0" expanded="false" />
-            <element signature="e#8002#8315#0" expanded="false" />
-            <element signature="e#8317#8404#0" expanded="false" />
-            <element signature="e#8708#8804#0" expanded="false" />
+            <element signature="e#209#272#0" expanded="false" />
+            <element signature="e#339#462#0" expanded="false" />
+            <element signature="e#2365#2439#0" expanded="false" />
+            <element signature="e#5699#5767#0" expanded="false" />
+            <element signature="e#6097#6164#0" expanded="false" />
+            <element signature="e#6097#7132#0" expanded="false" />
+            <element signature="e#7134#7194#0" expanded="false" />
+            <element signature="e#9043#9356#0" expanded="false" />
+            <element signature="e#9358#9445#0" expanded="false" />
+            <element signature="e#9746#9842#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -672,16 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#19#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NFAOperator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -700,9 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="e#41#59#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,10 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#103#127#0" expanded="true" />
-            <element signature="e#240#278#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -756,14 +725,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="44" column="38" lean-forward="false" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NFAToDFA.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="212">
+          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
             <element signature="e#147#166#0" expanded="true" />
           </folding>
@@ -772,70 +755,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GroupedNFA.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="33" />
+        <state relative-caret-position="108">
+          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
           <folding>
-            <element signature="e#137#154#0" expanded="true" />
+            <element signature="e#137#154#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GroupedNFA.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-273">
-          <caret line="58" column="30" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="30" />
+        <state relative-caret-position="186">
+          <caret line="107" column="31" lean-forward="true" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#41#60#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NFAToDFA.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="66" column="14" lean-forward="false" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="14" />
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#41#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NFAToDFA.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#110#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="261" column="44" lean-forward="false" selection-start-line="261" selection-start-column="44" selection-end-line="261" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#41#65#0" expanded="true" />
-            <element signature="e#184#247#0" expanded="false" />
-            <element signature="e#314#437#0" expanded="false" />
-            <element signature="e#1324#1398#0" expanded="false" />
-            <element signature="e#4658#4726#0" expanded="false" />
-            <element signature="e#5056#5123#0" expanded="false" />
-            <element signature="e#5056#6091#0" expanded="false" />
-            <element signature="e#6093#6153#0" expanded="false" />
-            <element signature="e#8002#8315#0" expanded="false" />
-            <element signature="e#8317#8404#0" expanded="false" />
-            <element signature="e#8708#8804#0" expanded="false" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DFA.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="481">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
           <folding>
             <element signature="e#100#114#0" expanded="true" />
           </folding>
@@ -844,10 +796,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DFA.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="60" lean-forward="true" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        <state relative-caret-position="324">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
             <element signature="e#41#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NFAToDFA.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#41#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestProgram.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="70" column="1" lean-forward="true" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#41#65#0" expanded="true" />
+            <element signature="e#209#272#0" expanded="false" />
+            <element signature="e#339#462#0" expanded="false" />
+            <element signature="e#2365#2439#0" expanded="false" />
+            <element signature="e#5699#5767#0" expanded="false" />
+            <element signature="e#6097#6164#0" expanded="false" />
+            <element signature="e#6097#7132#0" expanded="false" />
+            <element signature="e#7134#7194#0" expanded="false" />
+            <element signature="e#9043#9356#0" expanded="false" />
+            <element signature="e#9358#9445#0" expanded="false" />
+            <element signature="e#9746#9842#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestProgram.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="317" column="42" lean-forward="true" selection-start-line="317" selection-start-column="42" selection-end-line="317" selection-end-column="42" />
+          <folding>
+            <element signature="e#41#65#0" expanded="true" />
           </folding>
         </state>
       </provider>

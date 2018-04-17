@@ -28,6 +28,7 @@ CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
  /home/yousef/clean compiler/NFAOperator.h
  /home/yousef/clean compiler/NFAToDFA.h
  /home/yousef/clean compiler/RulesParser.h
+ /home/yousef/clean compiler/TestProgram.h
 CMakeFiles/clean_compiler.dir/NFA.cpp.o
  /home/yousef/clean compiler/Graph.h
  /home/yousef/clean compiler/NFA.cpp
@@ -49,6 +50,12 @@ CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o
 CMakeFiles/clean_compiler.dir/RulesParser.cpp.o
  /home/yousef/clean compiler/RulesParser.cpp
  /home/yousef/clean compiler/RulesParser.h
+CMakeFiles/clean_compiler.dir/TestProgram.cpp.o
+ /home/yousef/clean compiler/Bimap.h
+ /home/yousef/clean compiler/Graph.h
+ /home/yousef/clean compiler/GroupedNFA.h
+ /home/yousef/clean compiler/TestProgram.cpp
+ /home/yousef/clean compiler/TestProgram.h
 CMakeFiles/clean_compiler.dir/main.cpp.o
  /home/yousef/clean compiler/Graph.h
  /home/yousef/clean compiler/LexicalAnalyzer.h

@@ -73,6 +73,8 @@ DFA.h
 /home/yousef/clean compiler/DFA.h
 NFAToDFA.h
 /home/yousef/clean compiler/NFAToDFA.h
+TestProgram.h
+/home/yousef/clean compiler/TestProgram.h
 
 /home/yousef/clean compiler/LexicalAnalyzer.h
 iostream
@@ -136,6 +138,32 @@ string
 vector
 -
 map
+-
+
+/home/yousef/clean compiler/TestProgram.cpp
+TestProgram.h
+/home/yousef/clean compiler/TestProgram.h
+GroupedNFA.h
+/home/yousef/clean compiler/GroupedNFA.h
+iostream
+-
+sstream
+-
+fstream
+-
+
+/home/yousef/clean compiler/TestProgram.h
+iostream
+-
+stack
+-
+vector
+-
+map
+-
+iomanip
+-
+sstream
 -
 
 /home/yousef/clean compiler/main.cpp
