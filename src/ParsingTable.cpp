@@ -6,27 +6,27 @@
  */
 
 #include "ParsingTable.h"
+#include <iostream>
 
 // All the arguments must be passed by value not by reference because I may modify them
-map<NonTerminal, map<Terminal, int> > ParsingTable::constructTable(
-		vector<Terminal> terminals, vector<NonTerminal> nonTerminals,
-		map<NonTerminal, vector<Terminal> > first,
-		map<NonTerminal, vector<Terminal> > follow,
-		map<NonTerminal, vector<vector<Symbol*> > > productions) {
+map<NonTerminal*, map<Terminal*, int> > ParsingTable::constructTable(
+		vector<Terminal*> terminals, vector<NonTerminal*> nonTerminals,
+		map<NonTerminal*, vector<Terminal*> > first,
+		map<NonTerminal*, vector<Terminal*> > follow,
+		map<NonTerminal*, vector<vector<Symbol*> > > productions) {
 
-	map<NonTerminal, map<Terminal, int> > parsingTable;
+	map<NonTerminal*, map<Terminal*, int> > parsingTable;
 
 	// Build internal (terminals) map for each nonterminal
 	for (unsigned x = 0; x < nonTerminals.size(); x++) {
-		NonTerminal nonTerminal = nonTerminals[x];
+		NonTerminal* nonTerminal = nonTerminals[x];
 
 		// The internal map in the parsing table
 		// initially we will make all the entries error.
-		map<Terminal, int> terminalMap;
+		map<Terminal*, int> terminalMap;
 		for (unsigned i = 0; i < terminals.size(); i++) {
-			if (terminals[i].getName() != "L")
-				terminalMap.insert(
-						pair<Terminal, int>(terminals[i], (int) ERROR));
+			if (terminals[i]->getName() != "L")
+				terminalMap[terminals[i]] = ERROR;
 		}
 
 		// Let production be : T => T'E | E | aT'
@@ -43,48 +43,52 @@ map<NonTerminal, map<Terminal, int> > ParsingTable::constructTable(
 				// If first symbol is terminal, we just put it to the map
 				// with the production.
 				Terminal* firstTerminal = (Terminal*) firstSymbol;
-				terminalMap.insert(pair<Terminal, int>(*firstTerminal, i));
+
+				if (firstTerminal->getName() == "L") {
+					// If epsilon is the terminal, we get the follow terminals of
+					// the first nonterminal and put them with the epsilon production.
+					vector<Terminal*> followTerminals = follow[nonTerminal];
+					for (unsigned k = 0; k < followTerminals.size(); k++) {
+						terminalMap[followTerminals[k]] = i;
+					}
+				} else {
+					// If terminal is not epsilon, put the terminal as usual.
+					terminalMap[firstTerminal] = i;
+				}
 			} else {
 				// If first symbol is nonterminal, we take the FIRST of it
 				// which is all terminals and we put them with production
 				NonTerminal* firstNonTerminal = (NonTerminal*) firstSymbol;
-				vector<Terminal> firstTerminals = first[*firstNonTerminal];
+				vector<Terminal*> firstTerminals = first[firstNonTerminal];
 
 				for (unsigned j = 0; j < firstTerminals.size(); j++) {
-					Terminal firstTerminal = firstTerminals[j];
+					Terminal* firstTerminal = firstTerminals[j];
 
-					vector<Terminal> followTerminals = follow[*firstNonTerminal];
-
-					if (firstTerminal.getName() == "L") {
+					if (firstTerminal->getName() == "L") {
 						// If epsilon is the terminal, we get the follow terminals of
 						// the first nonterminal and put them with the epsilon production.
-
+						vector<Terminal*> followTerminals = follow[nonTerminal];
 						for (unsigned k = 0; k < followTerminals.size(); k++) {
-							terminalMap.insert(
-									pair<Terminal, int>(followTerminals[k], i));
+							terminalMap[followTerminals[k]] = i;
 						}
 					} else {
-						// If terminal is not epsilon, put the terminal as usual
-						// and we put 'synch' in the follow the terminal.
-						terminalMap.insert(
-								pair<Terminal, int>(firstTerminal, i));
-
-						for (unsigned k = 0; k < followTerminals.size(); k++) {
-							terminalMap.insert(
-									pair<Terminal, int>(followTerminals[k],
-											(int) SYNCH));
-						}
+						// If terminal is not epsilon, put the terminal as usual.
+						terminalMap[firstTerminal] = i;
 					}
-
 				}
+
 			}
 
 		}
+		// Put 'synch' in the follow the terminals which has no production.
+		vector<Terminal*> followTerminals = follow[nonTerminal];
+		for (unsigned k = 0; k < followTerminals.size(); k++) {
+			if (terminalMap[followTerminals[k]] == ERROR)
+				terminalMap[followTerminals[k]] = SYNCH;
+		}
 
 		// Put the inner map in the parsing table
-		parsingTable.insert(
-				pair<NonTerminal, map<Terminal, int> >(nonTerminal,
-						terminalMap));
+		parsingTable[nonTerminal] = terminalMap;
 	}
 
 	return parsingTable;

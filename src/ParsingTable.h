@@ -17,11 +17,11 @@ using namespace std;
 
 class ParsingTable {
 public:
-	static map<NonTerminal, map<Terminal, int> > constructTable(
-			vector<Terminal> terminals, vector<NonTerminal> nonTerminals,
-			map<NonTerminal, vector<Terminal> > first,
-			map<NonTerminal, vector<Terminal> > follow,
-			map<NonTerminal, vector<vector<Symbol*> > > productions);
+	static map<NonTerminal*, map<Terminal*, int> > constructTable(
+			vector<Terminal*> terminals, vector<NonTerminal*> nonTerminals,
+			map<NonTerminal*, vector<Terminal*> > first,
+			map<NonTerminal*, vector<Terminal*> > follow,
+			map<NonTerminal*, vector<vector<Symbol*> > > productions);
 
 	// These are the 3 cases of the table:
 	// production (we will put the production index),
