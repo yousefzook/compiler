@@ -41,7 +41,6 @@ private:
     vector<vector<int> > dfaTable; // has minimized dfa table (final)
     map<int, string> dfaStates;
     vector<string> tokens;
-    vector<string> values;
 
     bool charValid(char &j, string transitionToken);
 
@@ -53,7 +52,7 @@ private:
 
     void refereToEmptyState(int index, string line);
 
-    bool checkChar(char &currChar, int index, int lineSize, string line, string value);
+    int checkChar(char &currChar, int index, int lineSize, string line, string value);
 
     string definitionRange(string &str, string &result);
 
