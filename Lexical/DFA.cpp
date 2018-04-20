@@ -209,7 +209,7 @@ void DFA::prettyPrintTransTable() {
             cout<<transTable[i][j];
             cout << "\t";
         }
-        if(!acceptedStates[i].empty())
+        if(check_status(i))
             cout<<"\t Accepted>> "<<acceptedStates[i];
         cout << endl;
     }

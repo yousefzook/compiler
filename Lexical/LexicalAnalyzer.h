@@ -25,7 +25,7 @@ public:
     vector<string> punctuations;
     map<string, NFA> regexsNFAs;
 
-    void startLexical();
+    vector<string> startLexical();
 
 private:
     ifstream readFile;
@@ -35,7 +35,7 @@ private:
     stack<NFA> inputStack;
     stack<char> operationStack;
 
-    void readTestFile(vector<vector<int> > dfaTable, map<int, string> acceptedStates);
+    vector<string> readTestFile(vector<vector<int> > dfaTable, map<int, string> acceptedStates);
 
     void buildGroupedNFA();
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/yousef/clean compiler/Bimap.h
+/home/yousef/clean compiler/Lexical/Bimap.h
 unordered_map
 -
 map
@@ -14,15 +14,15 @@ map
 unordered_set
 -
 
-/home/yousef/clean compiler/DFA.cpp
+/home/yousef/clean compiler/Lexical/DFA.cpp
 iostream
 -
 DFA.h
-/home/yousef/clean compiler/DFA.h
+/home/yousef/clean compiler/Lexical/DFA.h
 GroupedNFA.h
-/home/yousef/clean compiler/GroupedNFA.h
+/home/yousef/clean compiler/Lexical/GroupedNFA.h
 
-/home/yousef/clean compiler/DFA.h
+/home/yousef/clean compiler/Lexical/DFA.h
 set
 -
 vector
@@ -32,51 +32,51 @@ string
 map
 -
 
-/home/yousef/clean compiler/Graph.cpp
+/home/yousef/clean compiler/Lexical/Graph.cpp
 Graph.h
-/home/yousef/clean compiler/Graph.h
+/home/yousef/clean compiler/Lexical/Graph.h
 GroupedNFA.h
-/home/yousef/clean compiler/GroupedNFA.h
+/home/yousef/clean compiler/Lexical/GroupedNFA.h
 
-/home/yousef/clean compiler/Graph.h
+/home/yousef/clean compiler/Lexical/Graph.h
 string
 -
 vector
 -
 
-/home/yousef/clean compiler/GroupedNFA.cpp
+/home/yousef/clean compiler/Lexical/GroupedNFA.cpp
 iostream
 -
 GroupedNFA.h
-/home/yousef/clean compiler/GroupedNFA.h
+/home/yousef/clean compiler/Lexical/GroupedNFA.h
 
-/home/yousef/clean compiler/GroupedNFA.h
+/home/yousef/clean compiler/Lexical/GroupedNFA.h
 vector
 -
 Graph.h
-/home/yousef/clean compiler/Graph.h
+/home/yousef/clean compiler/Lexical/Graph.h
 Bimap.h
-/home/yousef/clean compiler/Bimap.h
+/home/yousef/clean compiler/Lexical/Bimap.h
 set
 -
 
-/home/yousef/clean compiler/LexicalAnalyzer.cpp
+/home/yousef/clean compiler/Lexical/LexicalAnalyzer.cpp
 NFAOperator.h
-/home/yousef/clean compiler/NFAOperator.h
+/home/yousef/clean compiler/Lexical/NFAOperator.h
 LexicalAnalyzer.h
-/home/yousef/clean compiler/LexicalAnalyzer.h
+/home/yousef/clean compiler/Lexical/LexicalAnalyzer.h
 RulesParser.h
-/home/yousef/clean compiler/RulesParser.h
+/home/yousef/clean compiler/Lexical/RulesParser.h
 GroupedNFA.h
-/home/yousef/clean compiler/GroupedNFA.h
+/home/yousef/clean compiler/Lexical/GroupedNFA.h
 DFA.h
-/home/yousef/clean compiler/DFA.h
+/home/yousef/clean compiler/Lexical/DFA.h
 NFAToDFA.h
-/home/yousef/clean compiler/NFAToDFA.h
+/home/yousef/clean compiler/Lexical/NFAToDFA.h
 TestProgram.h
-/home/yousef/clean compiler/TestProgram.h
+/home/yousef/clean compiler/Lexical/TestProgram.h
 
-/home/yousef/clean compiler/LexicalAnalyzer.h
+/home/yousef/clean compiler/Lexical/LexicalAnalyzer.h
 iostream
 -
 fstream
@@ -86,53 +86,53 @@ map
 vector
 -
 NFA.h
-/home/yousef/clean compiler/NFA.h
+/home/yousef/clean compiler/Lexical/NFA.h
 stack
 -
 
-/home/yousef/clean compiler/NFA.cpp
+/home/yousef/clean compiler/Lexical/NFA.cpp
 NFA.h
-/home/yousef/clean compiler/NFA.h
+/home/yousef/clean compiler/Lexical/NFA.h
 
-/home/yousef/clean compiler/NFA.h
+/home/yousef/clean compiler/Lexical/NFA.h
 string
 -
 Graph.h
-/home/yousef/clean compiler/Graph.h
+/home/yousef/clean compiler/Lexical/Graph.h
 
-/home/yousef/clean compiler/NFAOperator.cpp
+/home/yousef/clean compiler/Lexical/NFAOperator.cpp
 NFAOperator.h
-/home/yousef/clean compiler/NFAOperator.h
+/home/yousef/clean compiler/Lexical/NFAOperator.h
 GroupedNFA.h
-/home/yousef/clean compiler/GroupedNFA.h
+/home/yousef/clean compiler/Lexical/GroupedNFA.h
 
-/home/yousef/clean compiler/NFAOperator.h
+/home/yousef/clean compiler/Lexical/NFAOperator.h
 NFA.h
-/home/yousef/clean compiler/NFA.h
+/home/yousef/clean compiler/Lexical/NFA.h
 
-/home/yousef/clean compiler/NFAToDFA.cpp
+/home/yousef/clean compiler/Lexical/NFAToDFA.cpp
 queue
 -
 iostream
 -
 NFAToDFA.h
-/home/yousef/clean compiler/NFAToDFA.h
+/home/yousef/clean compiler/Lexical/NFAToDFA.h
 
-/home/yousef/clean compiler/NFAToDFA.h
+/home/yousef/clean compiler/Lexical/NFAToDFA.h
 DFA.h
-/home/yousef/clean compiler/DFA.h
+/home/yousef/clean compiler/Lexical/DFA.h
 GroupedNFA.h
-/home/yousef/clean compiler/GroupedNFA.h
+/home/yousef/clean compiler/Lexical/GroupedNFA.h
 
-/home/yousef/clean compiler/RulesParser.cpp
+/home/yousef/clean compiler/Lexical/RulesParser.cpp
 RulesParser.h
-/home/yousef/clean compiler/RulesParser.h
+/home/yousef/clean compiler/Lexical/RulesParser.h
 iostream
 -
 sstream
 -
 
-/home/yousef/clean compiler/RulesParser.h
+/home/yousef/clean compiler/Lexical/RulesParser.h
 string
 -
 vector
@@ -140,15 +140,15 @@ vector
 map
 -
 
-/home/yousef/clean compiler/TestProgram.cpp
+/home/yousef/clean compiler/Lexical/TestProgram.cpp
 fstream
 -
 TestProgram.h
-/home/yousef/clean compiler/TestProgram.h
+/home/yousef/clean compiler/Lexical/TestProgram.h
 GroupedNFA.h
-/home/yousef/clean compiler/GroupedNFA.h
+/home/yousef/clean compiler/Lexical/GroupedNFA.h
 
-/home/yousef/clean compiler/TestProgram.h
+/home/yousef/clean compiler/Lexical/TestProgram.h
 iostream
 -
 stack
@@ -162,9 +162,57 @@ iomanip
 sstream
 -
 
+/home/yousef/clean compiler/Parser/NonTerminal.cpp
+NonTerminal.h
+/home/yousef/clean compiler/Parser/NonTerminal.h
+
+/home/yousef/clean compiler/Parser/NonTerminal.h
+Symbol.h
+/home/yousef/clean compiler/Parser/Symbol.h
+
+/home/yousef/clean compiler/Parser/ParserGenerator.cpp
+ParserGenerator.h
+/home/yousef/clean compiler/Parser/ParserGenerator.h
+
+/home/yousef/clean compiler/Parser/ParserGenerator.h
+vector
+-
+map
+-
+Terminal.h
+/home/yousef/clean compiler/Parser/Terminal.h
+NonTerminal.h
+/home/yousef/clean compiler/Parser/NonTerminal.h
+
+/home/yousef/clean compiler/Parser/Symbol.cpp
+Symbol.h
+/home/yousef/clean compiler/Parser/Symbol.h
+
+/home/yousef/clean compiler/Parser/Symbol.h
+string
+-
+
+/home/yousef/clean compiler/Parser/Terminal.cpp
+Terminal.h
+/home/yousef/clean compiler/Parser/Terminal.h
+
+/home/yousef/clean compiler/Parser/Terminal.h
+Symbol.h
+/home/yousef/clean compiler/Parser/Symbol.h
+
 /home/yousef/clean compiler/main.cpp
 iostream
 -
-LexicalAnalyzer.h
-/home/yousef/clean compiler/LexicalAnalyzer.h
+stack
+-
+vector
+-
+string
+-
+utility
+-
+map
+-
+sstream
+-
 

@@ -14,7 +14,10 @@ LexicalAnalyzer::LexicalAnalyzer() {
     initOperationsMap();
 }
 
-void LexicalAnalyzer::startLexical() {
+/*
+ * start lexical and return the results - token -
+ * */
+vector<string> LexicalAnalyzer::startLexical() {
 
     readRulesFile();
     /**
@@ -44,14 +47,15 @@ void LexicalAnalyzer::startLexical() {
     dfa.prettyPrintTransTable();
 
     // read test file and execute token file
-    readTestFile(dfa.transTable,dfa.acceptedStates);
+    vector<string> tokens = readTestFile(dfa.transTable,dfa.acceptedStates);
 
+    return tokens;
 }
 
 /*
- * Function to read input file and convert it into tokens
+ * Function to read input file and convert it into tokens and return them
  * */
-void LexicalAnalyzer::readTestFile(vector<vector<int> > dfaTable,
+vector<string> LexicalAnalyzer::readTestFile(vector<vector<int> > dfaTable,
                                    map<int, string> acceptedStates)
 {
     readFile.open("/home/yousef/tests/input.txt");
@@ -68,6 +72,7 @@ void LexicalAnalyzer::readTestFile(vector<vector<int> > dfaTable,
     cout<<"-------------------------"<<endl;
     testProgram.printTokens();
     testProgram.executeTokensFile();
+    return testProgram.tokens;
 }
 
 /*

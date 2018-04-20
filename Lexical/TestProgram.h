@@ -18,6 +18,8 @@ using namespace std;
 class TestProgram {
 public:
 
+    vector<string> tokens;
+
     void setData(vector<string> keywords, vector<string> punctuation, vector<vector<int> > dfatable,
                  map<int, string> acceptedState);
 
@@ -25,11 +27,10 @@ public:
 
     void parseLine(string line);
 
+
     void printTokens();
 
-
 private:
-
     stack<int> readedStates; // has all successfully traversed states
     stack<int> readedCharsIndex; //
     stack<int> acceptedStates;
@@ -40,7 +41,6 @@ private:
     vector<string> punctuations;
     vector<vector<int> > dfaTable; // has minimized dfa table (final)
     map<int, string> dfaStates;
-    vector<string> tokens;
 
     bool charValid(char &j, string transitionToken);
 

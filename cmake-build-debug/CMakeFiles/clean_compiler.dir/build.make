@@ -81,251 +81,407 @@ CMakeFiles/clean_compiler.dir/main.cpp.o.provides: CMakeFiles/clean_compiler.dir
 CMakeFiles/clean_compiler.dir/main.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/main.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/NFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/NFA.cpp.o: ../NFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/clean_compiler.dir/NFA.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/NFA.cpp.o -c "/home/yousef/clean compiler/NFA.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o: ../Lexical/NFA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o -c "/home/yousef/clean compiler/Lexical/NFA.cpp"
 
-CMakeFiles/clean_compiler.dir/NFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/NFA.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/NFA.cpp" > CMakeFiles/clean_compiler.dir/NFA.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/NFA.cpp" > CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.i
 
-CMakeFiles/clean_compiler.dir/NFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/NFA.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/NFA.cpp" -o CMakeFiles/clean_compiler.dir/NFA.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/NFA.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.s
 
-CMakeFiles/clean_compiler.dir/NFA.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/NFA.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/NFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/NFA.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFA.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/NFA.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/NFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/NFA.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/DFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/DFA.cpp.o: ../DFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/clean_compiler.dir/DFA.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/DFA.cpp.o -c "/home/yousef/clean compiler/DFA.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o: ../Lexical/DFA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o -c "/home/yousef/clean compiler/Lexical/DFA.cpp"
 
-CMakeFiles/clean_compiler.dir/DFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/DFA.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/DFA.cpp" > CMakeFiles/clean_compiler.dir/DFA.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/DFA.cpp" > CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.i
 
-CMakeFiles/clean_compiler.dir/DFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/DFA.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/DFA.cpp" -o CMakeFiles/clean_compiler.dir/DFA.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/DFA.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.s
 
-CMakeFiles/clean_compiler.dir/DFA.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/DFA.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/DFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/DFA.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/DFA.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/DFA.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/DFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/DFA.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/Graph.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/Graph.cpp.o: ../Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/clean_compiler.dir/Graph.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Graph.cpp.o -c "/home/yousef/clean compiler/Graph.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o: ../Lexical/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o -c "/home/yousef/clean compiler/Lexical/Graph.cpp"
 
-CMakeFiles/clean_compiler.dir/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Graph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Graph.cpp" > CMakeFiles/clean_compiler.dir/Graph.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/Graph.cpp" > CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.i
 
-CMakeFiles/clean_compiler.dir/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Graph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Graph.cpp" -o CMakeFiles/clean_compiler.dir/Graph.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/Graph.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.s
 
-CMakeFiles/clean_compiler.dir/Graph.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/Graph.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/Graph.cpp.o.provides: CMakeFiles/clean_compiler.dir/Graph.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Graph.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/Graph.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/Graph.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Graph.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/RulesParser.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/RulesParser.cpp.o: ../RulesParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/clean_compiler.dir/RulesParser.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/RulesParser.cpp.o -c "/home/yousef/clean compiler/RulesParser.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o: ../Lexical/RulesParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o -c "/home/yousef/clean compiler/Lexical/RulesParser.cpp"
 
-CMakeFiles/clean_compiler.dir/RulesParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/RulesParser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/RulesParser.cpp" > CMakeFiles/clean_compiler.dir/RulesParser.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/RulesParser.cpp" > CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.i
 
-CMakeFiles/clean_compiler.dir/RulesParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/RulesParser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/RulesParser.cpp" -o CMakeFiles/clean_compiler.dir/RulesParser.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/RulesParser.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.s
 
-CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.provides: CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/RulesParser.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o: ../LexicalAnalyzer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o -c "/home/yousef/clean compiler/LexicalAnalyzer.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o: ../Lexical/LexicalAnalyzer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o -c "/home/yousef/clean compiler/Lexical/LexicalAnalyzer.cpp"
 
-CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/LexicalAnalyzer.cpp" > CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/LexicalAnalyzer.cpp" > CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.i
 
-CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/LexicalAnalyzer.cpp" -o CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/LexicalAnalyzer.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.s
 
-CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.provides: CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o: ../GroupedNFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o -c "/home/yousef/clean compiler/GroupedNFA.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o: ../Lexical/GroupedNFA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o -c "/home/yousef/clean compiler/Lexical/GroupedNFA.cpp"
 
-CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/GroupedNFA.cpp" > CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/GroupedNFA.cpp" > CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.i
 
-CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/GroupedNFA.cpp" -o CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/GroupedNFA.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.s
 
-CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o: ../NFAOperator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o -c "/home/yousef/clean compiler/NFAOperator.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o: ../Lexical/NFAOperator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o -c "/home/yousef/clean compiler/Lexical/NFAOperator.cpp"
 
-CMakeFiles/clean_compiler.dir/NFAOperator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/NFAOperator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/NFAOperator.cpp" > CMakeFiles/clean_compiler.dir/NFAOperator.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/NFAOperator.cpp" > CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.i
 
-CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/NFAOperator.cpp" -o CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/NFAOperator.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.s
 
-CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.provides: CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o: ../NFAToDFA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o -c "/home/yousef/clean compiler/NFAToDFA.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o: ../Lexical/NFAToDFA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o -c "/home/yousef/clean compiler/Lexical/NFAToDFA.cpp"
 
-CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/NFAToDFA.cpp" > CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/NFAToDFA.cpp" > CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.i
 
-CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/NFAToDFA.cpp" -o CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/NFAToDFA.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.s
 
-CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/TestProgram.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/TestProgram.cpp.o: ../TestProgram.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/clean_compiler.dir/TestProgram.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/TestProgram.cpp.o -c "/home/yousef/clean compiler/TestProgram.cpp"
+CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o: ../Lexical/TestProgram.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o -c "/home/yousef/clean compiler/Lexical/TestProgram.cpp"
 
-CMakeFiles/clean_compiler.dir/TestProgram.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/TestProgram.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/TestProgram.cpp" > CMakeFiles/clean_compiler.dir/TestProgram.cpp.i
+CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Lexical/TestProgram.cpp" > CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.i
 
-CMakeFiles/clean_compiler.dir/TestProgram.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/TestProgram.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/TestProgram.cpp" -o CMakeFiles/clean_compiler.dir/TestProgram.cpp.s
+CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Lexical/TestProgram.cpp" -o CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.s
 
-CMakeFiles/clean_compiler.dir/TestProgram.cpp.o.requires:
+CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.requires:
 
-.PHONY : CMakeFiles/clean_compiler.dir/TestProgram.cpp.o.requires
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.requires
 
-CMakeFiles/clean_compiler.dir/TestProgram.cpp.o.provides: CMakeFiles/clean_compiler.dir/TestProgram.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/TestProgram.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/TestProgram.cpp.o.provides
+CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.provides: CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.provides
 
-CMakeFiles/clean_compiler.dir/TestProgram.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/TestProgram.cpp.o
+CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o
+
+
+CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o: ../Parser/Symbol.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o -c "/home/yousef/clean compiler/Parser/Symbol.cpp"
+
+CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Parser/Symbol.cpp" > CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.i
+
+CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Parser/Symbol.cpp" -o CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.s
+
+CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.requires:
+
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.requires
+
+CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.provides: CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.provides
+
+CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o
+
+
+CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o: ../Parser/Terminal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o -c "/home/yousef/clean compiler/Parser/Terminal.cpp"
+
+CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Parser/Terminal.cpp" > CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.i
+
+CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Parser/Terminal.cpp" -o CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.s
+
+CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.requires:
+
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.requires
+
+CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.provides: CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.provides
+
+CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o
+
+
+CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o: ../Parser/NonTerminal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o -c "/home/yousef/clean compiler/Parser/NonTerminal.cpp"
+
+CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Parser/NonTerminal.cpp" > CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.i
+
+CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Parser/NonTerminal.cpp" -o CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.s
+
+CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.requires:
+
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.requires
+
+CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.provides: CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.provides
+
+CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o
+
+
+CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: ../Parser/ParserGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o -c "/home/yousef/clean compiler/Parser/ParserGenerator.cpp"
+
+CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Parser/ParserGenerator.cpp" > CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.i
+
+CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Parser/ParserGenerator.cpp" -o CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.s
+
+CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.requires:
+
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.requires
+
+CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.provides: CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.provides
+
+CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o
+
+
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o: ../Parser/ParsingTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o -c "/home/yousef/clean compiler/Parser/ParsingTable.cpp"
+
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Parser/ParsingTable.cpp" > CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.i
+
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Parser/ParsingTable.cpp" -o CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.s
+
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.requires:
+
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.requires
+
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.provides: CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.provides
+
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o
+
+
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o: ../Parser/ParserTracer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o -c "/home/yousef/clean compiler/Parser/ParserTracer.cpp"
+
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Parser/ParserTracer.cpp" > CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.i
+
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Parser/ParserTracer.cpp" -o CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.s
+
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.requires:
+
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.requires
+
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.provides: CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.provides.build
+.PHONY : CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.provides
+
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o
 
 
 # Object files for target clean_compiler
 clean_compiler_OBJECTS = \
 "CMakeFiles/clean_compiler.dir/main.cpp.o" \
-"CMakeFiles/clean_compiler.dir/NFA.cpp.o" \
-"CMakeFiles/clean_compiler.dir/DFA.cpp.o" \
-"CMakeFiles/clean_compiler.dir/Graph.cpp.o" \
-"CMakeFiles/clean_compiler.dir/RulesParser.cpp.o" \
-"CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o" \
-"CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o" \
-"CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o" \
-"CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o" \
-"CMakeFiles/clean_compiler.dir/TestProgram.cpp.o"
+"CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o" \
+"CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"
 
 # External object files for target clean_compiler
 clean_compiler_EXTERNAL_OBJECTS =
 
 clean_compiler: CMakeFiles/clean_compiler.dir/main.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/NFA.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/DFA.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/Graph.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/RulesParser.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/TestProgram.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o
+clean_compiler: CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/build.make
 clean_compiler: CMakeFiles/clean_compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable clean_compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable clean_compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/clean_compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -334,15 +490,21 @@ CMakeFiles/clean_compiler.dir/build: clean_compiler
 .PHONY : CMakeFiles/clean_compiler.dir/build
 
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/main.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/NFA.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/DFA.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Graph.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/RulesParser.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/TestProgram.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.requires
+CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.requires
 
 .PHONY : CMakeFiles/clean_compiler.dir/requires
 
