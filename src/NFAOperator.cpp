@@ -53,12 +53,12 @@ NFA positiveClosure(NFA nfa) {
 	return temp;
 }
 
-int main(int argc, char **argv) {
-	NFA nfa1;
-	nfa1.addEdge(nfa1.startState, nfa1.finalState, "a");
-	NFA nfa2;
-	nfa2.addEdge(nfa2.startState, nfa2.finalState, "b");
-
-	NFA nfa = OR(nfa1, nfa2);
-	cout << "Hello" << endl;
-}
+//int main(int argc, char **argv) {
+//	NFA nfa1;
+//	nfa1.addEdge(nfa1.startState, nfa1.finalState, "a");
+//	NFA nfa2;
+//	nfa2.addEdge(nfa2.startState, nfa2.finalState, "b");
+//
+//	NFA nfa = OR(nfa1, nfa2);
+//	cout << "Hello" << endl;
+//}
