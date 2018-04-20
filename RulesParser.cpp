@@ -56,8 +56,11 @@ void RulesParser::constDefsParse(string line, vector<string> *constDefs) {
     line.erase(line.size() - 1); // erase from char number line.size() - 1 till end of line
     vector<string> keyWordsTemp;
     keyWordsTemp = split(line, ' ');
-    for (auto keyWord: keyWordsTemp)
+    for (auto keyWord: keyWordsTemp) {
+        if(keyWord[0] == '\\')
+            keyWord.erase(0,1);
         constDefs->push_back(keyWord);
+    }
 }
 
 /*

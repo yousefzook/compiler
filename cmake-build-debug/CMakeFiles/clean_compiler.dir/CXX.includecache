@@ -141,16 +141,12 @@ map
 -
 
 /home/yousef/clean compiler/TestProgram.cpp
+fstream
+-
 TestProgram.h
 /home/yousef/clean compiler/TestProgram.h
 GroupedNFA.h
 /home/yousef/clean compiler/GroupedNFA.h
-iostream
--
-sstream
--
-fstream
--
 
 /home/yousef/clean compiler/TestProgram.h
 iostream
