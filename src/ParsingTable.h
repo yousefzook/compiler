@@ -17,7 +17,7 @@ using namespace std;
 
 class ParsingTable {
 public:
-	static map<NonTerminal, map<Terminal, string> > constructTable(
+	static map<NonTerminal, map<Terminal, int> > constructTable(
 			vector<Terminal> terminals, vector<NonTerminal> nonTerminals,
 			map<NonTerminal, vector<Terminal> > first,
 			map<NonTerminal, vector<Terminal> > follow,

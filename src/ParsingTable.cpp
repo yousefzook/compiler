@@ -7,22 +7,14 @@
 
 #include "ParsingTable.h"
 
-//	for (vector<NonTerminal>::iterator nonTerminalIterator =
-//			nonTerminals.begin(); nonTerminalIterator != nonTerminals.end();
-//			++nonTerminalIterator) {
-
-//		for (vector<vector<Symbol*> >::iterator prodIterator =
-//				production.begin(); prodIterator != production.end();
-//				++prodIterator) {
-
 // All the arguments must be passed by value not by reference because I may modify them
-map<NonTerminal, map<Terminal, string> > ParsingTable::constructTable(
+map<NonTerminal, map<Terminal, int> > ParsingTable::constructTable(
 		vector<Terminal> terminals, vector<NonTerminal> nonTerminals,
 		map<NonTerminal, vector<Terminal> > first,
 		map<NonTerminal, vector<Terminal> > follow,
 		map<NonTerminal, vector<vector<Symbol*> > > productions) {
 
-	map<NonTerminal, map<Terminal, string> > parsingTable;
+	map<NonTerminal, map<Terminal, int> > parsingTable;
 
 	// Build internal (terminals) map for each nonterminal
 	for (unsigned x = 0; x < nonTerminals.size(); x++) {
@@ -89,10 +81,10 @@ map<NonTerminal, map<Terminal, string> > ParsingTable::constructTable(
 
 		}
 
-		for (vector<Terminal>::iterator terminalIterator = terminals.begin();
-				terminalIterator != terminals.end(); ++terminalIterator) {
-
-		}
+		// Put the inner map in the parsing table
+		parsingTable.insert(
+				pair<NonTerminal, map<Terminal, int> >(nonTerminal,
+						terminalMap));
 	}
 
 	return parsingTable;
