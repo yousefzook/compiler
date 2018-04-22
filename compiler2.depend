@@ -1,0 +1,162 @@
+# depslib dependency file v1.0
+1524259176 source:/home/rizk/Public/workspace/compiler2/Lexical/DFA.cpp
+	<iostream>
+	"DFA.h"
+	"GroupedNFA.h"
+
+1524259246 /home/rizk/Public/workspace/compiler2/Lexical/DFA.h
+	<set>
+	<vector>
+	<string>
+	<map>
+
+1524259254 /home/rizk/Public/workspace/compiler2/Lexical/GroupedNFA.h
+	<vector>
+	"Graph.h"
+	"Bimap.h"
+	<set>
+
+1524259250 /home/rizk/Public/workspace/compiler2/Lexical/Graph.h
+	<string>
+	<vector>
+
+1524259241 /home/rizk/Public/workspace/compiler2/Lexical/Bimap.h
+	<unordered_map>
+	<map>
+	<unordered_set>
+
+1524259181 source:/home/rizk/Public/workspace/compiler2/Lexical/Graph.cpp
+	"Graph.h"
+	"GroupedNFA.h"
+
+1524259187 source:/home/rizk/Public/workspace/compiler2/Lexical/GroupedNFA.cpp
+	<iostream>
+	"GroupedNFA.h"
+
+1524257785 source:/home/rizk/Public/workspace/compiler2/Lexical/NFA.cpp
+	"NFA.h"
+
+1524259277 /home/rizk/Public/workspace/compiler2/Lexical/NFA.h
+	<string>
+	"Graph.h"
+
+1524259192 source:/home/rizk/Public/workspace/compiler2/Lexical/NFAOperator.cpp
+	"NFAOperator.h"
+	"GroupedNFA.h"
+
+1524257785 /home/rizk/Public/workspace/compiler2/Lexical/NFAOperator.h
+	"NFA.h"
+
+1524259196 source:/home/rizk/Public/workspace/compiler2/Lexical/NFAToDFA.cpp
+	<queue>
+	<iostream>
+	"NFAToDFA.h"
+
+1524257785 /home/rizk/Public/workspace/compiler2/Lexical/NFAToDFA.h
+	"DFA.h"
+	"GroupedNFA.h"
+
+1524259200 source:/home/rizk/Public/workspace/compiler2/Lexical/RulesParser.cpp
+	"RulesParser.h"
+	<iostream>
+	<sstream>
+
+1524259277 /home/rizk/Public/workspace/compiler2/Lexical/RulesParser.h
+	<string>
+	<vector>
+	<map>
+
+1524300230 source:/home/rizk/Public/workspace/compiler2/Lexical/TestProgram.cpp
+	<fstream>
+	"TestProgram.h"
+	"GroupedNFA.h"
+
+1524259277 /home/rizk/Public/workspace/compiler2/Lexical/TestProgram.h
+	<iostream>
+	<stack>
+	<vector>
+	<map>
+	<iomanip>
+	<sstream>
+
+1524316589 source:/home/rizk/Public/workspace/compiler2/main.cpp
+	<iostream>
+	"Lexical/LexicalAnalyzer.h"
+	"Parser/ParserGenerator.h"
+
+1524259277 /home/rizk/Public/workspace/compiler2/Lexical/LexicalAnalyzer.h
+	<iostream>
+	<fstream>
+	<map>
+	<vector>
+	"NFA.h"
+	<stack>
+
+1524418021 /home/rizk/Public/workspace/compiler2/Parser/ParserGenerator.h
+	<iostream>
+	<vector>
+	<map>
+	<set>
+	<stack>
+	<fstream>
+	<sstream>
+	"Symbol.h"
+
+1524259233 /home/rizk/Public/workspace/compiler2/Parser/Terminal.h
+	"Symbol.h"
+
+1524320574 /home/rizk/Public/workspace/compiler2/Parser/Symbol.h
+	<string>
+
+1524259211 /home/rizk/Public/workspace/compiler2/Parser/NonTerminal.h
+	"Symbol.h"
+
+1524257785 source:/home/rizk/Public/workspace/compiler2/Parser/NonTerminal.cpp
+	"NonTerminal.h"
+
+1524417457 source:/home/rizk/Public/workspace/compiler2/Parser/ParserGenerator.cpp
+	"ParserGenerator.h"
+	"ParsingTable.h"
+
+1524259223 /home/rizk/Public/workspace/compiler2/Parser/ParsingTable.h
+	<vector>
+	<map>
+	"Symbol.h"
+	"Terminal.h"
+	"NonTerminal.h"
+
+1524257785 source:/home/rizk/Public/workspace/compiler2/Parser/ParserTracer.cpp
+	"ParserTracer.h"
+
+1524259219 /home/rizk/Public/workspace/compiler2/Parser/ParserTracer.h
+	"ParsingTable.h"
+
+1524257785 source:/home/rizk/Public/workspace/compiler2/Parser/ParsingTable.cpp
+	"ParsingTable.h"
+
+1524319302 source:/home/rizk/Public/workspace/compiler2/Parser/Symbol.cpp
+	"Symbol.h"
+
+1524257785 source:/home/rizk/Public/workspace/compiler2/Parser/Terminal.cpp
+	"Terminal.h"
+
+1524298865 source:/home/rizk/Public/workspace/compiler2/Lexical/LexicalAnalyzer.cpp
+	"NFAOperator.h"
+	"LexicalAnalyzer.h"
+	"RulesParser.h"
+	"GroupedNFA.h"
+	"DFA.h"
+	"NFAToDFA.h"
+	"TestProgram.h"
+
+1524302152 /home/rizk/Public/workspace/compiler2/Parser/ProductionParser.h
+	"Symbol.h"
+	"NonTerminal.h"
+	"Terminal.h"
+	<iostream>
+	<string>
+	<vector>
+	<map>
+	<set>
+	<iterator>
+

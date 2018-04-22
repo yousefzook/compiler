@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="compiler2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/compiler2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/compiler2" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Lexical/Bimap.h" />
+		<Unit filename="Lexical/DFA.cpp" />
+		<Unit filename="Lexical/DFA.h" />
+		<Unit filename="Lexical/Graph.cpp" />
+		<Unit filename="Lexical/Graph.h" />
+		<Unit filename="Lexical/GroupedNFA.cpp" />
+		<Unit filename="Lexical/GroupedNFA.h" />
+		<Unit filename="Lexical/LexicalAnalyzer.cpp" />
+		<Unit filename="Lexical/LexicalAnalyzer.h" />
+		<Unit filename="Lexical/NFA.cpp" />
+		<Unit filename="Lexical/NFA.h" />
+		<Unit filename="Lexical/NFAOperator.cpp" />
+		<Unit filename="Lexical/NFAOperator.h" />
+		<Unit filename="Lexical/NFAToDFA.cpp" />
+		<Unit filename="Lexical/NFAToDFA.h" />
+		<Unit filename="Lexical/RulesParser.cpp" />
+		<Unit filename="Lexical/RulesParser.h" />
+		<Unit filename="Lexical/TestProgram.cpp" />
+		<Unit filename="Lexical/TestProgram.h" />
+		<Unit filename="Parser/ParserGenerator.cpp" />
+		<Unit filename="Parser/ParserGenerator.h" />
+		<Unit filename="Parser/Symbol.cpp" />
+		<Unit filename="Parser/Symbol.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

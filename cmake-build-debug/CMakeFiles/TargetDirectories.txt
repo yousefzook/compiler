@@ -1,0 +1,3 @@
+/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir

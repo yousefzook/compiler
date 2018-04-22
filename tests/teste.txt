@@ -1,0 +1,1 @@
+# A = A 'rr' | S 'dd' | FAR 'rr' 'g' D | A 'f' | 'd'
