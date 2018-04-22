@@ -141,12 +141,6 @@
 		<Unit filename="/home/yousef/clean compiler/Lexical/TestProgram.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/Parser/NonTerminal.cpp">
-			<Option target="clean_compiler"/>
-		</Unit>
-		<Unit filename="/home/yousef/clean compiler/Parser/NonTerminal.h">
-			<Option target="clean_compiler"/>
-		</Unit>
 		<Unit filename="/home/yousef/clean compiler/Parser/ParserGenerator.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
@@ -169,12 +163,6 @@
 			<Option target="clean_compiler"/>
 		</Unit>
 		<Unit filename="/home/yousef/clean compiler/Parser/Symbol.h">
-			<Option target="clean_compiler"/>
-		</Unit>
-		<Unit filename="/home/yousef/clean compiler/Parser/Terminal.cpp">
-			<Option target="clean_compiler"/>
-		</Unit>
-		<Unit filename="/home/yousef/clean compiler/Parser/Terminal.h">
 			<Option target="clean_compiler"/>
 		</Unit>
 		<Unit filename="/home/yousef/clean compiler/main.cpp">

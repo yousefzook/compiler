@@ -162,15 +162,9 @@ iomanip
 sstream
 -
 
-/home/yousef/clean compiler/Parser/NonTerminal.cpp
-NonTerminal.h
-/home/yousef/clean compiler/Parser/NonTerminal.h
-
-/home/yousef/clean compiler/Parser/NonTerminal.h
-Symbol.h
-/home/yousef/clean compiler/Parser/Symbol.h
-
 /home/yousef/clean compiler/Parser/ParserGenerator.cpp
+algorithm
+-
 ParserGenerator.h
 /home/yousef/clean compiler/Parser/ParserGenerator.h
 
@@ -179,10 +173,26 @@ vector
 -
 map
 -
-Terminal.h
-/home/yousef/clean compiler/Parser/Terminal.h
-NonTerminal.h
-/home/yousef/clean compiler/Parser/NonTerminal.h
+unordered_set
+-
+set
+-
+
+/home/yousef/clean compiler/Parser/ParserTracer.cpp
+ParserTracer.h
+/home/yousef/clean compiler/Parser/ParserTracer.h
+
+/home/yousef/clean compiler/Parser/ParserTracer.h
+ParsingTable.h
+/home/yousef/clean compiler/Parser/ParsingTable.h
+string
+-
+vector
+-
+
+/home/yousef/clean compiler/Parser/ParsingTable.cpp
+
+/home/yousef/clean compiler/Parser/ParsingTable.h
 
 /home/yousef/clean compiler/Parser/Symbol.cpp
 Symbol.h
@@ -192,27 +202,11 @@ Symbol.h
 string
 -
 
-/home/yousef/clean compiler/Parser/Terminal.cpp
-Terminal.h
-/home/yousef/clean compiler/Parser/Terminal.h
-
-/home/yousef/clean compiler/Parser/Terminal.h
-Symbol.h
-/home/yousef/clean compiler/Parser/Symbol.h
-
 /home/yousef/clean compiler/main.cpp
 iostream
 -
-stack
--
-vector
--
-string
--
-utility
--
-map
--
-sstream
--
+Lexical/LexicalAnalyzer.h
+/home/yousef/clean compiler/Lexical/LexicalAnalyzer.h
+Parser/ParserGenerator.h
+/home/yousef/clean compiler/Parser/ParserGenerator.h
 

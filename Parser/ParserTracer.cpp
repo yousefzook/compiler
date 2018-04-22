@@ -5,5 +5,5 @@
 #include "ParserTracer.h"
 
 void ParserTracer::start(vector<string> lexicalTokens) {
-    map<NonTerminal, map<Terminal, int>> parsingTable = ParsingTable::getInstance()->table;
+//    map<NonTerminal, map<Terminal, int>> parsingTable = ParsingTable::getInstance()->table;
 }

@@ -13,12 +13,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yousef/clean compiler/Lexical/NFAToDFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o"
   "/home/yousef/clean compiler/Lexical/RulesParser.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o"
   "/home/yousef/clean compiler/Lexical/TestProgram.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o"
-  "/home/yousef/clean compiler/Parser/NonTerminal.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o"
   "/home/yousef/clean compiler/Parser/ParserGenerator.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o"
   "/home/yousef/clean compiler/Parser/ParserTracer.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"
   "/home/yousef/clean compiler/Parser/ParsingTable.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o"
   "/home/yousef/clean compiler/Parser/Symbol.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o"
-  "/home/yousef/clean compiler/Parser/Terminal.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o"
   "/home/yousef/clean compiler/main.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

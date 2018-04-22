@@ -321,57 +321,9 @@ CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.provides: CMakeFiles/clean_com
 CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o
 
 
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o: ../Parser/Terminal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o -c "/home/yousef/clean compiler/Parser/Terminal.cpp"
-
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Parser/Terminal.cpp" > CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.i
-
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Parser/Terminal.cpp" -o CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.s
-
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.requires:
-
-.PHONY : CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.requires
-
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.provides: CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.provides
-
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o
-
-
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o: ../Parser/NonTerminal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o -c "/home/yousef/clean compiler/Parser/NonTerminal.cpp"
-
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yousef/clean compiler/Parser/NonTerminal.cpp" > CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.i
-
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yousef/clean compiler/Parser/NonTerminal.cpp" -o CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.s
-
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.requires:
-
-.PHONY : CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.requires
-
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.provides: CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.requires
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.provides.build
-.PHONY : CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.provides
-
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.provides.build: CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o
-
-
 CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
 CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: ../Parser/ParserGenerator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o -c "/home/yousef/clean compiler/Parser/ParserGenerator.cpp"
 
 CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.i: cmake_force
@@ -395,7 +347,7 @@ CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.provides.build: CMake
 
 CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
 CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o: ../Parser/ParsingTable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o -c "/home/yousef/clean compiler/Parser/ParsingTable.cpp"
 
 CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.i: cmake_force
@@ -419,7 +371,7 @@ CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o: CMakeFiles/clean_compiler.dir/flags.make
 CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o: ../Parser/ParserTracer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o -c "/home/yousef/clean compiler/Parser/ParserTracer.cpp"
 
 CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.i: cmake_force
@@ -454,8 +406,6 @@ clean_compiler_OBJECTS = \
 "CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o" \
 "CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o" \
 "CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o" \
-"CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o" \
-"CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o" \
 "CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o" \
 "CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o" \
 "CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"
@@ -474,14 +424,12 @@ clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o
-clean_compiler: CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o
 clean_compiler: CMakeFiles/clean_compiler.dir/build.make
 clean_compiler: CMakeFiles/clean_compiler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable clean_compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/yousef/clean compiler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable clean_compiler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/clean_compiler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -500,8 +448,6 @@ CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/NF
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o.requires
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o.requires
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o.requires
-CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o.requires
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o.requires
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o.requires
 CMakeFiles/clean_compiler.dir/requires: CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o.requires

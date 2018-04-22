@@ -6,6 +6,10 @@
 #define CLEAN_COMPILER_PARSERTRACER_H
 
 #include "ParsingTable.h"
+#include <string>
+#include <vector>
+
+using namespace std;
 
 class ParserTracer {
 

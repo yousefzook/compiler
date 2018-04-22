@@ -56,22 +56,21 @@ CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o: ../Lexical/GroupedNFA.h
 CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o: ../Lexical/TestProgram.cpp
 CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o: ../Lexical/TestProgram.h
 
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o: ../Parser/NonTerminal.cpp
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o: ../Parser/NonTerminal.h
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o: ../Parser/Symbol.h
-
-CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: ../Parser/NonTerminal.h
 CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: ../Parser/ParserGenerator.cpp
 CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: ../Parser/ParserGenerator.h
-CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: ../Parser/Symbol.h
-CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o: ../Parser/Terminal.h
+
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o: ../Parser/ParserTracer.cpp
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o: ../Parser/ParserTracer.h
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o: ../Parser/ParsingTable.h
+
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o: ../Parser/ParsingTable.cpp
 
 CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o: ../Parser/Symbol.cpp
 CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o: ../Parser/Symbol.h
 
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o: ../Parser/Symbol.h
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o: ../Parser/Terminal.cpp
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o: ../Parser/Terminal.h
-
+CMakeFiles/clean_compiler.dir/main.cpp.o: ../Lexical/Graph.h
+CMakeFiles/clean_compiler.dir/main.cpp.o: ../Lexical/LexicalAnalyzer.h
+CMakeFiles/clean_compiler.dir/main.cpp.o: ../Lexical/NFA.h
+CMakeFiles/clean_compiler.dir/main.cpp.o: ../Parser/ParserGenerator.h
 CMakeFiles/clean_compiler.dir/main.cpp.o: ../main.cpp
 

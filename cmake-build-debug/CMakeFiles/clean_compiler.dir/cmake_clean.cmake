@@ -10,8 +10,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o"
   "CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o"
   "CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o"
-  "CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o"
-  "CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o"
   "CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o"
   "CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o"
   "CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"

@@ -56,22 +56,21 @@ CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o
  /home/yousef/clean compiler/Lexical/GroupedNFA.h
  /home/yousef/clean compiler/Lexical/TestProgram.cpp
  /home/yousef/clean compiler/Lexical/TestProgram.h
-CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o
- /home/yousef/clean compiler/Parser/NonTerminal.cpp
- /home/yousef/clean compiler/Parser/NonTerminal.h
- /home/yousef/clean compiler/Parser/Symbol.h
 CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o
- /home/yousef/clean compiler/Parser/NonTerminal.h
  /home/yousef/clean compiler/Parser/ParserGenerator.cpp
  /home/yousef/clean compiler/Parser/ParserGenerator.h
- /home/yousef/clean compiler/Parser/Symbol.h
- /home/yousef/clean compiler/Parser/Terminal.h
+CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o
+ /home/yousef/clean compiler/Parser/ParserTracer.cpp
+ /home/yousef/clean compiler/Parser/ParserTracer.h
+ /home/yousef/clean compiler/Parser/ParsingTable.h
+CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o
+ /home/yousef/clean compiler/Parser/ParsingTable.cpp
 CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o
  /home/yousef/clean compiler/Parser/Symbol.cpp
  /home/yousef/clean compiler/Parser/Symbol.h
-CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o
- /home/yousef/clean compiler/Parser/Symbol.h
- /home/yousef/clean compiler/Parser/Terminal.cpp
- /home/yousef/clean compiler/Parser/Terminal.h
 CMakeFiles/clean_compiler.dir/main.cpp.o
+ /home/yousef/clean compiler/Lexical/Graph.h
+ /home/yousef/clean compiler/Lexical/LexicalAnalyzer.h
+ /home/yousef/clean compiler/Lexical/NFA.h
+ /home/yousef/clean compiler/Parser/ParserGenerator.h
  /home/yousef/clean compiler/main.cpp
