@@ -13,6 +13,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o"
   "CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o"
   "CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"
+  "CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o"
+  "CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o"
+  "CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.o"
+  "CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.o"
   "clean_compiler.pdb"
   "clean_compiler"
 )

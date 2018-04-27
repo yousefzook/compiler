@@ -366,6 +366,60 @@ Lexical/TestProgram.cpp.s:
 	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.s
 .PHONY : Lexical/TestProgram.cpp.s
 
+Parser/InputHandler.o: Parser/InputHandler.cpp.o
+
+.PHONY : Parser/InputHandler.o
+
+# target to build an object file
+Parser/InputHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.o
+.PHONY : Parser/InputHandler.cpp.o
+
+Parser/InputHandler.i: Parser/InputHandler.cpp.i
+
+.PHONY : Parser/InputHandler.i
+
+# target to preprocess a source file
+Parser/InputHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.i
+.PHONY : Parser/InputHandler.cpp.i
+
+Parser/InputHandler.s: Parser/InputHandler.cpp.s
+
+.PHONY : Parser/InputHandler.s
+
+# target to generate assembly for a file
+Parser/InputHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.s
+.PHONY : Parser/InputHandler.cpp.s
+
+Parser/NonTerminal.o: Parser/NonTerminal.cpp.o
+
+.PHONY : Parser/NonTerminal.o
+
+# target to build an object file
+Parser/NonTerminal.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o
+.PHONY : Parser/NonTerminal.cpp.o
+
+Parser/NonTerminal.i: Parser/NonTerminal.cpp.i
+
+.PHONY : Parser/NonTerminal.i
+
+# target to preprocess a source file
+Parser/NonTerminal.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.i
+.PHONY : Parser/NonTerminal.cpp.i
+
+Parser/NonTerminal.s: Parser/NonTerminal.cpp.s
+
+.PHONY : Parser/NonTerminal.s
+
+# target to generate assembly for a file
+Parser/NonTerminal.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.s
+.PHONY : Parser/NonTerminal.cpp.s
+
 Parser/ParserGenerator.o: Parser/ParserGenerator.cpp.o
 
 .PHONY : Parser/ParserGenerator.o
@@ -474,6 +528,60 @@ Parser/Symbol.cpp.s:
 	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.s
 .PHONY : Parser/Symbol.cpp.s
 
+Parser/Terminal.o: Parser/Terminal.cpp.o
+
+.PHONY : Parser/Terminal.o
+
+# target to build an object file
+Parser/Terminal.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o
+.PHONY : Parser/Terminal.cpp.o
+
+Parser/Terminal.i: Parser/Terminal.cpp.i
+
+.PHONY : Parser/Terminal.i
+
+# target to preprocess a source file
+Parser/Terminal.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.i
+.PHONY : Parser/Terminal.cpp.i
+
+Parser/Terminal.s: Parser/Terminal.cpp.s
+
+.PHONY : Parser/Terminal.s
+
+# target to generate assembly for a file
+Parser/Terminal.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.s
+.PHONY : Parser/Terminal.cpp.s
+
+Parser/ToLL1Converter.o: Parser/ToLL1Converter.cpp.o
+
+.PHONY : Parser/ToLL1Converter.o
+
+# target to build an object file
+Parser/ToLL1Converter.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.o
+.PHONY : Parser/ToLL1Converter.cpp.o
+
+Parser/ToLL1Converter.i: Parser/ToLL1Converter.cpp.i
+
+.PHONY : Parser/ToLL1Converter.i
+
+# target to preprocess a source file
+Parser/ToLL1Converter.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.i
+.PHONY : Parser/ToLL1Converter.cpp.i
+
+Parser/ToLL1Converter.s: Parser/ToLL1Converter.cpp.s
+
+.PHONY : Parser/ToLL1Converter.s
+
+# target to generate assembly for a file
+Parser/ToLL1Converter.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.s
+.PHONY : Parser/ToLL1Converter.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -537,6 +645,12 @@ help:
 	@echo "... Lexical/TestProgram.o"
 	@echo "... Lexical/TestProgram.i"
 	@echo "... Lexical/TestProgram.s"
+	@echo "... Parser/InputHandler.o"
+	@echo "... Parser/InputHandler.i"
+	@echo "... Parser/InputHandler.s"
+	@echo "... Parser/NonTerminal.o"
+	@echo "... Parser/NonTerminal.i"
+	@echo "... Parser/NonTerminal.s"
 	@echo "... Parser/ParserGenerator.o"
 	@echo "... Parser/ParserGenerator.i"
 	@echo "... Parser/ParserGenerator.s"
@@ -549,6 +663,12 @@ help:
 	@echo "... Parser/Symbol.o"
 	@echo "... Parser/Symbol.i"
 	@echo "... Parser/Symbol.s"
+	@echo "... Parser/Terminal.o"
+	@echo "... Parser/Terminal.i"
+	@echo "... Parser/Terminal.s"
+	@echo "... Parser/ToLL1Converter.o"
+	@echo "... Parser/ToLL1Converter.i"
+	@echo "... Parser/ToLL1Converter.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

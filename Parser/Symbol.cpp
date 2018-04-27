@@ -6,11 +6,8 @@
  */
 
 #include "Symbol.h"
+#include "ParsingTable.h"
 
-//Symbol::Symbol(string name, bool terminal) {
-//	this->name = name;
-//	this->terminal = terminal;
-//}
 
 Symbol::~Symbol() {
 

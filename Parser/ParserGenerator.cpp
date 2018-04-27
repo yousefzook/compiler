@@ -4,24 +4,29 @@
 
 #include <algorithm>
 #include "ParserGenerator.h"
+#include "InputHandler.h"
+#include "ParserTracer.h"
 
 /*
  * Start Parser work
  * */
 void ParserGenerator::startParser(vector<string> lexicalTokens) {
 
-    readProductionsFile();
+    InputHandler inputHandler;
+    inputHandler.startParserInputHandler(&terminals, &nonTerminals,
+                                         &productions, startNonTerminal, &productionsStr);
     /*
-     * Now terminals set, nonTerminals  map are  initialized
+     * Now terminals set, nonTerminals  set, Productions map, startNonTerminal are  initialized
      * */
 
     generateFirst();
     generateFollow();
 
-//    ParsingTable::getInstance()->
-//            constructTable(terminals, nonTerminals, first, follow, productions);
+    ParsingTable parsingTable;
+    map<string, map<string, int>> table = parsingTable.constructTable(terminals, nonTerminals, productions);
 
-
+    ParserTracer parser;
+    parser.start(lexicalTokens, table, productionsStr, startNonTerminal->getName());
 
 
 }
@@ -31,27 +36,28 @@ void ParserGenerator::startParser(vector<string> lexicalTokens) {
  * init follow map
  * */
 void ParserGenerator::generateFollow() {
-    for (auto pair: nonTerminals) {
-        string nonTerminal = pair.first;
+    for (auto nonTerminal: nonTerminals)
         initFollow(nonTerminal);
-    }
+
 }
 
 /*
  * return follow of the given nonTerminal after initializing it
  * */
-void ParserGenerator::initFollow(string nonTerminal) {
+void ParserGenerator::initFollow(NonTerminal *nonTerminal) {
 
-    struct nonTerminalAttributes *attributes = &nonTerminals[nonTerminal];
-    if (!attributes->follow.empty())
+//    struct nonTerminalAttributes *attributes = &nonTerminals[nonTerminal];
+    if (!nonTerminal->follow.empty())
         return;
 
-    for (auto pair: nonTerminals) {
-        vector<vector<string>> productions = pair.second.productions;
-        string lhsNonTerminal = pair.first; // left hand side non terminal
+    for (auto nonTerminalIter: nonTerminals) {
+
+        vector<vector<Symbol *>> productions = this->productions[nonTerminalIter];
+
+        NonTerminal *lhsNonTerminal = nonTerminalIter; // left hand side non terminal
         for (auto production: productions) {
 
-            std::vector<string>::iterator it = find(production.begin(), production.end(), nonTerminal);
+            std::vector<Symbol *>::iterator it = find(production.begin(), production.end(), (Symbol *) nonTerminal);
             if (it == production.end())
                 // the production doesn't contain the nonterminal so skip it
                 continue;
@@ -61,11 +67,11 @@ void ParserGenerator::initFollow(string nonTerminal) {
                     continue;
                 else {
                     initFollow(lhsNonTerminal);
-                    for (auto value: nonTerminals[lhsNonTerminal].follow)
-                        attributes->follow.insert(value);
+                    for (auto value: lhsNonTerminal->follow)
+                        nonTerminal->follow.insert(value);
                 }
             }
-            production.at(it - production.begin() + 1);
+//            production.at(it - production.begin() + 1);
         }
     }
 
@@ -77,48 +83,50 @@ void ParserGenerator::initFollow(string nonTerminal) {
  * */
 void ParserGenerator::generateFirst() {
 
-    for (auto pair: nonTerminals) {
-        string nonTerminal = pair.first;
+    for (auto nonTerminal: nonTerminals)
         initFirst(nonTerminal);
-    }
+
 }
 
 /*
  * return first of the given nonTerminal after initializing it
  * */
-void ParserGenerator::initFirst(string nonTerminal) {
+void ParserGenerator::initFirst(NonTerminal *nonTerminal) {
 
-    struct nonTerminalAttributes *attributes = &nonTerminals[nonTerminal];
-    if (!attributes->first.empty())
+
+    if (!nonTerminal->first.empty())
         return;
-    vector<vector<string>> nonTerminalProductions = attributes->productions;
+
+    vector<vector<Symbol *>> nonTerminalProductions = productions[nonTerminal];
     int iter = 0;
 
     for (auto production: nonTerminalProductions) {
 
-        string symbol = production[iter];
-        if (symbol == "\L" || isTerminal(symbol)) // if terminal or lambda, push it
-            attributes->first.insert(symbol);
+        Symbol *symbol = production[iter];
+        string symbolStr = symbol->getName();
+        if (symbolStr == "\\L" || isTerminal(symbolStr)) // if terminal or lambda, push it
+            nonTerminal->first.insert((Terminal *) symbol);
 
         else { // if non terminal, get first of this nonterminal
-            initFirst(symbol);
-            for (auto value: nonTerminals[symbol].first)
-                attributes->first.insert(value);
+            NonTerminal *nonTerminal1 = (NonTerminal *) symbol;
+            initFirst(nonTerminal1);
+            for (auto value: nonTerminal1->first)
+                nonTerminal->first.insert(value);
 
             while (iter < production.size() &&
-                   find(nonTerminals[symbol].first.begin(),
-                        nonTerminals[symbol].first.end(), "\L") != nonTerminals[symbol].first.end()) {
+                   find(nonTerminal1->first.begin(),
+                        nonTerminal1->first.end(), getEpsilonPtr()) != nonTerminal1->first.end()) {
                 // while having lambda and still there exist symbols, push first of the next symbol
 
                 symbol = production[++iter];
-                if (symbol == "\L" || isTerminal(symbol)) { // if terminal or lambda, push it
-                    attributes->first.insert(symbol);
+                if (symbol->getName() == "\\L" || isTerminal(symbol->getName())) { // if terminal or lambda, push it
+                    nonTerminal->first.insert((Terminal *) symbol);
                     break;
                 }
-
-                initFirst(symbol);
-                for (auto value: nonTerminals[symbol].first)
-                    attributes->first.insert(value);
+                nonTerminal1 = (NonTerminal *) symbol;
+                initFirst(nonTerminal1);
+                for (auto value: nonTerminal1->first)
+                    nonTerminal->first.insert(value);
             }
         }
     }
@@ -128,15 +136,15 @@ void ParserGenerator::initFirst(string nonTerminal) {
  * if given symbol is terminal , return true else return false
  * */
 bool ParserGenerator::isTerminal(string symbol) {
-    if (terminals.find(symbol) != terminals.end())
-        return true;
+    for (auto terminal: terminals)
+        if (terminal->getName() == symbol)
+            return true;
     return false;
 }
 
-/*
- * read productions file and init the
- *  productions map and terminals, nonTerminals vectors
- * */
-void ParserGenerator::readProductionsFile() {
-
+Terminal *ParserGenerator::getEpsilonPtr() {
+    for (auto terminal: terminals)
+        if (terminal->getName() == "\\L")
+            return terminal;
+    return NULL;
 }

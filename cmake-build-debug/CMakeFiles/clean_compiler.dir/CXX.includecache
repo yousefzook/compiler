@@ -162,11 +162,55 @@ iomanip
 sstream
 -
 
+/home/yousef/clean compiler/Parser/InputHandler.cpp
+fstream
+-
+iostream
+-
+sstream
+-
+InputHandler.h
+/home/yousef/clean compiler/Parser/InputHandler.h
+ToLL1Converter.h
+/home/yousef/clean compiler/Parser/ToLL1Converter.h
+
+/home/yousef/clean compiler/Parser/InputHandler.h
+string
+-
+vector
+-
+stack
+-
+set
+-
+map
+-
+Symbol.h
+/home/yousef/clean compiler/Parser/Symbol.h
+NonTerminal.h
+/home/yousef/clean compiler/Parser/NonTerminal.h
+
+/home/yousef/clean compiler/Parser/NonTerminal.cpp
+NonTerminal.h
+/home/yousef/clean compiler/Parser/NonTerminal.h
+
+/home/yousef/clean compiler/Parser/NonTerminal.h
+set
+-
+Symbol.h
+/home/yousef/clean compiler/Parser/Symbol.h
+Terminal.h
+/home/yousef/clean compiler/Parser/Terminal.h
+
 /home/yousef/clean compiler/Parser/ParserGenerator.cpp
 algorithm
 -
 ParserGenerator.h
 /home/yousef/clean compiler/Parser/ParserGenerator.h
+InputHandler.h
+/home/yousef/clean compiler/Parser/InputHandler.h
+ParserTracer.h
+/home/yousef/clean compiler/Parser/ParserTracer.h
 
 /home/yousef/clean compiler/Parser/ParserGenerator.h
 vector
@@ -177,8 +221,18 @@ unordered_set
 -
 set
 -
+NonTerminal.h
+/home/yousef/clean compiler/Parser/NonTerminal.h
 
 /home/yousef/clean compiler/Parser/ParserTracer.cpp
+iostream
+-
+vector
+-
+map
+-
+stack
+-
 ParserTracer.h
 /home/yousef/clean compiler/Parser/ParserTracer.h
 
@@ -191,16 +245,68 @@ vector
 -
 
 /home/yousef/clean compiler/Parser/ParsingTable.cpp
+ParsingTable.h
+/home/yousef/clean compiler/Parser/ParsingTable.h
+iostream
+-
 
 /home/yousef/clean compiler/Parser/ParsingTable.h
+vector
+-
+map
+-
+Symbol.h
+/home/yousef/clean compiler/Parser/Symbol.h
+Terminal.h
+/home/yousef/clean compiler/Parser/Terminal.h
+NonTerminal.h
+/home/yousef/clean compiler/Parser/NonTerminal.h
 
 /home/yousef/clean compiler/Parser/Symbol.cpp
 Symbol.h
 /home/yousef/clean compiler/Parser/Symbol.h
+ParsingTable.h
+/home/yousef/clean compiler/Parser/ParsingTable.h
 
 /home/yousef/clean compiler/Parser/Symbol.h
 string
 -
+
+/home/yousef/clean compiler/Parser/Terminal.cpp
+Terminal.h
+/home/yousef/clean compiler/Parser/Terminal.h
+string
+-
+
+/home/yousef/clean compiler/Parser/Terminal.h
+Symbol.h
+/home/yousef/clean compiler/Parser/Symbol.h
+
+/home/yousef/clean compiler/Parser/ToLL1Converter.cpp
+iostream
+-
+ToLL1Converter.h
+/home/yousef/clean compiler/Parser/ToLL1Converter.h
+algorithm
+-
+fstream
+-
+sstream
+-
+
+/home/yousef/clean compiler/Parser/ToLL1Converter.h
+string
+-
+set
+-
+vector
+-
+map
+-
+stack
+-
+NonTerminal.h
+/home/yousef/clean compiler/Parser/NonTerminal.h
 
 /home/yousef/clean compiler/main.cpp
 iostream

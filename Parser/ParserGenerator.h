@@ -10,6 +10,7 @@
 #include <map>
 #include <unordered_set>
 #include <set>
+#include "NonTerminal.h"
 
 using namespace std;
 
@@ -17,26 +18,22 @@ class ParserGenerator {
 public:
     void startParser(vector<string>);
 
-    struct nonTerminalAttributes {
-        set<string> first;
-        set<string> follow;
-        vector<vector<string>> productions;
-    };
 private:
 
-    unordered_set<string> terminals;
-    map<string, nonTerminalAttributes> nonTerminals;
-    string startNonTerminal;
+    set<Terminal *> terminals;
+    set<NonTerminal *> nonTerminals;
+    NonTerminal * startNonTerminal;
+    map<NonTerminal *, vector<vector<Symbol*>>> productions;
+    map<string, vector<vector<string>>> productionsStr;
 
-    void initFirst(string nonTerminal);
+    void initFirst(NonTerminal * nonTerminal);
 
-    void initFollow(string nonTerminal);
+    Terminal * getEpsilonPtr();
+    void initFollow(NonTerminal *nonTerminal);
 
     void generateFirst();
 
     void generateFollow();
-
-    void readProductionsFile();
 
     bool isTerminal(string symbol);
 
