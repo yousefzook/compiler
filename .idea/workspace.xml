@@ -12,13 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32d765aa-8bc4-4229-8286-d252f83b807e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/clean_compiler" afterPath="$PROJECT_DIR$/cmake-build-debug/clean_compiler" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parser/InputHandler.cpp" afterPath="$PROJECT_DIR$/Parser/InputHandler.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parser/ParserGenerator.cpp" afterPath="$PROJECT_DIR$/Parser/ParserGenerator.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parser/ParserTracer.cpp" afterPath="$PROJECT_DIR$/Parser/ParserTracer.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clean_compiler.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parser/ToLL1Converter.cpp" afterPath="$PROJECT_DIR$/Parser/ToLL1Converter.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,8 +54,8 @@
       <file leaf-file-name="ParserGenerator.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Parser/ParserGenerator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="87">
+              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#41#61#0" expanded="true" />
@@ -71,8 +72,8 @@
       <file leaf-file-name="InputHandler.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Parser/InputHandler.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+            <state relative-caret-position="126">
+              <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="40" />
               <folding>
                 <element signature="e#3252#3309#0" expanded="false" />
                 <element signature="e#3252#3500#0" expanded="false" />
@@ -81,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserTracer.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ParserTracer.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Parser/ParserTracer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="301">
+              <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -94,8 +95,18 @@
       <file leaf-file-name="ToLL1Converter.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Parser/ToLL1Converter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="126">
+              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToLL1Converter.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Parser/ToLL1Converter.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,14 +116,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>!= &quot;&quot;</find>
-      <find>checkc</find>
-      <find>cout</find>
       <find>acceptedState</find>
       <find>acceptedStates</find>
       <find>nonTerminals[nonTerminal]</find>
       <find>parsingTable</find>
-      <find>L&quot;</find>
       <find>first</find>
       <find>readProductionsFile</find>
       <find>removewhie</find>
@@ -135,6 +142,10 @@
       <find>parsing</find>
       <find>endl</find>
       <find>productionsStr</find>
+      <find>newNonT</find>
+      <find>rowsTemp</find>
+      <find>re</find>
+      <find>L&quot;</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -172,7 +183,6 @@
         <option value="$PROJECT_DIR$/Lexical/TestProgram.h" />
         <option value="$PROJECT_DIR$/Lexical/LexicalAnalyzer.h" />
         <option value="$PROJECT_DIR$/Lexical/LexicalAnalyzer.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Parser/Terminal.cpp" />
         <option value="$PROJECT_DIR$/Parser/Terminal.h" />
         <option value="$PROJECT_DIR$/Parser/ParsingTable.h" />
@@ -188,10 +198,11 @@
         <option value="$PROJECT_DIR$/Parser/ToLL1Converter.h" />
         <option value="$PROJECT_DIR$/Parser/Symbol.h" />
         <option value="$PROJECT_DIR$/Parser/Symbol.cpp" />
+        <option value="$PROJECT_DIR$/Parser/ParserGenerator.cpp" />
         <option value="$PROJECT_DIR$/Parser/ToLL1Converter.cpp" />
         <option value="$PROJECT_DIR$/Parser/InputHandler.cpp" />
-        <option value="$PROJECT_DIR$/Parser/ParserGenerator.cpp" />
         <option value="$PROJECT_DIR$/Parser/ParserTracer.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -319,11 +330,12 @@
       <workItem from="1524847924899" duration="20401000" />
       <workItem from="1524873513861" duration="5009000" />
       <workItem from="1524897852275" duration="9044000" />
+      <workItem from="1524914414966" duration="4016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150722000" />
+    <option name="totallyTimeSpent" value="154738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1325" height="780" extended-state="6" />
@@ -333,12 +345,12 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3123123" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3978979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2837838" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2807808" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -368,8 +380,28 @@
           <line>55</line>
           <option name="timeStamp" value="162" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Parser/ParserTracer.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Parser/ParserGenerator.cpp</url>
+          <line>33</line>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Parser/InputHandler.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Parser/InputHandler.cpp</url>
+          <line>78</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="164" />
+      <option name="time" value="181" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -620,22 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Parser/ToLL1Converter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Parser/ParserGenerator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -671,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,15 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-727">
           <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Parser/ToLL1Converter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -695,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,25 +708,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="654" column="0" lean-forward="false" selection-start-line="654" selection-start-column="0" selection-end-line="654" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Parser/InputHandler.cpp">
+    <entry file="file://$PROJECT_DIR$/Parser/ToLL1Converter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="77" column="40" lean-forward="false" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-          <folding>
-            <element signature="e#3252#3309#0" expanded="false" />
-            <element signature="e#3252#3500#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="234">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Parser/ParserGenerator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+        <state relative-caret-position="87">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#41#61#0" expanded="true" />
@@ -736,8 +737,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Parser/ParserTracer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="301">
+          <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Parser/ToLL1Converter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Parser/InputHandler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="e#3252#3309#0" expanded="false" />
+            <element signature="e#3252#3500#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

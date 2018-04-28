@@ -26,9 +26,6 @@ void ToLL1Converter::startLL1Converter(set<string> * nonTerminals,
     eliminate_ind_LF();
     print_productions();
 
-    this->nonTerminals.insert("SIMPLE_EXPRESSION`");
-    this->nonTerminals.insert("STATEMENT_LIST`");
-    this->nonTerminals.insert("TERM`");
     *nonTerminals = this->nonTerminals;
     *productions = this->productions;
 
@@ -191,6 +188,7 @@ void ToLL1Converter::eliminate_imm_LR(string nonTerminalName) {
     while (is_nonTerminal(newNonTerminal))
         newNonTerminal = getRandomString(newNonTerminal);
 
+    this->nonTerminals.insert(newNonTerminal);
     /** remove the nonterminal name  from its production  */
     productions[nonTerminalName][productionNumber].erase(productions[nonTerminalName][productionNumber].begin());
 

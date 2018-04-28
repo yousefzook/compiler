@@ -59,7 +59,7 @@ void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, i
                         string j = (string)tempProduction.back();
                         tempProduction.pop_back();
 
-                        if(j!="L") //if not epsilon production
+                        if(j!="\\L") //if not epsilon production
                             tracerStack.push(j);
                     }
 
