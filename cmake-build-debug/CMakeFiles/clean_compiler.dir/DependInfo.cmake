@@ -4,15 +4,23 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yousef/clean compiler/DFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/DFA.cpp.o"
-  "/home/yousef/clean compiler/Graph.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Graph.cpp.o"
-  "/home/yousef/clean compiler/GroupedNFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o"
-  "/home/yousef/clean compiler/LexicalAnalyzer.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o"
-  "/home/yousef/clean compiler/NFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/NFA.cpp.o"
-  "/home/yousef/clean compiler/NFAOperator.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o"
-  "/home/yousef/clean compiler/NFAToDFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o"
-  "/home/yousef/clean compiler/RulesParser.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/RulesParser.cpp.o"
-  "/home/yousef/clean compiler/TestProgram.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/TestProgram.cpp.o"
+  "/home/yousef/clean compiler/Lexical/DFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o"
+  "/home/yousef/clean compiler/Lexical/Graph.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o"
+  "/home/yousef/clean compiler/Lexical/GroupedNFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o"
+  "/home/yousef/clean compiler/Lexical/LexicalAnalyzer.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o"
+  "/home/yousef/clean compiler/Lexical/NFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o"
+  "/home/yousef/clean compiler/Lexical/NFAOperator.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o"
+  "/home/yousef/clean compiler/Lexical/NFAToDFA.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o"
+  "/home/yousef/clean compiler/Lexical/RulesParser.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o"
+  "/home/yousef/clean compiler/Lexical/TestProgram.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o"
+  "/home/yousef/clean compiler/Parser/InputHandler.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.o"
+  "/home/yousef/clean compiler/Parser/NonTerminal.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o"
+  "/home/yousef/clean compiler/Parser/ParserGenerator.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o"
+  "/home/yousef/clean compiler/Parser/ParserTracer.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o"
+  "/home/yousef/clean compiler/Parser/ParsingTable.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o"
+  "/home/yousef/clean compiler/Parser/Symbol.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o"
+  "/home/yousef/clean compiler/Parser/Terminal.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o"
+  "/home/yousef/clean compiler/Parser/ToLL1Converter.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.o"
   "/home/yousef/clean compiler/main.cpp" "/home/yousef/clean compiler/cmake-build-debug/CMakeFiles/clean_compiler.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -84,61 +84,109 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/yousef/clean compiler/Bimap.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/Bimap.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/DFA.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/DFA.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/DFA.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/DFA.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/Graph.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/Graph.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/Graph.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/Graph.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/GroupedNFA.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/GroupedNFA.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/GroupedNFA.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/GroupedNFA.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/LexicalAnalyzer.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/LexicalAnalyzer.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/LexicalAnalyzer.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/LexicalAnalyzer.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/NFA.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/NFA.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/NFA.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/NFA.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/NFAOperator.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/NFAOperator.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/NFAOperator.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/NFAOperator.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/NFAToDFA.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/NFAToDFA.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/NFAToDFA.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/NFAToDFA.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/RulesParser.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/RulesParser.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/RulesParser.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/RulesParser.h">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/TestProgram.cpp">
+		<Unit filename="/home/yousef/clean compiler/Lexical/TestProgram.cpp">
 			<Option target="clean_compiler"/>
 		</Unit>
-		<Unit filename="/home/yousef/clean compiler/TestProgram.h">
+		<Unit filename="/home/yousef/clean compiler/Lexical/TestProgram.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/InputHandler.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/InputHandler.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/NonTerminal.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/NonTerminal.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/ParserGenerator.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/ParserGenerator.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/ParserTracer.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/ParserTracer.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/ParsingTable.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/ParsingTable.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/Symbol.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/Symbol.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/Terminal.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/Terminal.h">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/ToLL1Converter.cpp">
+			<Option target="clean_compiler"/>
+		</Unit>
+		<Unit filename="/home/yousef/clean compiler/Parser/ToLL1Converter.h">
 			<Option target="clean_compiler"/>
 		</Unit>
 		<Unit filename="/home/yousef/clean compiler/main.cpp">

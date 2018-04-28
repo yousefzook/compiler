@@ -123,248 +123,464 @@ clean_compiler/fast:
 	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/build
 .PHONY : clean_compiler/fast
 
-DFA.o: DFA.cpp.o
+Lexical/DFA.o: Lexical/DFA.cpp.o
 
-.PHONY : DFA.o
-
-# target to build an object file
-DFA.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/DFA.cpp.o
-.PHONY : DFA.cpp.o
-
-DFA.i: DFA.cpp.i
-
-.PHONY : DFA.i
-
-# target to preprocess a source file
-DFA.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/DFA.cpp.i
-.PHONY : DFA.cpp.i
-
-DFA.s: DFA.cpp.s
-
-.PHONY : DFA.s
-
-# target to generate assembly for a file
-DFA.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/DFA.cpp.s
-.PHONY : DFA.cpp.s
-
-Graph.o: Graph.cpp.o
-
-.PHONY : Graph.o
+.PHONY : Lexical/DFA.o
 
 # target to build an object file
-Graph.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Graph.cpp.o
-.PHONY : Graph.cpp.o
+Lexical/DFA.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.o
+.PHONY : Lexical/DFA.cpp.o
 
-Graph.i: Graph.cpp.i
+Lexical/DFA.i: Lexical/DFA.cpp.i
 
-.PHONY : Graph.i
+.PHONY : Lexical/DFA.i
 
 # target to preprocess a source file
-Graph.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Graph.cpp.i
-.PHONY : Graph.cpp.i
+Lexical/DFA.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.i
+.PHONY : Lexical/DFA.cpp.i
 
-Graph.s: Graph.cpp.s
+Lexical/DFA.s: Lexical/DFA.cpp.s
 
-.PHONY : Graph.s
+.PHONY : Lexical/DFA.s
 
 # target to generate assembly for a file
-Graph.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Graph.cpp.s
-.PHONY : Graph.cpp.s
+Lexical/DFA.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/DFA.cpp.s
+.PHONY : Lexical/DFA.cpp.s
 
-GroupedNFA.o: GroupedNFA.cpp.o
+Lexical/Graph.o: Lexical/Graph.cpp.o
 
-.PHONY : GroupedNFA.o
+.PHONY : Lexical/Graph.o
 
 # target to build an object file
-GroupedNFA.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.o
-.PHONY : GroupedNFA.cpp.o
+Lexical/Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.o
+.PHONY : Lexical/Graph.cpp.o
 
-GroupedNFA.i: GroupedNFA.cpp.i
+Lexical/Graph.i: Lexical/Graph.cpp.i
 
-.PHONY : GroupedNFA.i
+.PHONY : Lexical/Graph.i
 
 # target to preprocess a source file
-GroupedNFA.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.i
-.PHONY : GroupedNFA.cpp.i
+Lexical/Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.i
+.PHONY : Lexical/Graph.cpp.i
 
-GroupedNFA.s: GroupedNFA.cpp.s
+Lexical/Graph.s: Lexical/Graph.cpp.s
 
-.PHONY : GroupedNFA.s
+.PHONY : Lexical/Graph.s
 
 # target to generate assembly for a file
-GroupedNFA.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/GroupedNFA.cpp.s
-.PHONY : GroupedNFA.cpp.s
+Lexical/Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/Graph.cpp.s
+.PHONY : Lexical/Graph.cpp.s
 
-LexicalAnalyzer.o: LexicalAnalyzer.cpp.o
+Lexical/GroupedNFA.o: Lexical/GroupedNFA.cpp.o
 
-.PHONY : LexicalAnalyzer.o
+.PHONY : Lexical/GroupedNFA.o
 
 # target to build an object file
-LexicalAnalyzer.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.o
-.PHONY : LexicalAnalyzer.cpp.o
+Lexical/GroupedNFA.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.o
+.PHONY : Lexical/GroupedNFA.cpp.o
 
-LexicalAnalyzer.i: LexicalAnalyzer.cpp.i
+Lexical/GroupedNFA.i: Lexical/GroupedNFA.cpp.i
 
-.PHONY : LexicalAnalyzer.i
+.PHONY : Lexical/GroupedNFA.i
 
 # target to preprocess a source file
-LexicalAnalyzer.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.i
-.PHONY : LexicalAnalyzer.cpp.i
+Lexical/GroupedNFA.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.i
+.PHONY : Lexical/GroupedNFA.cpp.i
 
-LexicalAnalyzer.s: LexicalAnalyzer.cpp.s
+Lexical/GroupedNFA.s: Lexical/GroupedNFA.cpp.s
 
-.PHONY : LexicalAnalyzer.s
+.PHONY : Lexical/GroupedNFA.s
 
 # target to generate assembly for a file
-LexicalAnalyzer.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/LexicalAnalyzer.cpp.s
-.PHONY : LexicalAnalyzer.cpp.s
+Lexical/GroupedNFA.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/GroupedNFA.cpp.s
+.PHONY : Lexical/GroupedNFA.cpp.s
 
-NFA.o: NFA.cpp.o
+Lexical/LexicalAnalyzer.o: Lexical/LexicalAnalyzer.cpp.o
 
-.PHONY : NFA.o
+.PHONY : Lexical/LexicalAnalyzer.o
 
 # target to build an object file
-NFA.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFA.cpp.o
-.PHONY : NFA.cpp.o
+Lexical/LexicalAnalyzer.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.o
+.PHONY : Lexical/LexicalAnalyzer.cpp.o
 
-NFA.i: NFA.cpp.i
+Lexical/LexicalAnalyzer.i: Lexical/LexicalAnalyzer.cpp.i
 
-.PHONY : NFA.i
+.PHONY : Lexical/LexicalAnalyzer.i
 
 # target to preprocess a source file
-NFA.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFA.cpp.i
-.PHONY : NFA.cpp.i
+Lexical/LexicalAnalyzer.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.i
+.PHONY : Lexical/LexicalAnalyzer.cpp.i
 
-NFA.s: NFA.cpp.s
+Lexical/LexicalAnalyzer.s: Lexical/LexicalAnalyzer.cpp.s
 
-.PHONY : NFA.s
+.PHONY : Lexical/LexicalAnalyzer.s
 
 # target to generate assembly for a file
-NFA.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFA.cpp.s
-.PHONY : NFA.cpp.s
+Lexical/LexicalAnalyzer.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/LexicalAnalyzer.cpp.s
+.PHONY : Lexical/LexicalAnalyzer.cpp.s
 
-NFAOperator.o: NFAOperator.cpp.o
+Lexical/NFA.o: Lexical/NFA.cpp.o
 
-.PHONY : NFAOperator.o
+.PHONY : Lexical/NFA.o
 
 # target to build an object file
-NFAOperator.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.o
-.PHONY : NFAOperator.cpp.o
+Lexical/NFA.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.o
+.PHONY : Lexical/NFA.cpp.o
 
-NFAOperator.i: NFAOperator.cpp.i
+Lexical/NFA.i: Lexical/NFA.cpp.i
 
-.PHONY : NFAOperator.i
+.PHONY : Lexical/NFA.i
 
 # target to preprocess a source file
-NFAOperator.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.i
-.PHONY : NFAOperator.cpp.i
+Lexical/NFA.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.i
+.PHONY : Lexical/NFA.cpp.i
 
-NFAOperator.s: NFAOperator.cpp.s
+Lexical/NFA.s: Lexical/NFA.cpp.s
 
-.PHONY : NFAOperator.s
+.PHONY : Lexical/NFA.s
 
 # target to generate assembly for a file
-NFAOperator.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAOperator.cpp.s
-.PHONY : NFAOperator.cpp.s
+Lexical/NFA.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFA.cpp.s
+.PHONY : Lexical/NFA.cpp.s
 
-NFAToDFA.o: NFAToDFA.cpp.o
+Lexical/NFAOperator.o: Lexical/NFAOperator.cpp.o
 
-.PHONY : NFAToDFA.o
+.PHONY : Lexical/NFAOperator.o
 
 # target to build an object file
-NFAToDFA.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.o
-.PHONY : NFAToDFA.cpp.o
+Lexical/NFAOperator.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.o
+.PHONY : Lexical/NFAOperator.cpp.o
 
-NFAToDFA.i: NFAToDFA.cpp.i
+Lexical/NFAOperator.i: Lexical/NFAOperator.cpp.i
 
-.PHONY : NFAToDFA.i
+.PHONY : Lexical/NFAOperator.i
 
 # target to preprocess a source file
-NFAToDFA.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.i
-.PHONY : NFAToDFA.cpp.i
+Lexical/NFAOperator.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.i
+.PHONY : Lexical/NFAOperator.cpp.i
 
-NFAToDFA.s: NFAToDFA.cpp.s
+Lexical/NFAOperator.s: Lexical/NFAOperator.cpp.s
 
-.PHONY : NFAToDFA.s
+.PHONY : Lexical/NFAOperator.s
 
 # target to generate assembly for a file
-NFAToDFA.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/NFAToDFA.cpp.s
-.PHONY : NFAToDFA.cpp.s
+Lexical/NFAOperator.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFAOperator.cpp.s
+.PHONY : Lexical/NFAOperator.cpp.s
 
-RulesParser.o: RulesParser.cpp.o
+Lexical/NFAToDFA.o: Lexical/NFAToDFA.cpp.o
 
-.PHONY : RulesParser.o
+.PHONY : Lexical/NFAToDFA.o
 
 # target to build an object file
-RulesParser.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/RulesParser.cpp.o
-.PHONY : RulesParser.cpp.o
+Lexical/NFAToDFA.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.o
+.PHONY : Lexical/NFAToDFA.cpp.o
 
-RulesParser.i: RulesParser.cpp.i
+Lexical/NFAToDFA.i: Lexical/NFAToDFA.cpp.i
 
-.PHONY : RulesParser.i
+.PHONY : Lexical/NFAToDFA.i
 
 # target to preprocess a source file
-RulesParser.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/RulesParser.cpp.i
-.PHONY : RulesParser.cpp.i
+Lexical/NFAToDFA.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.i
+.PHONY : Lexical/NFAToDFA.cpp.i
 
-RulesParser.s: RulesParser.cpp.s
+Lexical/NFAToDFA.s: Lexical/NFAToDFA.cpp.s
 
-.PHONY : RulesParser.s
+.PHONY : Lexical/NFAToDFA.s
 
 # target to generate assembly for a file
-RulesParser.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/RulesParser.cpp.s
-.PHONY : RulesParser.cpp.s
+Lexical/NFAToDFA.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/NFAToDFA.cpp.s
+.PHONY : Lexical/NFAToDFA.cpp.s
 
-TestProgram.o: TestProgram.cpp.o
+Lexical/RulesParser.o: Lexical/RulesParser.cpp.o
 
-.PHONY : TestProgram.o
+.PHONY : Lexical/RulesParser.o
 
 # target to build an object file
-TestProgram.cpp.o:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/TestProgram.cpp.o
-.PHONY : TestProgram.cpp.o
+Lexical/RulesParser.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.o
+.PHONY : Lexical/RulesParser.cpp.o
 
-TestProgram.i: TestProgram.cpp.i
+Lexical/RulesParser.i: Lexical/RulesParser.cpp.i
 
-.PHONY : TestProgram.i
+.PHONY : Lexical/RulesParser.i
 
 # target to preprocess a source file
-TestProgram.cpp.i:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/TestProgram.cpp.i
-.PHONY : TestProgram.cpp.i
+Lexical/RulesParser.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.i
+.PHONY : Lexical/RulesParser.cpp.i
 
-TestProgram.s: TestProgram.cpp.s
+Lexical/RulesParser.s: Lexical/RulesParser.cpp.s
 
-.PHONY : TestProgram.s
+.PHONY : Lexical/RulesParser.s
 
 # target to generate assembly for a file
-TestProgram.cpp.s:
-	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/TestProgram.cpp.s
-.PHONY : TestProgram.cpp.s
+Lexical/RulesParser.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/RulesParser.cpp.s
+.PHONY : Lexical/RulesParser.cpp.s
+
+Lexical/TestProgram.o: Lexical/TestProgram.cpp.o
+
+.PHONY : Lexical/TestProgram.o
+
+# target to build an object file
+Lexical/TestProgram.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.o
+.PHONY : Lexical/TestProgram.cpp.o
+
+Lexical/TestProgram.i: Lexical/TestProgram.cpp.i
+
+.PHONY : Lexical/TestProgram.i
+
+# target to preprocess a source file
+Lexical/TestProgram.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.i
+.PHONY : Lexical/TestProgram.cpp.i
+
+Lexical/TestProgram.s: Lexical/TestProgram.cpp.s
+
+.PHONY : Lexical/TestProgram.s
+
+# target to generate assembly for a file
+Lexical/TestProgram.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Lexical/TestProgram.cpp.s
+.PHONY : Lexical/TestProgram.cpp.s
+
+Parser/InputHandler.o: Parser/InputHandler.cpp.o
+
+.PHONY : Parser/InputHandler.o
+
+# target to build an object file
+Parser/InputHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.o
+.PHONY : Parser/InputHandler.cpp.o
+
+Parser/InputHandler.i: Parser/InputHandler.cpp.i
+
+.PHONY : Parser/InputHandler.i
+
+# target to preprocess a source file
+Parser/InputHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.i
+.PHONY : Parser/InputHandler.cpp.i
+
+Parser/InputHandler.s: Parser/InputHandler.cpp.s
+
+.PHONY : Parser/InputHandler.s
+
+# target to generate assembly for a file
+Parser/InputHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/InputHandler.cpp.s
+.PHONY : Parser/InputHandler.cpp.s
+
+Parser/NonTerminal.o: Parser/NonTerminal.cpp.o
+
+.PHONY : Parser/NonTerminal.o
+
+# target to build an object file
+Parser/NonTerminal.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.o
+.PHONY : Parser/NonTerminal.cpp.o
+
+Parser/NonTerminal.i: Parser/NonTerminal.cpp.i
+
+.PHONY : Parser/NonTerminal.i
+
+# target to preprocess a source file
+Parser/NonTerminal.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.i
+.PHONY : Parser/NonTerminal.cpp.i
+
+Parser/NonTerminal.s: Parser/NonTerminal.cpp.s
+
+.PHONY : Parser/NonTerminal.s
+
+# target to generate assembly for a file
+Parser/NonTerminal.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/NonTerminal.cpp.s
+.PHONY : Parser/NonTerminal.cpp.s
+
+Parser/ParserGenerator.o: Parser/ParserGenerator.cpp.o
+
+.PHONY : Parser/ParserGenerator.o
+
+# target to build an object file
+Parser/ParserGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.o
+.PHONY : Parser/ParserGenerator.cpp.o
+
+Parser/ParserGenerator.i: Parser/ParserGenerator.cpp.i
+
+.PHONY : Parser/ParserGenerator.i
+
+# target to preprocess a source file
+Parser/ParserGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.i
+.PHONY : Parser/ParserGenerator.cpp.i
+
+Parser/ParserGenerator.s: Parser/ParserGenerator.cpp.s
+
+.PHONY : Parser/ParserGenerator.s
+
+# target to generate assembly for a file
+Parser/ParserGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParserGenerator.cpp.s
+.PHONY : Parser/ParserGenerator.cpp.s
+
+Parser/ParserTracer.o: Parser/ParserTracer.cpp.o
+
+.PHONY : Parser/ParserTracer.o
+
+# target to build an object file
+Parser/ParserTracer.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.o
+.PHONY : Parser/ParserTracer.cpp.o
+
+Parser/ParserTracer.i: Parser/ParserTracer.cpp.i
+
+.PHONY : Parser/ParserTracer.i
+
+# target to preprocess a source file
+Parser/ParserTracer.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.i
+.PHONY : Parser/ParserTracer.cpp.i
+
+Parser/ParserTracer.s: Parser/ParserTracer.cpp.s
+
+.PHONY : Parser/ParserTracer.s
+
+# target to generate assembly for a file
+Parser/ParserTracer.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParserTracer.cpp.s
+.PHONY : Parser/ParserTracer.cpp.s
+
+Parser/ParsingTable.o: Parser/ParsingTable.cpp.o
+
+.PHONY : Parser/ParsingTable.o
+
+# target to build an object file
+Parser/ParsingTable.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.o
+.PHONY : Parser/ParsingTable.cpp.o
+
+Parser/ParsingTable.i: Parser/ParsingTable.cpp.i
+
+.PHONY : Parser/ParsingTable.i
+
+# target to preprocess a source file
+Parser/ParsingTable.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.i
+.PHONY : Parser/ParsingTable.cpp.i
+
+Parser/ParsingTable.s: Parser/ParsingTable.cpp.s
+
+.PHONY : Parser/ParsingTable.s
+
+# target to generate assembly for a file
+Parser/ParsingTable.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ParsingTable.cpp.s
+.PHONY : Parser/ParsingTable.cpp.s
+
+Parser/Symbol.o: Parser/Symbol.cpp.o
+
+.PHONY : Parser/Symbol.o
+
+# target to build an object file
+Parser/Symbol.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.o
+.PHONY : Parser/Symbol.cpp.o
+
+Parser/Symbol.i: Parser/Symbol.cpp.i
+
+.PHONY : Parser/Symbol.i
+
+# target to preprocess a source file
+Parser/Symbol.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.i
+.PHONY : Parser/Symbol.cpp.i
+
+Parser/Symbol.s: Parser/Symbol.cpp.s
+
+.PHONY : Parser/Symbol.s
+
+# target to generate assembly for a file
+Parser/Symbol.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Symbol.cpp.s
+.PHONY : Parser/Symbol.cpp.s
+
+Parser/Terminal.o: Parser/Terminal.cpp.o
+
+.PHONY : Parser/Terminal.o
+
+# target to build an object file
+Parser/Terminal.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.o
+.PHONY : Parser/Terminal.cpp.o
+
+Parser/Terminal.i: Parser/Terminal.cpp.i
+
+.PHONY : Parser/Terminal.i
+
+# target to preprocess a source file
+Parser/Terminal.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.i
+.PHONY : Parser/Terminal.cpp.i
+
+Parser/Terminal.s: Parser/Terminal.cpp.s
+
+.PHONY : Parser/Terminal.s
+
+# target to generate assembly for a file
+Parser/Terminal.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/Terminal.cpp.s
+.PHONY : Parser/Terminal.cpp.s
+
+Parser/ToLL1Converter.o: Parser/ToLL1Converter.cpp.o
+
+.PHONY : Parser/ToLL1Converter.o
+
+# target to build an object file
+Parser/ToLL1Converter.cpp.o:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.o
+.PHONY : Parser/ToLL1Converter.cpp.o
+
+Parser/ToLL1Converter.i: Parser/ToLL1Converter.cpp.i
+
+.PHONY : Parser/ToLL1Converter.i
+
+# target to preprocess a source file
+Parser/ToLL1Converter.cpp.i:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.i
+.PHONY : Parser/ToLL1Converter.cpp.i
+
+Parser/ToLL1Converter.s: Parser/ToLL1Converter.cpp.s
+
+.PHONY : Parser/ToLL1Converter.s
+
+# target to generate assembly for a file
+Parser/ToLL1Converter.cpp.s:
+	$(MAKE) -f CMakeFiles/clean_compiler.dir/build.make CMakeFiles/clean_compiler.dir/Parser/ToLL1Converter.cpp.s
+.PHONY : Parser/ToLL1Converter.cpp.s
 
 main.o: main.cpp.o
 
@@ -402,33 +618,57 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... clean_compiler"
-	@echo "... DFA.o"
-	@echo "... DFA.i"
-	@echo "... DFA.s"
-	@echo "... Graph.o"
-	@echo "... Graph.i"
-	@echo "... Graph.s"
-	@echo "... GroupedNFA.o"
-	@echo "... GroupedNFA.i"
-	@echo "... GroupedNFA.s"
-	@echo "... LexicalAnalyzer.o"
-	@echo "... LexicalAnalyzer.i"
-	@echo "... LexicalAnalyzer.s"
-	@echo "... NFA.o"
-	@echo "... NFA.i"
-	@echo "... NFA.s"
-	@echo "... NFAOperator.o"
-	@echo "... NFAOperator.i"
-	@echo "... NFAOperator.s"
-	@echo "... NFAToDFA.o"
-	@echo "... NFAToDFA.i"
-	@echo "... NFAToDFA.s"
-	@echo "... RulesParser.o"
-	@echo "... RulesParser.i"
-	@echo "... RulesParser.s"
-	@echo "... TestProgram.o"
-	@echo "... TestProgram.i"
-	@echo "... TestProgram.s"
+	@echo "... Lexical/DFA.o"
+	@echo "... Lexical/DFA.i"
+	@echo "... Lexical/DFA.s"
+	@echo "... Lexical/Graph.o"
+	@echo "... Lexical/Graph.i"
+	@echo "... Lexical/Graph.s"
+	@echo "... Lexical/GroupedNFA.o"
+	@echo "... Lexical/GroupedNFA.i"
+	@echo "... Lexical/GroupedNFA.s"
+	@echo "... Lexical/LexicalAnalyzer.o"
+	@echo "... Lexical/LexicalAnalyzer.i"
+	@echo "... Lexical/LexicalAnalyzer.s"
+	@echo "... Lexical/NFA.o"
+	@echo "... Lexical/NFA.i"
+	@echo "... Lexical/NFA.s"
+	@echo "... Lexical/NFAOperator.o"
+	@echo "... Lexical/NFAOperator.i"
+	@echo "... Lexical/NFAOperator.s"
+	@echo "... Lexical/NFAToDFA.o"
+	@echo "... Lexical/NFAToDFA.i"
+	@echo "... Lexical/NFAToDFA.s"
+	@echo "... Lexical/RulesParser.o"
+	@echo "... Lexical/RulesParser.i"
+	@echo "... Lexical/RulesParser.s"
+	@echo "... Lexical/TestProgram.o"
+	@echo "... Lexical/TestProgram.i"
+	@echo "... Lexical/TestProgram.s"
+	@echo "... Parser/InputHandler.o"
+	@echo "... Parser/InputHandler.i"
+	@echo "... Parser/InputHandler.s"
+	@echo "... Parser/NonTerminal.o"
+	@echo "... Parser/NonTerminal.i"
+	@echo "... Parser/NonTerminal.s"
+	@echo "... Parser/ParserGenerator.o"
+	@echo "... Parser/ParserGenerator.i"
+	@echo "... Parser/ParserGenerator.s"
+	@echo "... Parser/ParserTracer.o"
+	@echo "... Parser/ParserTracer.i"
+	@echo "... Parser/ParserTracer.s"
+	@echo "... Parser/ParsingTable.o"
+	@echo "... Parser/ParsingTable.i"
+	@echo "... Parser/ParsingTable.s"
+	@echo "... Parser/Symbol.o"
+	@echo "... Parser/Symbol.i"
+	@echo "... Parser/Symbol.s"
+	@echo "... Parser/Terminal.o"
+	@echo "... Parser/Terminal.i"
+	@echo "... Parser/Terminal.s"
+	@echo "... Parser/ToLL1Converter.o"
+	@echo "... Parser/ToLL1Converter.i"
+	@echo "... Parser/ToLL1Converter.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
