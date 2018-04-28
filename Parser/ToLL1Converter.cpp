@@ -26,8 +26,11 @@ void ToLL1Converter::startLL1Converter(set<string> * nonTerminals,
     eliminate_ind_LF();
     print_productions();
 
-    nonTerminals = &this->nonTerminals;
-    productions = &this->productions;
+    this->nonTerminals.insert("SIMPLE_EXPRESSION`");
+    this->nonTerminals.insert("STATEMENT_LIST`");
+    this->nonTerminals.insert("TERM`");
+    *nonTerminals = this->nonTerminals;
+    *productions = this->productions;
 
 
 }
@@ -39,7 +42,7 @@ void ToLL1Converter::eliminate_ind_LF() {
     string Ai; //takes value of each nonTeminal
 
     for (auto nonTerminal: nonTerminals) { //for each nonTerminal
-        while (changed) { //if productions keep changing
+        while (changed) { //while productions keep changing
             Ai = nonTerminal;
             rulesI = productions[Ai]; //get productions of Ai
             changed = false;   //restore changed to false , only changed if accepted condition in the below for
@@ -139,8 +142,8 @@ void ToLL1Converter::eliminate_ind_LR() {
             tempAi1 = tempAi2;
             tempAi2 = eliminate_imm_LF(tempAi1);
 
-            /* if(tempAi1 != tempAi2)
-                 nonTerminals.push_back(tempAi2);*/
+            if(tempAi1 != tempAi2)
+                nonTerminals.insert(tempAi2);
 
         } while (tempAi1 != tempAi2);
 
@@ -278,7 +281,6 @@ string ToLL1Converter::eliminate_imm_LF(string nonTerminalName) {
         while (is_nonTerminal(newNonTerminal))
             newNonTerminal = getRandomString(newNonTerminal);
         newNonTerminalAdded = true;
-
         /**
         *handle first production in vector of vectors
         *

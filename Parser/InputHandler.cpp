@@ -20,6 +20,7 @@ void InputHandler::InitGeneratorMaps(set<Terminal *> *terminals, set<NonTerminal
     nonTerminals->insert(startNonTerminal);
     for (auto terminal: this->terminalSet)
         terminals->insert(new Terminal(terminal));
+    terminals->insert(new Terminal("\\L"));
 
     for (auto nonTerminal: this->nonTerminalSet){
         if(startNonTerminal->getName() == nonTerminal)
