@@ -70,7 +70,7 @@ void InputHandler::startParserInputHandler(set<Terminal *> *terminals,
                                            NonTerminal *startNonTerminal,
                                            map<string, vector<vector<string>>> * productionsStr) {
     ifstream readFile;
-    readFile.open("/home/yousef/tests/parserInput.txt");
+    readFile.open("/home/yousef/tests/phase2/grammar modified.txt");
     string line;
     while (getline(readFile, line))
         parseLine(line);
@@ -147,23 +147,21 @@ string InputHandler::removeWhiteSpaces(string line) {
 
 
 void InputHandler::productionParse1(string nonTerminalState, string str) {
-    vector<string> productionVec;
-    split(str, productionVec, '|');/**split string on '|' */
-    int i = 0;
-    /**handel the first production added to the vector of vector  in the map */
-    if (productionVec.size() > 0) {
-        productionParse2(productionVec[0]);
-        rowsTemp.push_back(productionTemp);
-        if (!productions.count(nonTerminalState)) {
-            productions.insert(std::make_pair(nonTerminalState, rowsTemp));
-        }
-        productionTemp.clear();
-        i++;
-    }
-    /**the rest elements*/
-    while (i < productionVec.size()) {
+    vector <string> productionVec;
+    split(str,productionVec,'|');/**split string on '|' */
+    int i=0;
+
+    while(i<productionVec.size())
+    {
         productionParse2(productionVec[i]);
-        productions[nonTerminalState].push_back(productionTemp);
+        if(!productions.count(nonTerminalState))
+        {
+            rowsTemp.push_back(productionTemp);
+            productions.insert(std::make_pair(nonTerminalState,rowsTemp));
+        }
+        else
+            productions[nonTerminalState].push_back(productionTemp);
+
         productionTemp.clear();
         i++;
     }

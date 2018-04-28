@@ -50,10 +50,10 @@ void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, i
                     continue;
                 }
                 else{ //if there exist a production ,pop non terminal, push equivalent production back to front
-                    tracerStack.pop();
                     int indexOfProduction = parsTabEntries[lexicalTokens[i]];
                     //terminal of input used to access the map of productions in the transTable entry,the entry hold an int used to give the index of the production in the nonTerminal productions vector in productions map
                     vector<string> tempProduction = productions[*stackTop][indexOfProduction];
+                    tracerStack.pop();
                     while(!tempProduction.empty())
                     {
                         string j = (string)tempProduction.back();

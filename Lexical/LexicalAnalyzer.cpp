@@ -58,7 +58,7 @@ vector<string> LexicalAnalyzer::startLexical() {
 vector<string> LexicalAnalyzer::readTestFile(vector<vector<int> > dfaTable,
                                    map<int, string> acceptedStates)
 {
-    readFile.open("/home/yousef/tests/input.txt");
+    readFile.open("/home/yousef/tests/phase2/test-bad.txt");
     string line;
     TestProgram testProgram;
     cout<<"\nYour Program :-"<<endl;
