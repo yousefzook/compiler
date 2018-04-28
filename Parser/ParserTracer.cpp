@@ -13,6 +13,7 @@ using namespace std;
 void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, int>> parsingTable,
                          map<string, vector<vector<string>>> productionsStr, string startState) {
 
+    cout<<"--------- Parser Tracing Starts ---------"<<endl<<endl;
     this->productions = productionsStr;
     this->parsingTable = parsingTable;
 
@@ -26,7 +27,7 @@ void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, i
 
             if(!isTerminal(lexicalTokens[i]))
             {
-                cout<<"ERROR: Discard \""<<lexicalTokens[i]<<"\"";
+                cout<<"ERROR: Discard \""<<lexicalTokens[i]<<"\""<<endl;
                 continue;
             }
 
@@ -38,7 +39,7 @@ void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, i
                 if(parsTabEntries[lexicalTokens[i]] == ERROR){
                     //if Error found ,discard input token
                     cout<<"ERROR: Illegal\""<<*stackTop<<"\" - discard \""<<lexicalTokens[i]<<"\"";
-                    cout<<endl<<endl;
+                    cout<<endl;
                     continue;
                 }
                 else if(parsTabEntries[lexicalTokens[i]] == SYNCH){
@@ -69,7 +70,7 @@ void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, i
             }else{ //if top of stack is terminal
                 if(*stackTop == lexicalTokens[i]){ //match input
                     if(*stackTop != "$"){
-                        cout<<"Matching \""<<*stackTop<<"\""<<endl<<endl;
+                        cout<<"Matching \""<<*stackTop<<"\""<<endl;
                         tracerStack.pop();
                         print_stack();
                         continue;
@@ -77,7 +78,7 @@ void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, i
                         cout<<" --------------"<<endl;
                         cout<<"| Parsing Ends |"<<endl;
                         cout<<" --------------"<<endl<<endl;
-                        cout<<"    (~‾▿‾)~ "<<endl;
+                        cout<<"    ~(‾▿‾)~ "<<endl;
 
                         tracerStack.pop();
                         print_stack();
@@ -89,12 +90,12 @@ void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, i
                     {
                         while(lexicalTokens[i] != "$"){
                             cout<<"ERROR: Discard \""<<lexicalTokens[i]<<"\"";
-                            cout<<endl<<endl;
+                            cout<<endl;
                             i++;
                         }
                         i--;
                     }else{
-                        cout<<"Error: Missing \""<<*stackTop<<"\" , inserted"<<endl<<endl;
+                        cout<<"Error: Missing \""<<*stackTop<<"\" , inserted"<<endl;
                         i--;
                         tracerStack.pop();
                         print_stack();
@@ -106,7 +107,7 @@ void ParserTracer::start(vector<string> lexicalTokens, map<string, map<string, i
         }
         while(!tracerStack.empty()){ //if input finished but the stack isn't empty, keep popping giving miss error
             string* stackTop = &tracerStack.top();
-            cout<<"Error: Missing \""<<*stackTop<<"\" , inserted"<<endl<<endl;
+            cout<<"Error: Missing \""<<*stackTop<<"\" , inserted"<<endl;
             tracerStack.pop();
             print_stack();
         }

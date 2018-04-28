@@ -75,6 +75,7 @@ void InputHandler::startParserInputHandler(set<Terminal *> *terminals,
     while (getline(readFile, line))
         parseLine(line);
     readFile.close();
+    *productionsStr = this->productions;
     InitGeneratorMaps(terminals, nonTerminals, productions, startNonTerminal);
 }
 

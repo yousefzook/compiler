@@ -205,6 +205,8 @@ Terminal.h
 /home/yousef/clean compiler/Parser/ParserGenerator.cpp
 algorithm
 -
+iostream
+-
 ParserGenerator.h
 /home/yousef/clean compiler/Parser/ParserGenerator.h
 InputHandler.h

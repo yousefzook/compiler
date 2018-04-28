@@ -3,9 +3,12 @@
 //
 
 #include <algorithm>
+#include <iostream>
 #include "ParserGenerator.h"
 #include "InputHandler.h"
 #include "ParserTracer.h"
+
+void prettyPrintTable(map<string, map<string, int>> table, NonTerminal *startNT);
 
 /*
  * Start Parser work
@@ -25,6 +28,7 @@ void ParserGenerator::startParser(vector<string> lexicalTokens) {
 
     ParsingTable parsingTable;
     map<string, map<string, int>> table = parsingTable.constructTable(terminals, nonTerminals, productions);
+    prettyPrintTable(table, startNonTerminal);
 
     ParserTracer parser;
     parser.start(lexicalTokens, table, productionsStr, startNonTerminal->getName());
@@ -32,13 +36,45 @@ void ParserGenerator::startParser(vector<string> lexicalTokens) {
 
 }
 
+void prettyPrintTable(map<string, map<string, int>> table, NonTerminal *startNT) {
+    cout << endl << " ----------********--------- parsing table ----------********---------" << endl;
+    map<string, int> temp = table[startNT->getName()];
+    cout << endl << "\t\t\t\t";
+    for (auto pair: temp) {
+        cout << pair.first[0];
+        if (pair.first.size() > 1)
+            cout << pair.first[1];
+        cout << "\t\t";
+    }
+    cout << endl;
+    for (auto pair: table) {
+        if (pair.first.size() > 10) {
+            for (int i = 0; i < 10; i++)
+                cout << pair.first[i];
+            cout << pair.first[pair.first.size() - 1];
+        } else {
+            if (pair.first.size() < 4)
+                cout << "\t\t";
+            else if (pair.first.size() < 8)
+                cout << "\t";
+            cout << pair.first;
+
+        }
+        cout << "\t|\t";
+        map<string, int> temp = table[pair.first];
+        for (auto pair2: temp)
+            cout << pair2.second << "\t\t";
+        cout << endl;
+    }
+    cout<<endl<<endl;
+}
 
 /*
  * init follow map
  * */
 void ParserGenerator::generateFollow() {
 
-    Terminal * dollar = new Terminal("$");
+    Terminal *dollar = new Terminal("$");
     terminals.insert(dollar);
     startNonTerminal->follow.insert(dollar);
     for (auto nonTerminal: nonTerminals)
@@ -75,16 +111,16 @@ void ParserGenerator::initFollow(NonTerminal *nonTerminal) {
                     for (auto value: lhsNonTerminal->follow)
                         nonTerminal->follow.insert(value);
                 }
-            }else{
-                Symbol * nextSym = production.at(it - production.begin() + 1);
-                if(nextSym->isTerminal()) // if terminal , push it
-                    nonTerminal->follow.insert((Terminal * )nextSym);
-                else{ // non Terminal
+            } else {
+                Symbol *nextSym = production.at(it - production.begin() + 1);
+                if (nextSym->isTerminal()) // if terminal , push it
+                    nonTerminal->follow.insert((Terminal *) nextSym);
+                else { // non Terminal
                     set<Terminal *> nextFirst = ((NonTerminal *) nextSym)->first;
-                    for(auto value: nextFirst){
-                        if(value->getName() == "\\L"){ // if contain lambda, add its follow
-                            initFollow((NonTerminal*)nextSym);
-                            for(auto value2: ((NonTerminal *)nextSym)->follow)
+                    for (auto value: nextFirst) {
+                        if (value->getName() == "\\L") { // if contain lambda, add its follow
+                            initFollow((NonTerminal *) nextSym);
+                            for (auto value2: ((NonTerminal *) nextSym)->follow)
                                 nonTerminal->follow.insert(value2);
                             continue;
                         }
