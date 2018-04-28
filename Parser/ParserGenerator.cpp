@@ -75,8 +75,23 @@ void ParserGenerator::initFollow(NonTerminal *nonTerminal) {
                     for (auto value: lhsNonTerminal->follow)
                         nonTerminal->follow.insert(value);
                 }
+            }else{
+                Symbol * nextSym = production.at(it - production.begin() + 1);
+                if(nextSym->isTerminal()) // if terminal , push it
+                    nonTerminal->follow.insert((Terminal * )nextSym);
+                else{ // non Terminal
+                    set<Terminal *> nextFirst = ((NonTerminal *) nextSym)->first;
+                    for(auto value: nextFirst){
+                        if(value->getName() == "\\L"){ // if contain lambda, add its follow
+                            initFollow((NonTerminal*)nextSym);
+                            for(auto value2: ((NonTerminal *)nextSym)->follow)
+                                nonTerminal->follow.insert(value2);
+                            continue;
+                        }
+                        nonTerminal->follow.insert(value);
+                    }
+                }
             }
-//            production.at(it - production.begin() + 1);
         }
     }
 

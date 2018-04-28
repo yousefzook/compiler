@@ -12,9 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32d765aa-8bc4-4229-8286-d252f83b807e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parser/InputHandler.cpp" afterPath="$PROJECT_DIR$/Parser/InputHandler.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parser/ToLL1Converter.cpp" afterPath="$PROJECT_DIR$/Parser/ToLL1Converter.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Parser/ParserGenerator.cpp" afterPath="$PROJECT_DIR$/Parser/ParserGenerator.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,19 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParserGenerator.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ParserGenerator.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Parser/ParserGenerator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="218">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#41#61#0" expanded="true" />
                 <element signature="e#144#173#0" expanded="false" />
                 <element signature="e#1156#1228#0" expanded="false" />
-                <element signature="e#2451#2500#0" expanded="false" />
-                <element signature="e#2619#2690#0" expanded="false" />
-                <element signature="e#4280#4351#0" expanded="false" />
+                <element signature="e#3261#3310#0" expanded="false" />
+                <element signature="e#3429#3500#0" expanded="false" />
+                <element signature="e#5090#5161#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -77,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToLL1Converter.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ToLL1Converter.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Parser/ToLL1Converter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
+            <state relative-caret-position="379">
               <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
               <folding />
             </state>
@@ -91,7 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dfa.</find>
       <find>print_accepted_Map</find>
       <find>dfaStates</find>
       <find>execute</find>
@@ -121,6 +118,7 @@
       <find>nonTerminals</find>
       <find>getRandomString</find>
       <find>error</find>
+      <find>EXPRESSION</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -175,9 +173,9 @@
         <option value="$PROJECT_DIR$/Parser/ToLL1Converter.h" />
         <option value="$PROJECT_DIR$/Parser/Symbol.h" />
         <option value="$PROJECT_DIR$/Parser/Symbol.cpp" />
-        <option value="$PROJECT_DIR$/Parser/ParserGenerator.cpp" />
         <option value="$PROJECT_DIR$/Parser/ToLL1Converter.cpp" />
         <option value="$PROJECT_DIR$/Parser/InputHandler.cpp" />
+        <option value="$PROJECT_DIR$/Parser/ParserGenerator.cpp" />
       </list>
     </option>
   </component>
@@ -304,12 +302,12 @@
       <workItem from="1524845286604" duration="611000" />
       <workItem from="1524847924899" duration="20401000" />
       <workItem from="1524873513861" duration="5009000" />
-      <workItem from="1524897852275" duration="4076000" />
+      <workItem from="1524897852275" duration="5786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145754000" />
+    <option name="totallyTimeSpent" value="147464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1325" height="780" extended-state="6" />
@@ -321,11 +319,11 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3903904" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3903904" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987988" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45795795" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -356,32 +354,17 @@
           <option name="timeStamp" value="121" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Parser/ParserGenerator.cpp</url>
-          <line>69</line>
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Parser/ParserGenerator.cpp</url>
-          <line>43</line>
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Parser/ParserGenerator.cpp</url>
-          <line>16</line>
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Parser/ParserGenerator.cpp</url>
-          <line>22</line>
-          <option name="timeStamp" value="128" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Parser/InputHandler.cpp</url>
           <line>59</line>
           <option name="timeStamp" value="148" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Parser/ParserGenerator.cpp</url>
+          <line>25</line>
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="149" />
+      <option name="time" value="160" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -685,6 +668,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -719,22 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Parser/ParserGenerator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#41#61#0" expanded="true" />
-            <element signature="e#144#173#0" expanded="false" />
-            <element signature="e#1156#1228#0" expanded="false" />
-            <element signature="e#2451#2500#0" expanded="false" />
-            <element signature="e#2619#2690#0" expanded="false" />
-            <element signature="e#4280#4351#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Parser/InputHandler.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -748,9 +716,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Parser/ToLL1Converter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
+        <state relative-caret-position="379">
           <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Parser/ParserGenerator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#41#61#0" expanded="true" />
+            <element signature="e#144#173#0" expanded="false" />
+            <element signature="e#1156#1228#0" expanded="false" />
+            <element signature="e#3261#3310#0" expanded="false" />
+            <element signature="e#3429#3500#0" expanded="false" />
+            <element signature="e#5090#5161#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
