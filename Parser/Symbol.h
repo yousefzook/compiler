@@ -17,6 +17,7 @@ public:
     // This is a pure virtual destructor to make this class abstract
     virtual ~Symbol()=0;
     string getName();
+    void setName(string);
     bool isTerminal();
 
 protected:

@@ -16,7 +16,7 @@ void InputHandler::InitGeneratorMaps(set<Terminal *> *terminals, set<NonTerminal
     ToLL1Converter converter;
     converter.startLL1Converter(&this->nonTerminalSet, &this->productions);
 
-    startNonTerminal = new NonTerminal(startNonTerminalString);
+    startNonTerminal->setName(startNonTerminalString);
     nonTerminals->insert(startNonTerminal);
     for (auto terminal: this->terminalSet)
         terminals->insert(new Terminal(terminal));

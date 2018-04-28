@@ -20,3 +20,7 @@ string Symbol::getName() {
 bool Symbol::isTerminal() {
     return terminal;
 }
+
+void Symbol::setName(string name) {
+    this->name = name;
+}

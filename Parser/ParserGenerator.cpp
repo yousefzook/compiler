@@ -12,6 +12,7 @@
  * */
 void ParserGenerator::startParser(vector<string> lexicalTokens) {
 
+    startNonTerminal = new NonTerminal("");
     InputHandler inputHandler;
     inputHandler.startParserInputHandler(&terminals, &nonTerminals,
                                          &productions, startNonTerminal, &productionsStr);
@@ -36,6 +37,10 @@ void ParserGenerator::startParser(vector<string> lexicalTokens) {
  * init follow map
  * */
 void ParserGenerator::generateFollow() {
+
+    Terminal * dollar = new Terminal("$");
+    terminals.insert(dollar);
+    startNonTerminal->follow.insert(dollar);
     for (auto nonTerminal: nonTerminals)
         initFollow(nonTerminal);
 
@@ -47,7 +52,7 @@ void ParserGenerator::generateFollow() {
 void ParserGenerator::initFollow(NonTerminal *nonTerminal) {
 
 //    struct nonTerminalAttributes *attributes = &nonTerminals[nonTerminal];
-    if (!nonTerminal->follow.empty())
+    if (!nonTerminal->follow.empty() && nonTerminal != startNonTerminal)
         return;
 
     for (auto nonTerminalIter: nonTerminals) {
