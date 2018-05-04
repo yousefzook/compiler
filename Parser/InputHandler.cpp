@@ -70,7 +70,7 @@ void InputHandler::startParserInputHandler(set<Terminal *> *terminals,
                                            NonTerminal *startNonTerminal,
                                            map<string, vector<vector<string>>> * productionsStr) {
     ifstream readFile;
-    readFile.open("/home/yousef/tests/phase2/grammar modified.txt");
+    readFile.open("/home/yousef/tests/phase2/grammar.txt");
     string line;
     while (getline(readFile, line))
         parseLine(line);
