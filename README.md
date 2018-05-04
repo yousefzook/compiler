@@ -35,6 +35,33 @@ more digits and an optional exponent consisting of an E followed by one or more 
 meaning discussed in class: - | + * ( )
 * Any reserved symbol needed to be used within the language, is preceded by an
 escape backslash character.
+---
+## 2. Parser Generator
+The parser generator expects an LL (1) grammar as input. It should compute First and Follow
+sets and uses them to construct a predictive parsing table for the grammar.
+If input file is not in LL1 form, the gernerator will do `Left Factoring` and `Left Recuresion` elimination techinques.
+
+The table is to be used to drive a predictive top-down parser. If the input grammar is not
+LL (1), an appropriate error message should be produced.
+The generated parser is required to produce some representation of the leftmost derivation for
+a correct input. If an error is encountered, a panic-mode error recovery routine is to be called
+to print an error message and to resume parsing.
+The parser generator is required to be tested using the given context free grammar of a small
+subset of Java. Of course, you have to modify the grammar to allow predictive parsing.
+Combine the lexical analyzer generated in phase1 and parser such that the lexical analyzer is
+to be called by the parser to find the next token. Use the simple program given in phase 1 to
+test the combined lexical analyzer and parser.
+
+CFG Input File Format:
+* CFG input file is a text file.
+* Production rules are lines in the form LHS ::= RHS
+* Production rule can be expanded over many lines.
+* Terminal symbols are enclosed in single quotes.
+* \L represents Lambda symbol.
+* The symbol | is used in RHS of production rules with the meaning discussed in class.
+* Any reserved symbol needed to be used within the language, is preceded by an escape
+backslash character. 
+
 
 ---
 ## Before running:
@@ -51,6 +78,10 @@ readFile.open("/home/yousef/tests/input.txt");
 ```C++
 outfile.open("/home/yousef/tests/tokens.txt");
 ```
+4. Edit parser rules file Path with your own path in `InputHandler.cpp` file >> 
+```C++
+readFile.open("/home/yousef/tests/grammar.txt");
+```
 ---
 ## Assumptions:
 * Rules File should be separated by spaces between each expression and letter or word. For example, If there is a regular definition defined as 
@@ -59,10 +90,11 @@ outfile.open("/home/yousef/tests/tokens.txt");
 * Only `positive clousre +`, `kleene closure *`, `ORing |` and `Concatenation .` are applied, but it is very easy to add more operators in the code, just do the next:
   * edit in `LexicalAnalyzer` files >> `initOperationsMap` and `doOperationInTOS` functions
   * add the operator function in `NFAOperator`
-  
+ * Terimnals in grammar file is surronded with single quotes, ex `'mulop'`
 ---
 ## Contributers:
 1. [Abo-ElHamd Ali](https://github.com/aboelhamd)
 2. [Ahmed Rizk](https://github.com/AhmedMahmoudRizk)
 3. [Yahia ElShahawy](https://github.com/yahia-elshahawy)
+
 
